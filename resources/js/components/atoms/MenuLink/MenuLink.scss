@@ -1,13 +1,67 @@
 .menuLink {
     padding: 10px 30px;
     font-family: Rubik;
-    font-size: 14px;
+    font-size: 16px;
     color: #ffffff;
     text-decoration: none solid rgb(255, 255, 255);
     text-align: center;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+
+    .up {
+        display: none;
+    }
+
+    &:hover {
+        color: #e5133a;
+    }
+
+    &:hover .up {
+        display: block;
+    }
+
+    &:hover .down {
+        display: none;
+    }
+}
+
+.menuLink:hover + .options{
+    height: 248px;
+    padding: 20px 0;
+}
+
+.options {
+    position: absolute;
+    width: 244px;
+    height: 0;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.1), inset -5px 5px 20px rgba(0, 0, 0, 0.05);
+    stroke-width: 1;
+    display: flex;
+    flex-direction: column;
+    padding:0;
+    margin-left: 28px;
+    transition: all .5s;
+    overflow: hidden;
+
+    .subMenuLink {
+        padding: 5px 0px 5px 30px;
+        background-size: cover;
+        font-size: 14px;
+        font-family: Rubik;
+        color: #323232;
+        text-decoration: none solid rgb(50, 50, 50);
+
+        &:hover{
+            background: #e5133a;
+            color: #fff;
+        }
+    }
 
     &:hover{
-        color: #e5133a;
+        height: 248px;
+        padding: 20px 0;
     }
 }
