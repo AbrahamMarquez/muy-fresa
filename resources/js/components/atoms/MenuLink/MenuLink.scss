@@ -1,0 +1,13 @@
+.menuLink {
+    padding: 10px 30px;
+    font-family: Rubik;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 600;
+
+    &:hover{
+        color: #e5133a;
+    }
+}
