@@ -33,7 +33,7 @@ mix.js("resources/js/app.js", "public/js")
     ]);
 
 mix.js(
-    "resources/js/pages/MainRouter/MainRouter.js",
+    "resources/js/routes/MainRouter/MainRouter.js",
     "public/js/pages/MainRouter"
 ).react().version();
 
