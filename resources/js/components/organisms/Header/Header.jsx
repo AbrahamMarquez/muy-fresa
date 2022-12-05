@@ -1,8 +1,17 @@
-//style
 import MenuLink from '../../atoms/MenuLink/MenuLink'
+import { useNavigate } from 'react-router-dom'
+
+//style
 import './Header.scss'
 
+//assets
+import searchIcon from '../../../img/icons/searchIcon.svg'
+import shoppIcon from '../../../img/icons/shoppIcon.svg'
+import userIcon from '../../../img/icons/userIcon.svg'
+
 export default function () {
+
+    const navigate = useNavigate()
 
     const options = [
         {
@@ -75,7 +84,23 @@ export default function () {
                 ))
             }
 
+            <button className='search'>
+                <div class="searchInput">
+                    <input />
+                </div>
+                <img src={searchIcon}/>
+            </button>
             
+            <button>
+                <img src={shoppIcon}/>
+            </button>
+
+            <button onClick={()=> navigate('/login')}>
+                <img src={userIcon}/>
+            </button>
+
+
+
 
         </header>
     )
