@@ -23,22 +23,23 @@ export default function () {
                 {
                     options.map((item, idx) => (
                         <MenuLink
+                            key={idx}
                             skeleton
                         />
                     ))
                 }
 
-                <button className='imgContainer' style={{padding:'0'}}>
-                    <Skeleton width='100%' height='100%' shape='circle'/>
+                <button className='imgContainer' style={{ padding: '0' }}>
+                    <Skeleton width='100%' height='100%' shape='circle' />
                 </button>
 
 
-                <button style={{padding:'0'}}>
-                   <Skeleton width='100%' height='100%' shape='circle'/>
+                <button style={{ padding: '0' }}>
+                    <Skeleton width='100%' height='100%' shape='circle' />
                 </button>
 
-                <button style={{padding:'0'}}>
-                    <Skeleton width='100%' height='100%' shape='circle'/>
+                <button style={{ padding: '0' }}>
+                    <Skeleton width='100%' height='100%' shape='circle' />
                 </button>
             </div>
 
