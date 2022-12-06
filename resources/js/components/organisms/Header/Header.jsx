@@ -1,5 +1,10 @@
-import MenuLink from '../../atoms/MenuLink/MenuLink'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+
+//components
+import MenuLink from '../../atoms/MenuLink/MenuLink'
+import InputText from '../../atoms/InputText/InputText'
+import HeaderMobile from '../HeaderMobile/HeaderMobile'
 
 //style
 import './Header.scss'
@@ -8,6 +13,8 @@ import './Header.scss'
 import searchIcon from '../../../img/icons/searchIcon.svg'
 import shoppIcon from '../../../img/icons/shoppIcon.svg'
 import userIcon from '../../../img/icons/userIcon.svg'
+import logoMuyFresa from '../../../img/icons/logoMuyFresa.svg'
+import burguerIcon from '../../../img/icons/burguerIcon.svg'
 
 export default function () {
 
@@ -70,36 +77,72 @@ export default function () {
         }
     ]
 
+    const [search, setSearch] = useState('')
+    const [showSideMenu, setShowSideMenu] = useState(false)
+
+    const handleShowInput = () => {
+        if (document.getElementById('searchInput').style.width == '0px' || document.getElementById('searchInput').style.width == '') {
+            document.getElementById('searchInput').style.width = '820px'
+            document.getElementById('searchInput').style.padding = '0px 45px'
+            document.getElementById('searchInput').style.border = '2px solid #db0032'
+        } else {
+            document.getElementById('searchInput').style.width = '0px'
+            document.getElementById('searchInput').style.padding = '0'
+            document.getElementById('searchInput').style.border = 'none'
+        }
+    }
+
+    const handleChangeSearch = (e) => {
+        setSearch(e.target.value)
+    }
+
     return (
         <header className="header">
 
-            {
-                options.map((item, idx) => (
-                    <MenuLink
-                        key={idx}
-                        link={item.link}
-                        title={item.title}
-                        options={item.subOptions}
-                    />
-                ))
-            }
+            <div className='logo' onClick={() => navigate('/')}>
+                <img src={logoMuyFresa} />
+            </div>
 
-            <button className='search'>
-                <div class="searchInput">
-                    <input />
+            <div className='sideMenu' onClick={() => setShowSideMenu(true)}>
+                <img src={burguerIcon} />
+            </div>
+
+            <HeaderMobile setShowSideMenu={setShowSideMenu} showSideMenu={showSideMenu} options={options}/>
+
+            <div className='rightSide'>
+                {
+                    options.map((item, idx) => (
+                        <MenuLink
+                            key={idx}
+                            link={item.link}
+                            title={item.title}
+                            options={item.subOptions}
+                        />
+                    ))
+                }
+
+                <div className='search'>
+                    <div id='searchInput' className="searchInput">
+                        <InputText
+                            placeholder={'Buscar'}
+                            value={search}
+                            onChange={(e) => handleChangeSearch(e)}
+                            width={'100%'}
+                        />
+                    </div>
+                    <button className='imgContainer' onClick={handleShowInput}>
+                        <img src={searchIcon} />
+                    </button>
                 </div>
-                <img src={searchIcon}/>
-            </button>
-            
-            <button>
-                <img src={shoppIcon}/>
-            </button>
 
-            <button onClick={()=> navigate('/login')}>
-                <img src={userIcon}/>
-            </button>
+                <button onClick={() => navigate('/shopping')}>
+                    <img src={shoppIcon} />
+                </button>
 
-
+                <button onClick={() => navigate('/login')}>
+                    <img src={userIcon} />
+                </button>
+            </div>
 
 
         </header>

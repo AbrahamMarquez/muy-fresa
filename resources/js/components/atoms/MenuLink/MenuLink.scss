@@ -1,5 +1,7 @@
+@import '../../../../sass/_mixins';
+
 .menuLink {
-    padding: 10px 30px;
+    padding: 10px 15px;
     font-family: Rubik;
     font-size: 16px;
     color: #ffffff;
@@ -7,6 +9,7 @@
     text-align: center;
     font-weight: 600;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
     .up {
@@ -24,44 +27,75 @@
     &:hover .down {
         display: none;
     }
+
+    @include xl {
+        padding: 10px 30px;
+    }
 }
 
-.menuLink:hover + .options{
-    height: 248px;
-    padding: 20px 0;
+.menuLink:hover+.options {
+    height: 215px;
+    padding: 0;
+
+    @include lg {
+        height: 248px;
+        padding: 20px 0;
+    }
 }
 
 .options {
-    position: absolute;
-    width: 244px;
+    width: 250px;
     height: 0;
-    border-radius: 20px;
-    background: #ffffff;
-    box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.1), inset -5px 5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    background: #1f140b;
     stroke-width: 1;
     display: flex;
     flex-direction: column;
-    padding:0;
-    margin-left: 28px;
+    padding: 0;
     transition: all .5s;
     overflow: hidden;
+    margin-left: -15px;
+
+    @include lg {
+        width: 244px;
+        position: absolute;
+        margin-left: 28px;
+        border-radius: 20px;
+        background: #ffffff;
+        box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.1), inset -5px 5px 20px rgba(0, 0, 0, 0.05);
+    }
 
     .subMenuLink {
         padding: 5px 0px 5px 30px;
         background-size: cover;
         font-size: 14px;
         font-family: Rubik;
-        color: #323232;
+        color: #fff;
         text-decoration: none solid rgb(50, 50, 50);
 
-        &:hover{
+        &:hover {
             background: #e5133a;
             color: #fff;
         }
+
+        @include lg {
+            color: #323232;
+        }
     }
 
-    &:hover{
-        height: 248px;
-        padding: 20px 0;
+    &:hover {
+        height: 215px;
+        padding: 0;
+
+        @include lg {
+            height: 248px;
+            padding: 20px 0;
+        }
+
+
     }
+}
+
+.backSkeleton{
+    background: #e2e8f0;
 }
