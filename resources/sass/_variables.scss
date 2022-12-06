@@ -2,6 +2,20 @@
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-sans-serif: 'Rubik', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 950px;
+
+// Large tablets and desktops
+$screen-xl-min: 1435px;
+
+

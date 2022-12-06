@@ -1,0 +1,12 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        font-family: Rubik;
+        outline: none;
+        width: 100%;
+    }
+}

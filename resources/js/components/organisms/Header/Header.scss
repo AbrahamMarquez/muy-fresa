@@ -1,78 +1,172 @@
+@import '../../../../sass/_mixins';
+
 .header {
     width: 100%;
     height: 100px;
-    padding: 22px 150px 22px 0;
+    padding: 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     background: rgb(75, 58, 58);
 
-    button {
-        width: 73px;
-        height: 73px;
+    .logo {
+        width: 70px;
+        height: 70px;
         background: #fff;
-        box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.1), inset -5px 5px 20px rgba(0, 0, 0, 0.05);
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 100%;
-        margin: 0 10px;
-        cursor: pointer;
 
-        img{
-            width: 80%;
+        img {
+            width: 100%;
         }
 
-        &:hover{
-            background: #e5133a
+        @include lg {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 5px;
+            left: 20px;
         }
 
-        &:hover img{
-            width: 70%;
+        @include xl {
+            width: 180px;
+            height: 180px;
+            left: 90px;
+
+            img {
+                width: auto;
+            }
         }
     }
 
-    .search{
-        background: #e5133a;
-        margin-left: 50px;
+    .sideMenu {
+        display: block;
+        z-index: 99;
+        width: 40px;
+        height: 40px;
 
-        .searchInput{
-            width: 0;
-            position: absolute;
-            height: 73px;
-            border-radius: 50px;
-            background-color: #ffffff;
-            background-size: cover;
-            font-family: Spartan;
-            font-size: 18px;
-            color: #323232;
-            text-decoration: none solid rgb(50, 50, 50);
-            box-shadow: -15px 15px 20px rgba(0,0,0,0.1), inset -5px 5px 20px rgba(0,0,0,0.05);
-            transition: all .5s;
-            overflow: hidden;
+        @include lg {
+            display: none;
+        }
+    }
+
+    .rightSide {
+        display: none;
+        justify-content: flex-end;
+        align-items: center;
+
+        button {
+            width: 65px;
+            height: 65px;
+            background: #fff;
+            box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.1), inset -5px 5px 20px rgba(0, 0, 0, 0.05);
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
-        }
+            border-radius: 100%;
+            margin: 0 10px;
+            cursor: pointer;
 
-        img{
-            width: 60%;
-        }
+            img {
+                width: 75%;
+            }
 
-        &:hover{
-            background: #a30329;
+            &:hover {
+                background: #e5133a
+            }
 
-            img{
-                width: 50%;
+            &:hover img {
+                width: 65%;
             }
         }
 
-        &:focus{
-            .searchInput{
-                width: 800px;
-                padding: 0px 45px;
-                border: 2px solid #db0032;
+        .search {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            border-radius: 100%;
+            margin: 0 10px;
+            cursor: pointer;
+            margin-left: 10px;
+            justify-content: flex-end;
+            padding: 0;
+
+
+            @include xl {
+                margin-left: 40px;
+
+            }
+
+            .searchInput {
+                width: 0px;
+                position: absolute;
+                height: 65px;
+                border-radius: 50px;
+                background-color: #ffffff;
+                background-size: cover;
+                font-family: Spartan;
+                box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.1), inset -5px 5px 20px rgba(0, 0, 0, 0.05);
+                transition: all .3s;
+                overflow: hidden;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 0;
+                border: none;
+
+                input {
+                    font-size: 18px;
+                    color: #323232;
+                    text-decoration: none solid rgb(50, 50, 50);
+
+                    &::placeholder {
+                        color: #77ab39;
+                        font-size: 20px;
+                    }
+                }
+
+            }
+
+            .imgContainer {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #e5133a;
+                border-radius: 100%;
+                z-index: 3;
+                padding: 0;
+                margin: 0;
+
+                &:hover {
+                    background: #a30329;
+
+                    img {
+                        width: 50%;
+                    }
+                }
+            }
+
+            img {
+                width: 55%;
             }
         }
+
+        @include lg {
+            display: flex;
+        }
+
+    }
+
+    @include lg {
+        justify-content: flex-end;
+    }
+
+    @include xl {
+        padding: 22px 150px 22px 0;
     }
 }
