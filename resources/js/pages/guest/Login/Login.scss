@@ -1,0 +1,135 @@
+.fs-LoginP{
+
+    .fs-Login{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        
+        .body-register {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+
+            width: 415px;
+            height: 508px;
+            border-radius: 50px;
+
+            background: white;
+
+            .title-container {
+
+                justify-content: center;
+
+                .title {
+                    display: flex;
+                    
+                    font-size: 28px;
+                    font-weight: bold;
+                    color: #e5133a;
+                    line-height: 30px;
+                    text-align: center;
+
+                }
+
+                .sub-title {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 16px;
+                    font-weight: 480;
+                    color: #747573;
+                    text-align: center;
+                }
+
+                padding-bottom: 35px;
+            }
+
+            .txb-container {
+                justify-content: center;
+                display: flex;
+
+                font-size: 12px;
+
+                .txb-title {
+                    padding-left: 19px;
+                    padding-bottom: 8px;
+                    width: 261px;
+                    height: 20px;
+                    font-size: 12px;
+                    color: #e5133a;
+                    line-height: 1px;
+                    font-weight: 445;
+                }
+
+                }
+                .txb-subtitle {
+                    padding-left: 19px;
+                    padding-bottom: 8px;
+                    width: 261px;
+                    height: 20px;
+                    font-size: 12px;
+                    color: #e5133a;
+                    line-height: 1px;
+
+                }
+
+                .txb {
+                    .cj-input-text {
+                        .input-wrapper {
+                            .input:focus {
+                                border-width: 1px;
+                                border-color: #fbb030;
+                            }
+                        }
+
+                    }
+
+                    .cj-input-text-password {
+                        .input-wrapper {
+                            .input:focus {
+                                border-width: 1px;
+                                border-color: #fbb030;
+                            }
+                        }
+
+                    }
+
+                    padding-bottom: 16px;
+                }
+
+                .txb-red {
+                    padding-bottom: 16px;
+                }
+
+                .button-container {
+                    padding-top: 41px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .bottom-text {
+
+                    color: #747573;
+                    font-size: 14px;
+                    padding-top: 27px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+
+        }
+
+}
+
+.fs-background{
+    background: url('../../../img/login/background_fresa.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+}
