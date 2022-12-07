@@ -7,6 +7,7 @@ const Login = lazy(() => import("../../../pages/Guest/Login/Login"))
 
 //skeleton
 import HomeSkeleton from "../../../pages/Guest/Home/HomeSkeleton";
+import LoginSkeleton from "../../../pages/guest/Login/LoginSkeleton";
 
 export default function () {
     return (
@@ -20,7 +21,7 @@ export default function () {
 
             <Route
                 path="/login"
-                element={<Suspense fallback={<div />}>
+                element={<Suspense fallback={<LoginSkeleton />}>
                     <Login />
                 </Suspense>}
             />

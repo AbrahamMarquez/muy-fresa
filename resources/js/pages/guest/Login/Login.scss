@@ -15,8 +15,8 @@
             align-items: center;
             justify-content: center;
 
-            width: 415px;
-            height: 508px;
+            width: 381.8px;
+            height: 467.36px;
             border-radius: 50px;
 
             background: white;
@@ -27,7 +27,7 @@
                 gap: 12px;
 
                 justify-content: center;
-                padding-bottom: 35px;
+                padding-bottom: 8px;
 
                 .title {
                     display: flex;
@@ -43,7 +43,7 @@
                 .sub-title {
                     display: flex;
                     justify-content: center;
-                    font-size: 16px;
+                    font-size: 14.72px;
                     font-weight: 480;
                     color: #747573;
                     text-align: center;
@@ -63,19 +63,18 @@
                     padding-bottom: 8px;
                     width: 261px;
                     height: 20px;
-                    font-size: 12px;
+                    font-size: 11.4px;
                     color: #e5133a;
                     font-weight: 445;
                 }
 
-                }
                 .txb-subtitle {
                     padding-top: 22px;
                     padding-left: 19px;
                     padding-bottom: 8px;
                     width: 261px;
                     height: 20px;
-                    font-size: 12px;
+                    font-size: 11.4px;
                     color: #e5133a;
                     line-height: 1px;
 
@@ -93,7 +92,7 @@
                         background-color: #ffffff;
                         background-size: cover;
                         font-family: Metropolis;
-                        font-size: 12px;
+                        font-size: 11.4px;
                         color: #000000;
                         opacity: 65%;
                         
@@ -111,126 +110,202 @@
                         }
 
                     }
+                    .input{
+                        height: 100%;
+                        border-radius: 20px;
+                        width: 307px;
+                        padding-left: 15px;
+
+                    }
                 }
+            }
                 
-                .remember-box{
-                    width: 70%;
-                    display: flex;
-                    align-content: center;
-                    justify-content: space-between;
-                    align-items: center;
+            .remember-box{
+                width: 70%;
+                display: flex;
+                align-content: center;
+                justify-content: space-between;
+                align-items: center;
 
-                    /* custom radio */
-                    .radio {
-                        display: block;
-                        position: relative;
-                        padding-left: 35px;
-                        margin-bottom: 12px;
-                        cursor: pointer;
-                        font-size: 22px;
-                        -webkit-user-select: none;
-                        -moz-user-select: none;
-                        -ms-user-select: none;
-                        user-select: none;
-                    }
-
-                    /* hide the browser's default radio button */
-                    .radio input {
-                        position: absolute;
-                        opacity: 0;
-                        cursor: pointer;
-                    }
-
-                    /* create custom radio */
-                    .radio .check {
-                        position: absolute;
-                        top: 12px;
-                        left: 15px;
-                        height: 15px;
-                        width: 15px;
-                        background-color: #eee;
-                        border: 1px solid #ccc;
-                        border-radius: 50%;
-                    }
-
-                    /* on mouse-over, add border color */
-                    .radio:hover input ~ .check {
-                        border: 2px solid #b00e0e;
-                    }
-
-                    /* add background color when the radio is checked */
-                    .radio input:checked ~ .check {
-                        background: linear-gradient(120deg, rgba(201, 28, 28, 0.63) 0%, #e31212 3%, #b00e0e 100% );
-                        border:none;
-                    }
-
-                    /* create the radio and hide when not checked */
-                    .radio .check:after {
-                        content: "";
-                        position: absolute;
-                        display: none;
-                    }
-
-                    /* show the radio when checked */
-                    .radio input:checked ~ .check:after {
-                        display: block;
-                    }
-
-                    .txt-remember{
-                        width: 75px;
-                        height: 12px;
-                        font-size: 12px;
-                        color: #e5133a;
-                        text-decoration: none solid rgb(229, 19, 58);
-                    }
-
-                    .link {
-                        width: 128px;
-                        height: 12px;
-                        font-size: 12px;
-                        color: #e5133a;
-                        text-decoration: none solid rgb(229, 19, 58);
-                        text-align: right;
-                    }
+                /* custom radio */
+                .radio {
+                    display: block;
+                    position: relative;
+                    padding-left: 35px;
+                    margin-bottom: 2px;
+                    cursor: pointer;
+                    font-size: 22px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
                 }
+
+                /* hide the browser's default radio button */
+                .radio input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+
+                /* create custom radio */
+                .radio .check {
+                    position: absolute;
+                    top: 12px;
+                    left: 15px;
+                    height: 15px;
+                    width: 15px;
+                    background-color: #eee;
+                    border: 1px solid #ccc;
+                    border-radius: 50%;
+                }
+
+                /* on mouse-over, add border color */
+                .radio:hover input ~ .check {
+                    border: 2px solid #b00e0e;
+                }
+
+                /* add background color when the radio is checked */
+                .radio input:checked ~ .check {
+                    background: linear-gradient(120deg, rgba(201, 28, 28, 0.63) 0%, #e31212 3%, #b00e0e 100% );
+                    border:none;
+                }
+
+                /* create the radio and hide when not checked */
+                .radio .check:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+
+                /* show the radio when checked */
+                .radio input:checked ~ .check:after {
+                    display: block;
+                }
+
+                .txt-remember{
+                    width: 75px;
+                    height: 12px;
+                    font-size: 12px;
+                    color: #e5133a;
+                    text-decoration: none solid rgb(229, 19, 58);
+                }
+
+                .link {
+                    width: 128px;
+                    height: 12px;
+                    font-size: 12px;
+                    color: #e5133a;
+                    text-decoration: none solid rgb(229, 19, 58);
+                    text-align: right;
+                }
+            }
+            
+
+            .button-container {
+                display: flex;
+                justify-content: center;
+                padding-top: 24px;
                 
-
-                .button-container {
-                    display: flex;
-                    justify-content: center;
-                    padding-top: 24px;
-
-                    .btnRed{
-                        width: 303px;
-                        height: 40px;
-                        border-radius: 51px;
-                        background-color: #e5133a;
-                        background-size: cover;
-                        font-size: 13px;
-                        font-weight: bold;
-                        color: #ffffff;
-                        text-align: center;
-                    }
-                }
-
-                .bottom-text {
-
-                    display: flex;
-                    justify-content: space-between;
-                    color: #747573;
-                    font-size: 16px;
-                    padding-top: 34px;
-
-                    .bottom-text:focus {
-                        border-width: 1px;
-                        border-color: #bccda7;
-                    }
-
+                .btnRed{
+                    width: 278.76px;
+                    height: 36.8px;
+                    border-radius: 51px;
+                    background-color: #e5133a;
+                    background-size: cover;
+                    font-size: 11.96px;
+                    font-weight: bold;
+                    color: #ffffff;
+                    text-align: center;
+                    cursor: pointer;
                 }
             }
 
+            .bottom-text {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #747573;
+                font-size: 14.72px;
+                padding-top: 30px;
+
+                .bottom-text:focus {
+                    border-width: 1px;
+                    border-color: #bccda7;
+                }
+
+            }
+            }
+
+        @media screen and (max-width:1024px){
+
+            .body-register{
+                width: min(334px, 100%);
+                height: 482px;
+                border-radius: 45px;
+                fill: #ffffff;
+
+                .title-container{
+                    margin-top: 55px;
+                    gap: 8px;
+                    padding-bottom: 20px;
+                }
+                .txb-container{
+                    width: min(248px, 100%);
+                    .txb-container1{
+                        width: min(248px, 100%);
+                    }
+
+                    .txb{
+                        width: min(248px, 100%);
+
+                        .input-text{
+                            width: min(248px, 100%) !important ;
+                        }
+                        .input{
+                            width: min(248px, 115%) !important;
+                            padding-left: 10px;
+                        }
+                        .input-text-password{
+                            width: min(248px, 100%);
+                            .input-wrapper{
+                                width: min(248px, 100%) !important;
+                            }
+                        }
+                    }
+                    
+                }
+                .remember-box{
+                    width: min(248px, 100%);
+
+                    .remember-box1{
+                        width: min(248px, 100%);
+                    }
+
+                    .radio{
+                        width: min(248px, 100%);
+                        margin-bottom: 0px;
+                    }
+                    .link{
+                        width: min(122px, 100%);
+                    }
+                }
+
+                .button-container{
+                    width: min(244px, 100%);
+                }
+                .bottom-text{
+                    width: min(174px,100%);
+                    padding-top: 20px;
+                    padding-bottom: 50px;
+                }
+            }
+            
+        }
 
         }
+    
 
 }
 
@@ -238,7 +313,11 @@
     background: url('../../../img/login/background_fresa.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: calc(100vh - 100px);
 
+    height: calc(100vh - 199.64px);
+
+    @media screen and (max-width:1024px){
+        height: calc(100vh - 23px);
+    }
     
 }
