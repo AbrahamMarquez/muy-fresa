@@ -28,17 +28,23 @@ export default function ({
 
     useEffect(() => {
         if (showSideMenu) {
-            document.getElementById('closeContainer').style.display = 'block'
-            document.getElementById('sideBarContainer').style.right = '0'
+            document.getElementById('headerMobile').style.display = 'block'
+            setTimeout(() => {
+                document.getElementById('closeContainer').style.display = 'block'
+                document.getElementById('sideBarContainer').style.right = '0'
+            }, 50);
         } else {
             document.getElementById('closeContainer').style.display = 'none'
             document.getElementById('sideBarContainer').style.right = '-100%'
+            setTimeout(() => {
+                document.getElementById('headerMobile').style.display = 'none'
+            }, 300);
         }
     }, [showSideMenu])
 
 
     return (
-        <div className='headerMobile'>
+        <div className='headerMobile' id='headerMobile'>
             <div className='closeContainer' id='closeContainer'></div>
             <div className='sideBarContainer' id='sideBarContainer'>
                 <img width='30px' style={{ marginLeft: '-10px' }} src={returnIcon} onClick={() => setShowSideMenu(false)} />

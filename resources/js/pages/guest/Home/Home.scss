@@ -1,36 +1,344 @@
-.home{
+.home {
 
-    .chocolateDown{
-        position: absolute;
+    .chocolateDown {
         top: -150px;
         transition: all 8s;
+        z-index: 10;
+        position: fixed;
+        width: 100%;
 
-        img{
+        img {
             width: 100%;
         }
     }
 
-    .s1{
+    .s1 {
         width: 100%;
         height: 725px;
         background: gray;
+        z-index: 0;
+        overflow: hidden;
+
+        .item {
+            height: 725px;
+            overflow: hidden;
+
+            .item-image {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                .image {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+
+                }
+
+                .container {
+                    background: rgba(0, 0, 0, 0.5019607843);
+                    width: 100%;
+                    bottom: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    padding: 150px 250px;
+                    top: 0;
+
+                    .whimButton {
+                        width: 385px;
+                        height: 85px;
+                        border-radius: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 25px;
+                        font-weight: 600;
+                        color: #fff;
+                        background: linear-gradient(90deg, #db0032, #74001b);
+                        cursor: pointer;
+
+                        &:hover {
+                            background: #db0032;
+                        }
+                    }
+
+                    p {
+                        font-family: Rubik;
+                        width: 80%;
+                        font-size: 23px;
+                        line-height: 25px;
+                        color: #ffffff;
+                        text-decoration: none solid rgb(255, 255, 255);
+                        text-align: center;
+                        font-weight: 600;
+                    }
+                }
+
+                .food {
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+
+                    }
+
+
+                    h3 {
+                        width: 80%;
+                        font-family: 'League Spartan', sans-serif;
+                        font-size: 60px;
+                        line-height: 60px;
+                        color: #ffffff;
+                        text-decoration: none solid rgb(255, 255, 255);
+                        text-shadow: 0px 5px 2px rgba(0, 0, 0, 0.2);
+                        font-weight: 900;
+
+                    }
+
+
+                    .imgsCont {
+                        display: flex;
+                        flex-direction: row;
+
+                        img {
+                            margin: 50px 15px 0 0;
+                        }
+                    }
+                }
+
+                .bowl {
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+
+                    p {
+                        width: 50%;
+                        font-family: 'League Spartan', sans-serif;
+                        font-size: 40px;
+                        color: #ffffff;
+                        text-decoration: none solid rgb(255, 255, 255);
+                        text-align: center;
+                        font-weight: 800;
+                        text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.27);
+                        margin: 0 0 80px 0;
+
+                        span {
+                            color: #db0032;
+                            text-decoration: none solid rgb(219, 0, 50);
+
+                        }
+                    }
+
+                    h5 {
+                        width: 30%;
+                        font-family: 'League Spartan', sans-serif;
+                        font-size: 50px;
+                        line-height: 65px;
+                        color: #ffffff;
+                        font-weight: 900;
+                        text-decoration: none solid rgb(255, 255, 255);
+                        text-align: right;
+                        text-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
+                        margin: 0;
+
+                        span {
+                            color: #e5133a;
+                            text-decoration: none solid rgb(229, 19, 58);
+                            font-size: 75px;
+                            font-weight: 900;
+
+                        }
+                    }
+                }
+
+                .events {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    h3 {
+                        font-family: 'League Spartan', sans-serif;
+                        font-size: 60px;
+                        color: #e5133a;
+                        text-decoration: none solid rgb(229, 19, 58);
+                        text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+                        margin: 0;
+                    }
+
+                    p {
+                        width: 40%;
+                        text-align: start;
+                        font-size: 40px;
+                        line-height: 50px;
+                    }
+                }
+            }
+        }
+
+
+        .slick-slider {
+            height: 100%;
+        }
+
+        .slick-prev {
+            left: 30px;
+        }
+
+        .slick-next {
+            right: 30px;
+        }
+
+        .slick-prev,
+        .slick-next {
+            position: absolute;
+            z-index: 7;
+            width: 100px;
+            height: 100px;
+
+            &:hover {}
+        }
+
+        .slick-prev::before,
+        .slick-next::before {
+            font-size: 70px;
+            opacity: 1;
+
+
+        }
+
+        .slick-dots {
+            position: absolute;
+            z-index: 7;
+            bottom: 30px;
+        }
+
+        .slick-dots li button:before {
+            font-size: 20px;
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: #db0032;
+        }
     }
 
-    .s2{
+    .s2 {
         background: url('../../../img/home/backWhiteGreen.svg');
         width: 100%;
         height: 2229px;
         background-repeat: no-repeat;
         background-size: 100% 100%;
         margin-top: -483px;
+        position: absolute;
+        z-index: 3;
+
+        .s2-s1 {
+            margin-top: 450px;
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 100px;
+
+            div {
+                width: 50%;
+            }
+
+            h1 {
+
+                font-family: 'League Spartan', sans-serif;
+                font-size: 70px;
+                width: 73%;
+                line-height: 70px;
+                color: #3b2b1e;
+                font-weight: 900;
+                text-decoration: none solid rgb(59, 43, 30);
+                text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.35);
+                margin: 0 0 30px 0;
+
+                span {
+                    color: #77ab39;
+                    text-decoration: none solid rgb(119, 171, 57);
+                }
+
+            }
+
+            .popular {
+                display: flex;
+
+                h5 {
+                    font-family: 'League Spartan', sans-serif;
+                    font-size: 30px;
+                    font-size: 900;
+                    color: #e5133a;
+                    margin: 5px 0 0 0;
+                    text-decoration: none solid rgb(229, 19, 58);
+                    margin: 15px 0 0 0;
+                }
+
+                img {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+
+            .whatsapp {
+
+                font-family: "League Spartan", sans-serif;
+                font-size: 24px;
+                color: #323232;
+                -webkit-text-decoration: none solid rgb(50, 50, 50);
+                text-decoration: none solid rgb(50, 50, 50);
+                transform: rotate(-3deg);
+                width: 33%;
+                font-weight: 600;
+                display: flex;
+                gap: 25px;
+                padding-right: 165px;
+
+                span {
+                    font-size: 28px;
+                    color: #77ab39;
+                    text-decoration: none solid rgb(119, 171, 57);
+
+                }
+
+                .whatsappImg {
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+
+        }
+
+        .s2-s2 {
+
+            display: flex;
+            padding: 50px 350px;
+            justify-content: center;
+            align-items: center;
+
+            .parent{
+                display: grid;
+                width: 100%;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-column-gap: 38px;
+                grid-row-gap: 65px;
+            }
+
+        }
+
     }
 
-    .s3{
+    .s3 {
         width: 100%;
         height: 654px;
     }
 
-    .s4{
+    .s4 {
         width: 100%;
         height: 4500px;
         background: url('../../../img/home/backConfeti.svg');
@@ -38,7 +346,7 @@
         background-size: 100% 100%;
     }
 
-    .s5{
+    .s5 {
         width: 100%;
         height: 1320px;
         background: url('../../../img/home/backBrown.svg');

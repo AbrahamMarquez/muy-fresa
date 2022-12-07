@@ -1,0 +1,108 @@
+.cardPopular {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .img {
+        width: 180px;
+        height: 170px;
+        border-radius: 30px;
+        background-position: center center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-bottom: -88px;
+        box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.1), -5px 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .data {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 30px;
+        width: 280px;
+        height: 260px;
+        border-radius: 30px;
+        box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.1), -5px 5px 20px rgba(0, 0, 0, 0.05);
+        background: #fff;
+
+        p{
+            margin: 0;
+        }
+
+        .box {
+            font-family: "League Spartan", sans-serif;
+            font-size: 15px;
+            color: #323232;
+            margin: 0;
+            font-weight: 800;
+            text-decoration: none solid rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        hr {
+            width: 100%;
+            height: 1px;
+            background: #dadada;
+            margin: 20px 0;
+        }
+
+        .cuantity {
+            font-family: "League Spartan", sans-serif;
+            font-size: 10px;
+            color: #323232;
+            text-decoration: none solid rgb(50, 50, 50);
+            text-align: center;
+        }
+
+        .priceContainer {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+
+            .price {
+                font-family: "League Spartan", sans-serif;
+                font-size: 25px;
+                font-weight: 900;
+                color: #323232;
+                text-decoration: none solid rgb(50, 50, 50);
+            }
+
+            button {
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    width: 90%;
+                }
+            }
+
+            .heartWhite {
+                background-color: #e5133a;
+            }
+
+            .heartTransparent {
+                background-color: #77ab39;
+            }
+        }
+    }
+
+    &:hover{
+        .data{
+            background: #e5133a;
+        }
+
+        p{
+            color: #fff !important;
+        }
+    }
+}

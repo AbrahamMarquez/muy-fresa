@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 //components
@@ -79,6 +79,7 @@ export default function () {
 
     const [search, setSearch] = useState('')
     const [showSideMenu, setShowSideMenu] = useState(false)
+    const [changeHeader, setChangeHeader] = useState(false);
 
     const handleShowInput = () => {
         if (document.getElementById('searchInput').style.width == '0px' || document.getElementById('searchInput').style.width == '') {
@@ -96,10 +97,18 @@ export default function () {
         setSearch(e.target.value)
     }
 
-    return (
-        <header className="header">
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            window.addEventListener("scroll", () =>
+                setChangeHeader(window.pageYOffset > 400)
+            );
+        }
+    }, [])
 
-            <div className='logo' onClick={() => navigate('/')}>
+    return (
+        <header className={!changeHeader ? "header" : "header headerBackground"}>
+
+            <div className={!changeHeader ? "logo" : "logo logoSmall"} onClick={() => navigate('/')}>
                 <img src={logoMuyFresa} />
             </div>
 
