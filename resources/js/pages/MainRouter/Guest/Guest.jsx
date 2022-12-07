@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react"
 //components
 const HomeRoutes = lazy(() => import("../../../routes/Guest/Home/HomeRoutes"));
 const Header = lazy(() => import("../../../components/organisms/Header/Header"));
+const Footer = lazy(() => import("../../../components/organisms/Footer/Footer"));
 
 //skeleton
 import HeaderSkeleton from "../../../components/organisms/Header/HeaderSkeleton";
@@ -18,6 +19,9 @@ const Guest = () => {
             
             <HomeRoutes/>
 
+            <Suspense fallback={<div/>}>
+                <Footer />
+            </Suspense>
         </>
     )
 }
