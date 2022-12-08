@@ -44,7 +44,7 @@ const LoginSkeleton = () => {
                             <div className="remember-box">
                                 <div style={{ display: "flex" }}>
                                
-                                <label class="radio">
+                                <label className="radio">
                                     <input type="radio"  id="radioRememberPassword" name="radio" value="1" />
                                     <label htmlFor="radioRememberPassword" className="txt-remember"><Skeleton width="70px" height="14px"></Skeleton></label>
                                 </label>

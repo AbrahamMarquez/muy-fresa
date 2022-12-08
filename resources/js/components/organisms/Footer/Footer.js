@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
 
             <div className="footer-down">
-                <div class="linea"></div>
+                <div className="linea"></div>
                 <p>© 2022 Muy fresa.  Todos los derechos reservados.</p>
             </div>
         </footer>
