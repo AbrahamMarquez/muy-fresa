@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import InputText from "../../../components/atoms/InputText/InputText";
 import InputPassword from "../../../components/atoms/InputPassword/InputPassword";
 import { ColorValidation, SubmitValidation, UpdateValue } from "../../../utilities/Validations";
-import eye from '../../../img/icons/Eye.svg'
-import closeEye from '../../../img/icons/EyeClose.svg'
+import eye from '../../../img/login/Eye.svg'
+import closeEye from '../../../img/login/EyeClose.svg'
 
 import "./Login.scss";
 
