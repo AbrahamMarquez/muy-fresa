@@ -1,4 +1,5 @@
 .home {
+    overflow: hidden;
 
     .chocolateDown {
         top: -150px;
@@ -229,15 +230,16 @@
     .s2 {
         background: url('../../../img/home/backWhiteGreen.svg');
         width: 100%;
-        height: 2229px;
+        height: 1780px;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        margin-top: -483px;
-        position: absolute;
+        margin-top: -153px;
+        padding: 100px;
+        position: relative;
         z-index: 3;
 
         .s2-s1 {
-            margin-top: 450px;
+            margin-top: 0;
             display: flex;
             justify-content: space-between;
             padding: 50px 100px;
@@ -296,7 +298,7 @@
                 font-weight: 600;
                 display: flex;
                 gap: 25px;
-                padding-right: 165px;
+                padding-right: 127px;
 
                 span {
                     font-size: 28px;
@@ -309,24 +311,51 @@
                     width: 90px;
                     height: 90px;
                 }
+
+                .arrowGreen {
+                    position: absolute;
+                    margin-top: 94px;
+                    margin-left: 194px;
+                    transform: rotate(-12deg);
+                    width: 200px;
+
+                }
             }
+
 
         }
 
         .s2-s2 {
 
             display: flex;
-            padding: 50px 350px;
+            padding: 70px 350px;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
 
-            .parent{
-                display: grid;
+            .parent {
                 width: 100%;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-                grid-column-gap: 38px;
-                grid-row-gap: 65px;
+
+                .sideInLeft {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    right: -150%;
+                    transition: all 1s;
+                }
+
+                .sideInRight {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    left: -150%;
+                    position: relative;
+                    transition: all 1s;
+                    margin-top: 50px;
+                }
             }
 
         }
@@ -336,23 +365,392 @@
     .s3 {
         width: 100%;
         height: 654px;
+        margin-top: -40px;
+        overflow: hidden;
+
+        @keyframes animate {
+            0% {
+                left: 0;
+            }
+
+            25% {
+                left: -50%;
+            }
+
+            50% {
+                left: -100%;
+            }
+
+            75% {
+                left: -150%;
+            }
+
+            100% {
+                left: -200%;
+            }
+        }
+
+        @keyframes animateRight {
+            0% {
+                left: -200%;
+            }
+
+            25% {
+                left: -150%;
+            }
+
+            50% {
+                left: -100%;
+            }
+
+            75% {
+                left: -50%;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        .leftEffect {
+            overflow: hidden;
+            display: flex;
+            width: 300%;
+            height: 50%;
+            animation: animate 100s linear infinite;
+            position: relative;
+            z-index: 20;
+
+            div {
+                width: 25%;
+                height: 100%;
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+                background-position: center center !important;
+
+            }
+        }
+
+        .rightEffect {
+            animation: animateRight 100s linear infinite;
+        }
+
+        .coverPink {
+            position: absolute;
+            width: 100%;
+            height: 654px;
+            background-color: rgb(219, 0, 50, 0.2);
+            z-index: 100;
+            margin-top: -654px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                width: 270px;
+                height: 80px;
+                border-radius: 80px;
+                background: #ffffff;
+                font-family: "League Spartan", sans-serif;
+                font-size: 25px;
+                color: #77ab39;
+                text-decoration: none solid rgb(119, 171, 57);
+                text-align: center;
+                box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.2), inset -5px 5px 20px rgba(0, 0, 0, 0.05);
+                cursor: pointer;
+
+                &:hover {
+                    background: linear-gradient(90deg, #74001b, #db0032);
+                    color: #fff;
+                }
+            }
+        }
+
+        .camera {
+            position: absolute;
+            right: 0;
+            margin-top: -367px;
+            z-index: 101;
+            overflow: hidden;
+
+            img {
+                width: 694px;
+                height: 589px;
+                margin-right: -70px;
+            }
+        }
     }
 
     .s4 {
         width: 100%;
-        height: 4500px;
+        height: 3821px;
         background: url('../../../img/home/backConfeti.svg');
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 200px 120px 700px 120px;
+
+        .imgContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .christmas {
+                width: 350px;
+                height: 350px;
+                transform: scaleX(-1)
+            }
+
+            .ballon:first-of-type {
+                margin-top: 80px;
+                width: 500px;
+            }
+
+            .ballon:last-of-type {
+                margin-bottom: 100px;
+                width: 500px;
+                margin-left: -152px;
+            }
+
+            .deathDay {
+                width: 350px;
+                height: 350px;
+                transform: scaleX(-1)
+            }
+
+        }
+
+        .text {
+            position: absolute;
+            width: calc(100% - 240px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+
+            .text1 {
+                width: 50%;
+            }
+
+
+            p {
+                font-family: "League Spartan", sans-serif;
+                font-size: 38px;
+                color: #323232;
+                font-weight: 900;
+                text-decoration: none solid rgb(50, 50, 50);
+            }
+
+            h3 {
+                font-family: "League Spartan", sans-serif;
+                font-size: 75px;
+                font-weight: 900;
+                line-height: 75px;
+                margin: 0;
+                color: #77ab39;
+            }
+
+            h5 {
+                font-family: "League Spartan", sans-serif;
+                font-size: 100px;
+                margin: 0;
+                line-height: 100px;
+                color: #e5133a;
+                text-decoration: none solid rgb(229, 19, 58);
+            }
+
+            .containerCards {
+                display: flex;
+                justify-content: center;
+                gap: 50px;
+                width: 100%;
+                padding: 100px;
+                overflow: hidden;
+
+                .left {
+                    position: relative;
+                    transition: all 1s;
+                    left: -50%;
+                }
+
+                .right {
+                    position: relative;
+                    transition: all 1s;
+                    right: -50%;
+                }
+
+                .center {
+                    position: relative;
+                    transition: all 1s;
+                    margin-top: 50%;
+                }
+
+                div {
+                    width: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 90px;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+
+                .imgContainer {
+                    width: 100%;
+                    background: #fff;
+                    border-radius: 40px;
+                    height: 670px;
+                    padding: 20px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .text {
+                        width: 92%;
+                        position: absolute;
+                        height: 0;
+                        transition: all .5s;
+                        overflow: hidden;
+                        background: url('../../../img/home/imgTextBack.svg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        padding: 0;
+                        border-radius: 0 0 40px 40px;
+                        opacity: 0.8;
+                        align-items: flex-start;
+                        gap: 0;
+                        justify-content: flex-end;
+
+
+                        h3 {
+                            font-family: "League Spartan", sans-serif;
+                            font-size: 24px;
+                            font-weight: 800;
+                            color: #ffffff;
+                            text-decoration: none solid rgb(255, 255, 255);
+                        }
+
+                        p {
+                            font-family: "League Spartan", sans-serif;
+                            font-size: 16px;
+                            line-height: 16px;
+                            margin: 0;
+                            color: #ffffff;
+                            font-weight: 400;
+                            text-decoration: none solid rgb(255, 255, 255);
+                        }
+                    }
+
+                    &:hover .text {
+                        height: 10%;
+                        padding: 24px 35px;
+                    }
+                }
+            }
+
+
+
+        }
     }
 
     .s5 {
         width: 100%;
-        height: 1320px;
+        height: 1250px;
         background: url('../../../img/home/backBrown.svg');
         background-repeat: no-repeat;
         background-size: 100% 100%;
         margin-top: -730px;
+        padding-top: 150px;
+
+        .container {
+            width: 100%;
+            position: absolute;
+            left: -100%;
+            padding: 60px 150px;
+            display: flex;
+            overflow: hidden;
+            transition: all 0.5s;
+
+            .text {
+                width: 50%;
+
+                h3 {
+                    font-family: "League Spartan", sans-serif;
+                    font-size: 70px;
+                    color: #ffffff;
+                    text-decoration: none solid rgb(255, 255, 255);
+                    line-height: 80px;
+
+                    span {
+                        color: #db0032;
+                        text-decoration: none solid rgb(219, 0, 50);
+                    }
+                }
+
+                .inputEmail{
+                    width: 430px;
+                    height: 65px;
+                    display: flex;
+                    border: 1px solid #db0032;
+                    border-radius: 27px;
+
+                    .inputContainer{
+                        width: 70%;
+
+                        input{
+                            background: transparent;
+                            color: #fff;
+                            border: none;
+
+                            &::placeholder{
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    button{
+                        width: 30%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: linear-gradient(90deg, #e5133a 0%, #a30329 100% );
+                        color: #fff;
+                        cursor: pointer;
+                        border-radius: 0 27px 27px 0;
+                        font-weight: 600;
+                        font-family: "League Spartan", sans-serif;
+
+                        &:hover{
+                            background: linear-gradient(90deg, #77ab39 0%, #6ecb63 100% );
+                            border: 1px solid #6ecb63;
+                        }
+                    }
+                }
+
+
+            }
+
+            .img{
+                width: 50%;
+                display: flex;
+                align-self: flex-end;
+            }
+        }
+
     }
 
 

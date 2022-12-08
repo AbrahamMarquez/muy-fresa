@@ -77,9 +77,9 @@ const Login = (props) => {
                             <div className="remember-box">
                                 <div style={{ display: "flex" }}>
                                
-                                <label class="radio">
+                                <label className="radio">
                                     <input type="radio"  id="radioRememberPassword" name="radio" value="1" />
-                                    <span class="check"></span>
+                                    <span className="check"></span>
                                     <label htmlFor="radioRememberPassword" className="txt-remember">Recuerdame</label>
                                 </label>
                                 </div>
