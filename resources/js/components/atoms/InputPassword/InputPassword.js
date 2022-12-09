@@ -1,8 +1,8 @@
 import { Skeleton } from "primereact/skeleton";
 import React, { useState, useEffect } from "react";
 import './InputPassword.scss';
-import eye from '../../../img/icons/Eye.svg'
-import closeEye from '../../../img/icons/EyeClose.svg'
+import eye from '../../../img/login/Eye.svg'
+import closeEye from '../../../img/login/EyeClose.svg'
 
 const InputPassword = ({ placeholder, errors, id, name, onChange, value, onBlur, className, title, type = 'text', required = true, autoComplete = 'on', disabled, width, skeleton, onKeyDown, }) => {
     const [passwordShown, setPasswordShown] = useState(false);

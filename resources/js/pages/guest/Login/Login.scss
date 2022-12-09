@@ -103,6 +103,9 @@
                   
                     .input-text-password {
                         .input-wrapper {
+                            .input-pass{
+                                cursor: pointer;
+                            }
                             .input:focus {
                                 border-width: 1px;
                                 border-color: #bccda7;
@@ -115,6 +118,7 @@
                         border-radius: 20px;
                         width: 307px;
                         padding-left: 15px;
+                        cursor: pointer;
 
                     }
                 }
@@ -218,6 +222,10 @@
                     color: #ffffff;
                     text-align: center;
                     cursor: pointer;
+
+                    &:hover {
+                        background-color: rgb(163, 3, 41);
+                    }
                 }
             }
 
@@ -233,6 +241,13 @@
                 .bottom-text:focus {
                     border-width: 1px;
                     border-color: #bccda7;
+
+                    
+                }
+                a{
+                    &:hover {
+                        color: #77ab39;
+                    }
                 }
 
             }
