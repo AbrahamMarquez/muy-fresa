@@ -79,7 +79,7 @@ export default function () {
                             <button className='whimButton'>¡Date un antojo!</button>
                         </div>
                         <div >
-                            <p>Haz click y pide mediante tu plataforma favorita</p>
+                            <p className='text-10'>Haz click y pide mediante tu plataforma favorita</p>
                             <div className='imgsCont'>
                                 <img src={uber} />
                                 <img src={rappi} />
@@ -116,7 +116,7 @@ export default function () {
                     <img src={item.img} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={item.title} className="image" />
                     <div className='container events'>
                         <h3>Eventos Muy Fresa</h3>
-                        <p>Contrata nuestros servicios para tus fiestas o eventos</p>
+                        <p >Contrata nuestros servicios para tus fiestas o eventos</p>
 
                         <button className='whimButton'>Ver paquetes</button>
 
@@ -227,7 +227,7 @@ export default function () {
     const [popularItemsLeft, setpopularItemsLeft] = useState(popularLeft)
     const [popularItemsRight, setpopularItemsRight] = useState(popularRight)
 
-
+console.log("sideInPopular",sideInPopular);
     useEffect(() => {
         if (typeof window !== "undefined") {
             window.addEventListener("scroll", () => {
@@ -237,6 +237,15 @@ export default function () {
                 setContainerOferts(window.pageYOffset > 5720)
             });
         }
+        if (typeof window !== "undefined"&&window.screen.width<1024) {
+            window.addEventListener("scroll", () => {
+                setChangeHeader(window.pageYOffset > 400)
+                setSideInPopular(window.pageYOffset > 250)
+                setPicsSideIn(window.pageYOffset > 3020)
+                setContainerOferts(window.pageYOffset > 5720)
+            });
+        }
+        
 
     }, [])
 
@@ -301,18 +310,40 @@ export default function () {
 
             <div className='s2'>
                 <div className='s2-s1'>
-                    <div>
-                        <h1>¿Buscas el regalo <span>perfecto</span>?</h1>
-                        <div className='popular'>
-                            <h5>Populares</h5>
-                            <img src={heartIcon} />
-                        </div>
-                    </div>
-                    <div className='whatsapp'>
-                        <p>Escríbenos por <span>WhatsApp</span> para pedidos especiales</p>
-                        <img className='whatsappImg' src={whatsapp} />
-                        <img className='arrowGreen' src={arrowGreen} />
-                    </div>
+                    {
+                        window.screen.width > 1023 ?
+                            <>
+                                <div>
+                                    <h1>¿Buscas el regalo <span>perfecto</span>?</h1>
+                                    <div className='popular'>
+                                        <h5>Populares</h5>
+                                        <img src={heartIcon} />
+                                    </div>
+                                </div>
+                                <div className='whatsapp'>
+                                    <p>Escríbenos por <span>WhatsApp</span> para pedidos especiales</p>
+                                    <img className='whatsappImg' src={whatsapp} />
+                                    <img className='arrowGreen' src={arrowGreen} />
+                                </div>
+                            </> :
+                            <>
+                                <div>
+                                    <h1>¿Buscas el regalo <span>perfecto</span>?</h1>
+                                </div>
+                                <div className='containerResponsive'>
+                                    <div className='popular'>
+                                        <h5>Populares</h5>
+                                        <img src={heartIcon} />
+                                    </div>
+                                    <div className='whatsapp '>
+                                        <p style={{ width: '155px', position: 'relative' }}>Escríbenos por <span>WhatsApp</span> para pedidos especiales</p>
+                                        <img className='whatsappImg' src={whatsapp} />
+                                        <img className='arrowGreen' src={arrowGreen} />
+                                    </div>
+                                </div>
+                            </>
+                    }
+
                 </div>
                 <div className='s2-s2'>
                     <div className='parent'>
@@ -351,8 +382,19 @@ export default function () {
                             }
                         </div>
                     </div>
+                    
                 </div>
-
+                <CardPopular
+                        key={1}
+                        id={192}
+                        img={popularItemsLeft[0].img}
+                        boxSize={popularItemsLeft[0].boxSize}
+                        cuantity={popularItemsLeft[0].cuantity}
+                        price={popularItemsLeft[0].price}
+                        selected={popularItemsLeft[0].selected}
+                        items={popularItemsLeft}
+                        setItems={setpopularItemsLeft}
+                    />
             </div>
             <div className='s3'>
                 <div className='leftEffect'>

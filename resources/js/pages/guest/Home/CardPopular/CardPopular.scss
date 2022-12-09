@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: fit-content;
 
     .img {
         width: 180px;
@@ -27,6 +28,10 @@
         border-radius: 30px;
         box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.1), -5px 5px 20px rgba(0, 0, 0, 0.05);
         background: #fff;
+        @media screen and (max-width:1024px) {
+            width: 154px;
+            height: 154px;
+        }
 
         p{
             margin: 0;
