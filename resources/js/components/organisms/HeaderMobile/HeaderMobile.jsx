@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import './HeaderMobile.scss'
 
 //assets
-import returnIcon from '../../../img/icons/returniconWhite.svg'
+import returnIcon from '../../../img/icons/returnIconWhite.svg'
 import searchIcon from '../../../img/icons/searchIcon.svg'
 import shoppIcon from '../../../img/icons/shoppIcon.svg'
 import userIcon from '../../../img/icons/userIcon.svg'
