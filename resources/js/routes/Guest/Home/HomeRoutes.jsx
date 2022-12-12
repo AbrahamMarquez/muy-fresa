@@ -16,6 +16,7 @@ export default function () {
                 path="/"
                 element={<Suspense fallback={<HomeSkeleton />}>
                     <Home />
+                    {/* <HomeSkeleton /> */}
                 </Suspense>}
             />
 

@@ -19,6 +19,8 @@ export default function ({
     const handlePopular = () => {
         const idxSelect = items.findIndex(element => element.id == id)
 
+        console.log(idxSelect);
+
         let newItems = [...items]
         if(newItems[idxSelect].selected){
             newItems[idxSelect].selected = false
@@ -43,7 +45,7 @@ export default function ({
                             <img src={heartWhite} />
                         </button>
                         :
-                        <button className='heartTransparent'>
+                        <button className='heartTransparent' onClick={handlePopular}>
                             <img src={heartTransparent} />
                         </button>
                     }

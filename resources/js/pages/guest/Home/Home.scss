@@ -1,4 +1,5 @@
 .home {
+    overflow: hidden;
 
     .chocolateDown {
         top: -150px;
@@ -19,9 +20,20 @@
         z-index: 0;
         overflow: hidden;
 
+        @media screen and (max-width:1024px) {
+            height: 500px;
+        }
+
         .item {
             height: 725px;
             overflow: hidden;
+
+            .text-10 {
+                @media screen and (max-width:1024px) {
+                    font-size: 10px !important;
+                    line-height: 1 !important;
+                }
+            }
 
             .item-image {
                 width: 100%;
@@ -45,7 +57,15 @@
                     align-items: center;
                     position: absolute;
                     padding: 150px 250px;
+                    flex-direction: row;
                     top: 0;
+
+                    @media screen and (max-width:1024px) {
+                        padding: 50px;
+                        height: 66%;
+                        justify-content: center;
+                        flex-direction: column;
+                    }
 
                     .whimButton {
                         width: 385px;
@@ -63,6 +83,12 @@
                         &:hover {
                             background: #db0032;
                         }
+
+                        @media screen and (max-width:1024px) {
+                            width: 134px;
+                            height: 28px;
+                            font-size: 11px;
+                        }
                     }
 
                     p {
@@ -74,6 +100,11 @@
                         text-decoration: none solid rgb(255, 255, 255);
                         text-align: center;
                         font-weight: 600;
+
+                        @media screen and (max-width:1024px) {
+
+                            width: 50%;
+                        }
                     }
                 }
 
@@ -84,6 +115,13 @@
                         flex-direction: column;
                         align-items: center;
                         justify-content: space-between;
+
+                        @media screen and (max-width:1024px) {
+                            justify-content: flex-end;
+                            width: 100%;
+                            align-items: flex-end;
+
+                        }
 
                     }
 
@@ -98,6 +136,12 @@
                         text-shadow: 0px 5px 2px rgba(0, 0, 0, 0.2);
                         font-weight: 900;
 
+                        @media screen and (max-width:1024px) {
+                            font-size: 24px;
+                            line-height: 1;
+                            width: 100%;
+                        }
+
                     }
 
 
@@ -107,6 +151,11 @@
 
                         img {
                             margin: 50px 15px 0 0;
+
+                            @media screen and (max-width:1024px) {
+                                margin: 0px 15px 0 0;
+                                width: 38px;
+                            }
                         }
                     }
                 }
@@ -115,6 +164,11 @@
                     flex-direction: column;
                     align-items: flex-end;
                     justify-content: flex-end;
+
+                    @media screen and (max-width:1024px) {
+                        justify-content: center;
+                    }
+
 
                     p {
                         width: 50%;
@@ -126,6 +180,12 @@
                         font-weight: 800;
                         text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.27);
                         margin: 0 0 80px 0;
+
+                        @media screen and (max-width:1024px) {
+                            width: 100%;
+                            font-size: 12px;
+                            margin: 0 0 5px 0;
+                        }
 
                         span {
                             color: #db0032;
@@ -146,11 +206,21 @@
                         text-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
                         margin: 0;
 
+                        @media screen and (max-width:1024px) {
+                            width: 76%;
+                            font-size: 16px;
+                            line-height: 1;
+                        }
+
                         span {
                             color: #e5133a;
                             text-decoration: none solid rgb(229, 19, 58);
                             font-size: 75px;
                             font-weight: 900;
+
+                            @media screen and (max-width:1024px) {
+                                font-size: 48px;
+                            }
 
                         }
                     }
@@ -168,6 +238,12 @@
                         text-decoration: none solid rgb(229, 19, 58);
                         text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
                         margin: 0;
+
+                        @media screen and (max-width:1024px) {
+                            font-size: 16px;
+                            line-height: 1;
+                            width: 80%;
+                        }
                     }
 
                     p {
@@ -175,6 +251,12 @@
                         text-align: start;
                         font-size: 40px;
                         line-height: 50px;
+
+                        @media screen and (max-width:1024px) {
+                            font-size: 16px;
+                            line-height: 1.5;
+                            width: 80%;
+                        }
                     }
                 }
             }
@@ -187,10 +269,18 @@
 
         .slick-prev {
             left: 30px;
+
+            @media screen and (max-width:1024px) {
+                left: 9px;
+            }
         }
 
         .slick-next {
             right: 30px;
+
+            @media screen and (max-width:1024px) {
+                right: 12px;
+            }
         }
 
         .slick-prev,
@@ -201,6 +291,11 @@
             height: 100px;
 
             &:hover {}
+
+            @media screen and (max-width:1024px) {
+                width: 30px;
+                height: 30px;
+            }
         }
 
         .slick-prev::before,
@@ -208,6 +303,9 @@
             font-size: 70px;
             opacity: 1;
 
+            @media screen and (max-width:1024px) {
+                font-size: 37px;
+            }
 
         }
 
@@ -229,28 +327,45 @@
     .s2 {
         background: url('../../../img/home/backWhiteGreen.svg');
         width: 100%;
-        height: 2229px;
+        height: fit-content;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        margin-top: -483px;
-        position: absolute;
+        margin-top: -153px;
+        padding: 100px;
+        position: relative;
         z-index: 3;
 
+        @media screen and (max-width:1024px) {
+            padding: 0px;
+            height: fit-content;
+            margin-bottom: 30px;
+        }
+
         .s2-s1 {
-            margin-top: 450px;
+            margin-top: 0;
             display: flex;
             justify-content: space-between;
             padding: 50px 100px;
+            flex-direction: row;
+
+            @media screen and (max-width:1024px) {
+                flex-direction: column;
+                padding: 0px 0px;
+            }
 
             div {
                 width: 50%;
+
+                @media screen and (max-width:1024px) {
+                    width: 80%;
+                }
             }
 
             h1 {
 
                 font-family: 'League Spartan', sans-serif;
                 font-size: 70px;
-                width: 73%;
+                width: 100%;
                 line-height: 70px;
                 color: #3b2b1e;
                 font-weight: 900;
@@ -263,6 +378,18 @@
                     text-decoration: none solid rgb(119, 171, 57);
                 }
 
+                @media screen and (max-width:1024px) {
+                    font-size: 24px;
+                    line-height: 1.5;
+                    margin-top: 142px;
+                    margin-left: 30px;
+
+                }
+            }
+
+            .containerResponsive {
+                display: flex;
+                align-items: center;
             }
 
             .popular {
@@ -276,11 +403,23 @@
                     margin: 5px 0 0 0;
                     text-decoration: none solid rgb(229, 19, 58);
                     margin: 15px 0 0 0;
+
+                    @media screen and (max-width:1024px) {
+
+                        font-size: 14px;
+                        margin: 0px 0 0 0;
+
+                    }
                 }
 
                 img {
-                    width: 45px;
-                    height: 45px;
+                    width: 15px;
+                    height: 15px;
+                }
+
+                @media screen and (max-width:1024px) {
+                    margin-left: 30px;
+
                 }
             }
 
@@ -296,37 +435,119 @@
                 font-weight: 600;
                 display: flex;
                 gap: 25px;
-                padding-right: 165px;
+                padding-right: 127px;
+                max-width: 581px;
+
+                @media screen and (max-width:1024px) {
+                    font-size: 12px;
+                    width: 92%;
+                    margin-left: 30px;
+                    padding-right: 0px;
+                    min-height: auto;
+
+
+                }
 
                 span {
                     font-size: 28px;
                     color: #77ab39;
                     text-decoration: none solid rgb(119, 171, 57);
 
+                    @media screen and (max-width:1024px) {
+                        font-size: 12px;
+
+                    }
                 }
 
                 .whatsappImg {
                     width: 90px;
                     height: 90px;
+                    position: absolute;
+                    left: 400px;
+
+                    @media screen and (max-width:1024px) {
+                        width: 40px;
+                        height: 40px;
+                        left: 172px;
+
+
+                    }
+                }
+
+                .arrowGreen {
+                    position: absolute;
+                    margin-top: 94px;
+                    margin-left: 194px;
+                    transform: rotate(-12deg);
+                    width: 200px;
+
+                    @media screen and (max-width:1024px) {
+                        width: 105px;
+                        left: -114px;
+                        bottom: -32px;
+                    }
+
                 }
             }
+
 
         }
 
         .s2-s2 {
 
             display: flex;
-            padding: 50px 350px;
+            padding: 70px 25px;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
 
-            .parent{
-                display: grid;
+            @media screen and (max-width:1024px) {
+                padding: 0px 0px;
+                margin-top: 30px;
+            }
+
+            .parent {
                 width: 100%;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-                grid-column-gap: 38px;
-                grid-row-gap: 65px;
+
+                .sideInLeft {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    right: -150%;
+                    transition: all 1s;
+                    top: auto;
+                    column-gap: 15px;
+                    flex-wrap: wrap;
+                    padding: 30px;
+                    row-gap: 15px;
+
+                    @media screen and (max-width:1024px) {
+                        padding: 15px;
+                        row-gap: 15px;
+                    }
+                }
+
+                .sideInRight {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    left: -150%;
+                    position: relative;
+                    transition: all 1s;
+                    margin-top: 50px;
+                    column-gap: 15px;
+                    flex-wrap: wrap;
+                    padding: 30px;
+                    row-gap: 15px;
+
+                    @media screen and (max-width:1024px) {
+                        padding: 15px 15px 70px 15px;
+                        row-gap: 15px;
+                    }
+                }
             }
 
         }
@@ -336,23 +557,582 @@
     .s3 {
         width: 100%;
         height: 654px;
+        margin-top: -40px;
+        overflow: hidden;
+
+        @media screen and (max-width:1024px) {
+            height: 162px;
+        }
+
+        @keyframes animate {
+            0% {
+                left: 0;
+            }
+
+            25% {
+                left: -50%;
+            }
+
+            50% {
+                left: -100%;
+            }
+
+            75% {
+                left: -150%;
+            }
+
+            100% {
+                left: -200%;
+            }
+        }
+
+        @keyframes animateRight {
+            0% {
+                left: -200%;
+            }
+
+            25% {
+                left: -150%;
+            }
+
+            50% {
+                left: -100%;
+            }
+
+            75% {
+                left: -50%;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        .leftEffect {
+            overflow: hidden;
+            display: flex;
+            width: 300%;
+            height: 50%;
+            animation: animate 100s linear infinite;
+            position: relative;
+            z-index: 20;
+
+            @media screen and (max-width:1024px) {
+                height: 81px;
+            }
+
+            div {
+                width: 25%;
+                height: 100%;
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+                background-position: center center !important;
+
+            }
+        }
+
+        .rightEffect {
+            animation: animateRight 100s linear infinite;
+        }
+
+        .coverPink {
+            position: absolute;
+            width: 100%;
+            height: 654px;
+            background-color: rgb(219, 0, 50, 0.2);
+            z-index: 100;
+            margin-top: -654px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (max-width:1024px) {
+                margin-top: -163px;
+                height: 162px;
+            }
+
+            button {
+                width: 270px;
+                height: 80px;
+                border-radius: 80px;
+                background: #ffffff;
+                font-family: "League Spartan", sans-serif;
+                font-size: 25px;
+                color: #77ab39;
+                text-decoration: none solid rgb(119, 171, 57);
+                text-align: center;
+                box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.2), inset -5px 5px 20px rgba(0, 0, 0, 0.05);
+                cursor: pointer;
+
+                @media screen and (max-width:1024px) {
+                    width: 124px;
+                    height: 42px;
+                    font-size: 12px;
+                }
+
+                &:hover {
+                    background: linear-gradient(90deg, #74001b, #db0032);
+                    color: #fff;
+                }
+            }
+        }
+
+        .camera {
+            position: absolute;
+            right: 0;
+            margin-top: -367px;
+            z-index: 101;
+            overflow: hidden;
+
+            @media screen and (max-width:1024px) {
+                margin-top: -99px;
+            }
+
+            img {
+                width: 694px;
+                height: 589px;
+                margin-right: -70px;
+
+                @media screen and (max-width:1024px) {
+                    width: 163px;
+                    height: 135px;
+                    margin-right: -32px;
+                }
+            }
+        }
     }
 
     .s4 {
         width: 100%;
-        height: 4500px;
+        height: 3821px;
         background: url('../../../img/home/backConfeti.svg');
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 200px 120px 700px 120px;
+
+        @media screen and (max-width:1024px) {
+            padding: 15px;
+            background-size: cover;
+            height: calc(100vh + 386px);
+            margin-bottom: 374px;
+
+        }
+
+        .imgContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .christmas {
+                width: 350px;
+                height: 350px;
+                transform: scaleX(-1);
+
+                @media screen and (max-width:1024px) {
+                    width: 86px;
+                    height: 86px;
+                }
+            }
+
+            .ballon:first-of-type {
+                margin-top: 80px;
+                width: 500px;
+
+                @media screen and (max-width:1024px) {
+                    width: 155px;
+                }
+            }
+
+            .ballon:last-of-type {
+                margin-bottom: 100px;
+                width: 500px;
+                margin-left: -152px;
+
+                @media screen and (max-width:1024px) {
+                    width: 155px;
+                }
+            }
+
+            .deathDay {
+                width: 350px;
+                height: 350px;
+                transform: scaleX(-1)
+            }
+
+            h3 {
+                @media screen and (max-width:1024px) {
+                    font-size: 11px !important;
+                }
+            }
+
+        }
+
+        .text {
+            position: absolute;
+            width: calc(100% - 240px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+
+            @media screen and (max-width:1024px) {
+                width: calc(100% - 30px);
+
+            }
+
+            .text1 {
+                width: 50%;
+            }
+
+
+            p {
+                font-family: "League Spartan", sans-serif;
+                font-size: 38px;
+                color: #323232;
+                font-weight: 900;
+                text-decoration: none solid rgb(50, 50, 50);
+                width: auto;
+
+                @media screen and (max-width:1024px) {
+                    font-size: 11px;
+                    width: 231px;
+                }
+            }
+
+            h3 {
+                font-family: "League Spartan", sans-serif;
+                font-size: 75px;
+                font-weight: 900;
+                line-height: 75px;
+                margin: 0;
+                color: #77ab39;
+                width: auto;
+
+                @media screen and (max-width:1024px) {
+                    font-size: 36px;
+                    line-height: 1;
+                    width: 231px;
+                }
+            }
+
+            h5 {
+                font-family: "League Spartan", sans-serif;
+                font-size: 100px;
+                margin: 0;
+                line-height: 100px;
+                color: #e5133a;
+                text-decoration: none solid rgb(229, 19, 58);
+                width: auto;
+
+                @media screen and (max-width:1024px) {
+                    font-size: 36px;
+                    line-height: 1;
+                    width: 300px;
+                }
+            }
+
+            .containerCards {
+                display: flex;
+                justify-content: center;
+                gap: 50px;
+                width: 100%;
+                padding: 100px;
+                overflow: hidden;
+                flex-wrap: nowrap;
+
+                @media screen and (max-width:1024px) {
+                    flex-wrap: wrap;
+                    padding: 15px;
+                    overflow-y: auto;
+                    height: 729px;
+                }
+
+                @media screen and (max-width:375px) {
+                    height: 475px;
+                }
+
+                .left {
+                    position: relative;
+                    transition: all 1s;
+                    left: -50%;
+
+                    @media screen and (max-width:1024px) {
+                        position: initial;
+                        min-width: 342px;
+
+                    }
+                }
+
+                .right {
+                    position: relative;
+                    transition: all 1s;
+                    right: -50%;
+
+                    @media screen and (max-width:1024px) {
+                        position: initial;
+                        min-width: 342px;
+
+                    }
+                }
+
+                .center {
+                    position: relative;
+                    transition: all 1s;
+                    margin-top: 50%;
+
+                    @media screen and (max-width:1024px) {
+                        margin-top: 0%;
+
+                        @media screen and (max-width:1024px) {
+                            position: initial;
+                            min-width: 342px;
+
+                        }
+                    }
+                }
+
+                div {
+                    width: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 90px;
+                    justify-content: center;
+                    align-items: center;
+                    row-gap: 0px;
+
+                    @media screen and (max-width:1024px) {
+                        width: 100%;
+                        gap: 0px;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        row-gap: 20px;
+                    }
+
+                }
+
+                .imgContainer {
+                    width: 100%;
+                    background: #fff;
+                    border-radius: 40px;
+                    height: 670px;
+                    padding: 20px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    position: initial;
+
+                    @media screen and (max-width:1024px) {
+                        height: 228px;
+                        width: 164px;
+                        padding: 10px;
+                        border-radius: 15px;
+                        position: relative;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 24px;
+                        // @media screen and (max-width:1024px) {
+
+                        // }
+                    }
+
+                    .text {
+                        width: 90%;
+                        position: absolute;
+                        height: 0;
+                        transition: all .5s;
+                        overflow: hidden;
+                        background: url('../../../img/home/imgTextBack.svg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        padding: 0;
+                        border-radius: 0 0 35px 35px;
+                        opacity: 0.8;
+                        align-items: flex-start;
+                        gap: 0;
+                        justify-content: flex-end;
+
+                        @media screen and (max-width:1024px) {
+                            width: 144px;
+                            top: 93px;
+                            border-radius: 15px;
+
+                        }
+
+
+                        h3 {
+                            font-family: "League Spartan", sans-serif;
+                            font-size: 24px;
+                            font-weight: 800;
+                            color: #ffffff;
+                            text-decoration: none solid rgb(255, 255, 255);
+                        }
+
+                        p {
+                            font-family: "League Spartan", sans-serif;
+                            font-size: 16px;
+                            line-height: 16px;
+                            margin: 0;
+                            color: #ffffff;
+                            font-weight: 400;
+                            text-decoration: none solid rgb(255, 255, 255);
+
+                            @media screen and (max-width:1024px) {
+
+                                font-size: 8px;
+                                line-height: 1;
+                            }
+                        }
+                    }
+
+                    &:hover .text {
+                        height: 10%;
+                        padding: 11px 35px;
+
+                        @media screen and (max-width:1024px) {
+                            height: 125px;
+                            padding: 52px 7px 0px 7px;
+
+                        }
+                    }
+                }
+            }
+
+
+
+        }
     }
 
     .s5 {
         width: 100%;
-        height: 1320px;
+        height: 1250px;
         background: url('../../../img/home/backBrown.svg');
         background-repeat: no-repeat;
         background-size: 100% 100%;
         margin-top: -730px;
+        padding-top: 150px;
+
+        @media screen and (max-width:1024px) {
+            height: 361px;
+        }
+
+        .container {
+            width: 100%;
+            position: absolute;
+            left: -100%;
+            padding: 60px 150px;
+            display: flex;
+            overflow: hidden;
+            transition: all 0.5s;
+
+            @media screen and (max-width:1024px) {
+                padding: 15px;
+            }
+
+            .text {
+                width: 50%;
+
+                h3 {
+                    font-family: "League Spartan", sans-serif;
+                    font-size: 70px;
+                    color: #ffffff;
+                    text-decoration: none solid rgb(255, 255, 255);
+                    line-height: 80px;
+
+                    @media screen and (max-width:1024px) {
+                        font-size: 16px;
+                        line-height: 1;
+                    }
+
+                    span {
+                        color: #db0032;
+                        text-decoration: none solid rgb(219, 0, 50);
+                    }
+                }
+
+                .inputEmail {
+                    width: 430px;
+                    height: 65px;
+                    display: flex;
+                    border: 1px solid #db0032;
+                    border-radius: 27px;
+
+                    @media screen and (max-width:1024px) {
+                        height: 29px;
+                        width: 175px;
+                    }
+
+                    .inputContainer {
+                        width: 70%;
+
+                        input {
+                            background: transparent;
+                            color: #fff;
+                            border: none;
+
+                            @media screen and (max-width:1024px) {
+                                font-size: 8px;
+                            }
+
+                            &::placeholder {
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    button {
+                        width: 30%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: linear-gradient(90deg, #e5133a 0%, #a30329 100%);
+                        color: #fff;
+                        cursor: pointer;
+                        border-radius: 0 27px 27px 0;
+                        font-weight: 600;
+                        font-family: "League Spartan", sans-serif;
+
+                        @media screen and (max-width:1024px) {
+                            font-size: 8px;
+                        }
+
+                        &:hover {
+                            background: linear-gradient(90deg, #77ab39 0%, #6ecb63 100%);
+                            border: 1px solid #6ecb63;
+                        }
+                    }
+                }
+
+
+            }
+
+            .img {
+                width: 50%;
+                display: flex;
+                align-self: flex-end;
+
+                @media screen and (max-width:1024px) {
+                    img {
+                        width: 170px;
+                    }
+                }
+            }
+        }
+
     }
 
 
