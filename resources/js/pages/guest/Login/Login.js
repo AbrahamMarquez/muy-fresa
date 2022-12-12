@@ -69,7 +69,7 @@ const Login = (props) => {
                                         Contraseña
                                     </div>
                                     <div className="txb">
-                                        <InputPassword title={"Contraseña"}  onChange={(e) => { UpdateValue(e, "password", inputList, setInputList) }} id={'password'} width="307px" height="33px" placeholder="Contraseña" UnlockPassIcon={eye} UnlockPassIconClose={closeEye} />
+                                        <InputPassword title={"Contraseña"}  onChange={(e) => { UpdateValue(e, "password", inputList, setInputList) }} id={'password'} width="307px" height="33px" placeholder="Contraseña"  UnlockPassIcon={eye} UnlockPassIconClose={closeEye} />
                                     </div>
                                 </div>
                             </div>
