@@ -227,7 +227,7 @@ export default function () {
     const [popularItemsLeft, setpopularItemsLeft] = useState(popularLeft)
     const [popularItemsRight, setpopularItemsRight] = useState(popularRight)
 
-console.log("sideInPopular",sideInPopular);
+    console.log("sideInPopular", sideInPopular);
     useEffect(() => {
         if (typeof window !== "undefined") {
             window.addEventListener("scroll", () => {
@@ -237,15 +237,15 @@ console.log("sideInPopular",sideInPopular);
                 setContainerOferts(window.pageYOffset > 5720)
             });
         }
-        if (typeof window !== "undefined"&&window.screen.width<1024) {
+        if (typeof window !== "undefined" && window.screen.width < 1024) {
             window.addEventListener("scroll", () => {
                 setChangeHeader(window.pageYOffset > 400)
                 setSideInPopular(window.pageYOffset > 250)
-                setPicsSideIn(window.pageYOffset > 3020)
+                setPicsSideIn(window.pageYOffset > 620)
                 setContainerOferts(window.pageYOffset > 5720)
             });
         }
-        
+
 
     }, [])
 
@@ -266,16 +266,21 @@ console.log("sideInPopular",sideInPopular);
     }, [sideInPopular])
 
     useEffect(() => {
-        if (picsSideIn) {
-            document.getElementById('left').style.left = '0'
-            document.getElementById('right').style.right = '0'
-            document.getElementById('center').style.marginTop = '0'
-        } else {
-            document.getElementById('left').style.left = '-50%'
-            document.getElementById('right').style.right = '-50%'
-            document.getElementById('center').style.marginTop = '50%'
+        if (window.screen.width > 1023) {
+            if (picsSideIn) {
+                document.getElementById('left').style.left = '0'
+                document.getElementById('right').style.right = '0'
+                document.getElementById('center').style.marginTop = '0'
+            } else {
+                document.getElementById('left').style.left = '-50%'
+                document.getElementById('right').style.right = '-50%'
+                document.getElementById('center').style.marginTop = '50%'
+            }
         }
+        
     }, [picsSideIn])
+
+
 
     useEffect(() => {
         if (containerOferts) {
@@ -382,9 +387,9 @@ console.log("sideInPopular",sideInPopular);
                             }
                         </div>
                     </div>
-                    
+
                 </div>
-                <CardPopular
+                {/* <CardPopular
                         key={1}
                         id={192}
                         img={popularItemsLeft[0].img}
@@ -394,7 +399,7 @@ console.log("sideInPopular",sideInPopular);
                         selected={popularItemsLeft[0].selected}
                         items={popularItemsLeft}
                         setItems={setpopularItemsLeft}
-                    />
+                    /> */}
             </div>
             <div className='s3'>
                 <div className='leftEffect'>
@@ -458,79 +463,158 @@ console.log("sideInPopular",sideInPopular);
                         <h3>Eventos</h3>
                         <h5>Muy Fresa</h5>
                     </div>
+                    {
+                        window.screen.width > 1023 ?
+                            <>
+                                <div className='containerCards'>
+                                    <div className='left' id='left'>
+                                        <div className='imgContainer'>
+                                            <img src={pic1} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                        <div className='imgContainer'>
+                                            <img src={pic2} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                        <div className='imgContainer'>
+                                            <img src={pic3} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='center' id='center'>
+                                        <div className='imgContainer'>
+                                            <img src={pic4} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                        <div className='imgContainer'>
+                                            <img src={pic5} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                        <div className='imgContainer'>
+                                            <img src={pic6} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='right' id='right'>
+                                        <div className='imgContainer'>
+                                            <img src={pic7} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                        <div className='imgContainer'>
+                                            <img src={pic8} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                        <div className='imgContainer'>
+                                            <img src={pic9} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div className='containerCards'>
-                        <div className='left' id='left'>
-                            <div className='imgContainer'>
-                                <img src={pic1} />
-                                <div className='text'>
-                                    <h3>Día del padre</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
                                 </div>
-                            </div>
-                            <div className='imgContainer'>
-                                <img src={pic2} />
-                                <div className='text'>
-                                    <h3>Día del padre</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
-                                </div>
-                            </div>
-                            <div className='imgContainer'>
-                                <img src={pic3} />
-                                <div className='text'>
-                                    <h3>Día del padre</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='center' id='center'>
-                            <div className='imgContainer'>
-                                <img src={pic4} />
-                                <div className='text'>
-                                    <h3>Día del padre</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
-                                </div>
-                            </div>
-                            <div className='imgContainer'>
-                                <img src={pic5} />
-                                <div className='text'>
-                                    <h3>Día del padre</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
-                                </div>
-                            </div>
-                            <div className='imgContainer'>
-                                <img src={pic6} />
-                                <div className='text'>
-                                    <h3>Día del padre</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='right' id='right'>
-                            <div className='imgContainer'>
-                                <img src={pic7} />
-                                <div className='text'>
-                                    <h3>Día del padre</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
-                                </div>
-                            </div>
-                            <div className='imgContainer'>
-                                <img src={pic8} />
-                                <div className='text'>
-                                    <h3>Día del padre</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
-                                </div>
-                            </div>
-                            <div className='imgContainer'>
-                                <img src={pic9} />
-                                <div className='text'>
-                                    <h3>Día del padre</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
-                                </div>
-                            </div>
-                        </div>
+                            </> :
+                            <>
+                                <div className='containerCards'>
+                                    <div className='left'>
+                                        <div className='imgContainer'>
+                                            <img src={pic1} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                        <div className='imgContainer'>
+                                            <img src={pic2} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                        <div className='imgContainer'>
+                                            <img src={pic3} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='center' id='center'>
+                                        <div className='imgContainer'>
+                                            <img src={pic4} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                        <div className='imgContainer'>
+                                            <img src={pic5} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                        <div className='imgContainer'>
+                                            <img src={pic6} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='right' id='right'>
+                                        <div className='imgContainer'>
+                                            <img src={pic7} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                        <div className='imgContainer'>
+                                            <img src={pic8} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                        <div className='imgContainer'>
+                                            <img src={pic9} />
+                                            <div className='text'>
+                                                <h3>Día del padre</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    </div>
+                                </div>
+                            </>
+                    }
+
                 </div>
             </div>
 
