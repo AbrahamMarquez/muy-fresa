@@ -242,7 +242,7 @@ export default function () {
                 setChangeHeader(window.pageYOffset > 400)
                 setSideInPopular(window.pageYOffset > 250)
                 setPicsSideIn(window.pageYOffset > 620)
-                setContainerOferts(window.pageYOffset > 5720)
+                setContainerOferts(window.pageYOffset > 1000)
             });
         }
 
@@ -277,17 +277,29 @@ export default function () {
                 document.getElementById('center').style.marginTop = '50%'
             }
         }
-        
+
     }, [picsSideIn])
 
 
 
     useEffect(() => {
+    if(window.screen.width > 1023)
+    {
+
         if (containerOferts) {
             document.getElementById('containerOferts').style.left = '0'
         } else {
             document.getElementById('containerOferts').style.left = '-100%'
         }
+    }
+    else
+    {
+        if (containerOferts) {
+            document.getElementById('containerOferts').style.left = '0'
+        } else {
+            document.getElementById('containerOferts').style.left = '0%'
+        } 
+    }
     }, [containerOferts])
 
 
@@ -452,7 +464,13 @@ export default function () {
 
                     <div>
                         <img src={ballon} className='ballon' />
-                        <img src={deathDay} className='deathDay' />
+                        {
+                            window.screen.width > 1023 ?
+                                <>
+                                    <img src={deathDay} className='deathDay' />
+                                </> : ''
+
+                        }
                     </div>
 
                 </div>
@@ -563,8 +581,6 @@ export default function () {
                                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className='center' id='center'>
                                         <div className='imgContainer'>
                                             <img src={pic4} />
                                             <div className='text'>
@@ -586,8 +602,6 @@ export default function () {
                                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi eius nobis, harum ipsam obcaecati id!</p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className='right' id='right'>
                                         <div className='imgContainer'>
                                             <img src={pic7} />
                                             <div className='text'>
@@ -610,9 +624,19 @@ export default function () {
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </>
+                    }
+                    {
+                        window.screen.width > 1023 ?
+
+                            ''
+                            : <>
+                                <div className='flex' style={{justifyContent:'flex-end',width:'100%'}}>
+                                    <img src={deathDay} width={'150'} className='deathDay' />
+                                </div>
+                            </>
+
                     }
 
                 </div>
