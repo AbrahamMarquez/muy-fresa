@@ -240,9 +240,9 @@ export default function () {
         if (typeof window !== "undefined" && window.screen.width < 1024) {
             window.addEventListener("scroll", () => {
                 setChangeHeader(window.pageYOffset > 400)
-                setSideInPopular(window.pageYOffset > 250)
-                setPicsSideIn(window.pageYOffset > 620)
-                setContainerOferts(window.pageYOffset > 1000)
+                setSideInPopular(window.pageYOffset > 150)
+                setPicsSideIn(window.pageYOffset > 520)
+                setContainerOferts(window.pageYOffset > 950)
             });
         }
 
