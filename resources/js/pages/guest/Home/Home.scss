@@ -171,15 +171,15 @@
 
 
                     p {
-                        width: 50%;
+                        width: 100%;
                         font-family: 'League Spartan', sans-serif;
                         font-size: 40px;
                         color: #ffffff;
                         text-decoration: none solid rgb(255, 255, 255);
-                        text-align: center;
+                        text-align: end;
                         font-weight: 800;
                         text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.27);
-                        margin: 0 0 80px 0;
+                        margin: 1 0 80px 0;
 
                         @media screen and (max-width:1024px) {
                             width: 100%;
@@ -289,25 +289,33 @@
             z-index: 7;
             width: 100px;
             height: 100px;
-
-            &:hover {}
+            
+            &:hover{
+                &::before, &:before {
+                    color: #db0032;
+                }
+            }
 
             @media screen and (max-width:1024px) {
                 width: 30px;
                 height: 30px;
             }
         }
+        
 
         .slick-prev::before,
         .slick-next::before {
             font-size: 70px;
             opacity: 1;
 
+            
             @media screen and (max-width:1024px) {
                 font-size: 37px;
             }
 
         }
+
+        
 
         .slick-dots {
             position: absolute;
@@ -413,8 +421,9 @@
                 }
 
                 img {
-                    width: 15px;
-                    height: 15px;
+                    width: 57.96px;
+                    height: 57.96px;
+                    padding-bottom: 15px;
                 }
 
                 @media screen and (max-width:1024px) {
@@ -848,6 +857,7 @@
                 padding: 100px;
                 overflow: hidden;
                 flex-wrap: nowrap;
+                cursor: pointer;
 
                 @media screen and (max-width:1024px) {
                     flex-wrap: wrap;
