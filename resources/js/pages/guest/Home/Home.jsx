@@ -417,7 +417,7 @@ export default function () {
                 <div className='leftEffect'>
                     <div style={{ background: `url(${img1})` }}></div>
                     <div style={{ background: `url(${img2})` }}></div>
-                    <div style={{ background: `url(${img3})` }}></div>
+                    <div style={{ background: `url(${img11})` }}></div>
                     <div style={{ background: `url(${img4})` }}></div>
                     <div style={{ background: `url(${img5})` }}></div>
                     <div style={{ background: `url(${img6})` }}></div>
@@ -425,7 +425,7 @@ export default function () {
                     <div style={{ background: `url(${img8})` }}></div>
                     <div style={{ background: `url(${img1})` }}></div>
                     <div style={{ background: `url(${img2})` }}></div>
-                    <div style={{ background: `url(${img3})` }}></div>
+                    <div style={{ background: `url(${img5})` }}></div>
                     <div style={{ background: `url(${img4})` }}></div>
                 </div>
                 <div className='leftEffect rightEffect'>
