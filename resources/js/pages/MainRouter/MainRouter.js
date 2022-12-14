@@ -7,6 +7,9 @@ import {
 //generak assets
 import candado from '../../img/icons/candado.png'
 import facebook from '../../img/icons/facebook.svg'
+import emailBg1 from '../../img/emails/fresa.svg'
+import oval from '../../img/emails/redBg.svg'
+import LogoMuyFresaWhite from '../../img/emails/LogoMuyFresaWhite.svg'
 //primereact
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';

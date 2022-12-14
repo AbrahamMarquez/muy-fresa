@@ -86,7 +86,7 @@ const Login = (props) => {
                                 <button className="btnRed"  onClick={() => nextPage()}>Iniciar sesión</button>
                             </div>
                             <div className="bottom-text">
-                                <Link to="#">Aún no tengo cuenta</Link>
+                                <Link to="/register">Aún no tengo cuenta</Link>
                             </div>
                         </div>
 
