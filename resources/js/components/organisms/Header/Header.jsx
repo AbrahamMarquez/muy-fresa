@@ -8,16 +8,16 @@ import HeaderMobile from '../HeaderMobile/HeaderMobile'
 
 //style
 import './Header.scss'
-
+import  '../../../pages/MainRouter/MainRouter.scss'
 //assets
 import searchIcon from '../../../img/icons/searchIcon.svg'
 import shoppIcon from '../../../img/icons/shoppIcon.svg'
 import userIcon from '../../../img/icons/userIcon.svg'
 import logoMuyFresa from '../../../img/icons/logoMuyFresa.svg'
 import burguerIcon from '../../../img/icons/burguerIcon.svg'
-
+import chocolateImg from '../../../img/header/animationChocolate.png'
 export default function () {
-
+    
     const navigate = useNavigate()
 
     const options = [
@@ -92,7 +92,19 @@ export default function () {
             document.getElementById('searchInput').style.border = 'none'
         }
     }
-
+    useEffect(() => {
+        if (!changeHeader) {
+            document.getElementById('chocolateDown').style.top = '-20px'
+            document.getElementById('img-chocolate').style.display = 'initial'
+            document.getElementById('chocolateDown').style.background = 'transparent'
+        }
+        else
+        {
+            document.getElementById('chocolateDown').style.top = '-150px'
+            document.getElementById('chocolateDown').style.background = '#3b2b1e'
+            document.getElementById('img-chocolate').style.display = 'none'
+        }
+    }, [changeHeader])
     const handleChangeSearch = (e) => {
         setSearch(e.target.value)
     }
@@ -106,8 +118,14 @@ export default function () {
     }, [])
 
     return (
-        <header className={!changeHeader ? "header" : "header headerBackground"}>
+        <header className={!changeHeader ? "header" : "header headerBackground "}>
 
+            {/* {
+                !changeHeader && */}
+                <div className='chocolateDown' id='chocolateDown'>
+                    <img id='img-chocolate' src={chocolateImg} />
+                </div>
+            {/* }    */}
             <div className={!changeHeader ? "logo" : "logo logoSmall"} onClick={() => navigate('/')}>
                 <img src={logoMuyFresa} />
             </div>

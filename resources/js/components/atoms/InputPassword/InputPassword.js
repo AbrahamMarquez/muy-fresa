@@ -4,7 +4,7 @@ import './InputPassword.scss';
 import eye from '../../../img/login/Eye.svg'
 import closeEye from '../../../img/login/EyeClose.svg'
 
-const InputPassword = ({ placeholder, errors, id, name, onChange, value, onBlur, className, title, type = 'text', required = true, autoComplete = 'on', disabled, width, skeleton, onKeyDown, }) => {
+const InputPassword = ({ placeholder, id, onChange, value, className, title, required = true, autoComplete = 'on', disabled, skeleton }) => {
     const [passwordShown, setPasswordShown] = useState(false);
     const [iconsChange, setIconchange] = useState(true);
     const togglePassword = () => {
@@ -13,29 +13,16 @@ const InputPassword = ({ placeholder, errors, id, name, onChange, value, onBlur,
             setIconchange(!iconsChange);
         }
     };
-
-    useEffect(() => {
-        try {
-            if (errors === "error") {
-
-                document.getElementById(id).style.border = "1px solid red"
-            }
-            else {
-                document.getElementById(id).style.border = "1px solid #A0A0A3"
-            }
-        } catch (e) { }
-    }, [errors])
-    
-
     return (!skeleton ?
         <>
+
             <div className={`input-text-password ${className}`}>
+                <div className="title_INPUT_PASSWORD">{title}</div>
+                <div className="input-wrapper" >
 
-                <div className="input-wrapper" style={{ width: width }}>
 
-
-                    <input onKeyDown={onKeyDown} id={id} name={name} value={value} onChange={onChange} onBlur={onBlur} className={`input-pass`} placeholder={placeholder}
-                        type={passwordShown ? type : "password"} autoComplete={autoComplete} disabled={disabled}
+                    <input id={id} value={value} onChange={onChange} className={`input-pass`} placeholder={placeholder}
+                        type={passwordShown ? "text" : 'password'} autoComplete={autoComplete} disabled={disabled}
                     />
                     {
                         iconsChange ?

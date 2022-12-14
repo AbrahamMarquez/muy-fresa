@@ -9,7 +9,22 @@
     align-items: center;
     position: fixed;
     z-index: 1000;
+    background:transparent;
+    z-index: 1000;
+    .chocolateDown {
+        top: -150px;
+        transition: all 8s;
+        z-index: 1;
+        position: fixed;
+        width: 100%;
 
+        img {
+            width:110%;
+            @media screen and (max-width:1024px) {
+                display: none!important;
+            }
+        }
+    }
     .logo {
         width: 70px;
         height: 70px;
@@ -19,6 +34,7 @@
         align-items: center;
         border-radius: 100%;
         transition: all 0.5s;
+        z-index: 1000;
 
         img {
             width: 100%;
@@ -67,6 +83,7 @@
         display: none;
         justify-content: flex-end;
         align-items: center;
+        z-index: 1000;
 
         button {
             width: 65px;

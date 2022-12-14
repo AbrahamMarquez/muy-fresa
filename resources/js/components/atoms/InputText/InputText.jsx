@@ -20,7 +20,7 @@ export default function ({
 
         !skeleton ?
             <div className={`inputContainer ${className}  ${disabled && "disabledInput"}`} style={{ width: width }}>
-                {title && <div className="title">{title}</div>}
+                {title && <div className="title_input">{title}</div>}
                 <input
                     id={id}
                     value={value}

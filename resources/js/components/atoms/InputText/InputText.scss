@@ -1,12 +1,33 @@
 .inputContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+   
 
-    input {
+    .input {
         font-family: Rubik;
         outline: none;
         width: 100%;
+        border: 1px solid #dddddd;
+        border-radius: 16px;
+        height:30px ;
+        padding-left: 1rem;
+        transition: all 0.5s;
+    }
+    .input::placeholder
+    {
+        color:#dddddd ;
+        font-size: 11px;
+    }
+    .input:focus
+    {
+        border:1px solid #afc794;
+        transition: all 0.5s;
+    }
+    .title_input
+    {
+        font-size: 11px;
+        color: #b20f2d;
+        text-align: left;
+        padding-left:22px ;
+        margin-bottom: 6px;
+        font-weight: 600;
     }
 }
