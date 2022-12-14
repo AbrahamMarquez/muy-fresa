@@ -231,7 +231,7 @@ export default function () {
     useEffect(() => {
         if (typeof window !== "undefined") {
             window.addEventListener("scroll", () => {
-                setChangeHeader(window.pageYOffset > 400)
+                // setChangeHeader(window.pageYOffset > 400)
                 setSideInPopular(window.pageYOffset > 620)
                 setPicsSideIn(window.pageYOffset > 3020)
                 setContainerOferts(window.pageYOffset > 5720)
@@ -239,7 +239,7 @@ export default function () {
         }
         if (typeof window !== "undefined" && window.screen.width < 1024) {
             window.addEventListener("scroll", () => {
-                setChangeHeader(window.pageYOffset > 400)
+                // setChangeHeader(window.pageYOffset > 400)
                 setSideInPopular(window.pageYOffset > 150)
                 setPicsSideIn(window.pageYOffset > 520)
                 setContainerOferts(window.pageYOffset > 950)
@@ -249,11 +249,11 @@ export default function () {
 
     }, [])
 
-    useEffect(() => {
-        if (!changeHeader) {
-            document.getElementById('chocolateDown').style.top = '-20px'
-        }
-    }, [changeHeader])
+    // useEffect(() => {
+    //     if (!changeHeader) {
+    //         document.getElementById('chocolateDown').style.top = '-20px'
+    //     }
+    // }, [changeHeader])
 
     useEffect(() => {
         if (sideInPopular) {
@@ -307,12 +307,12 @@ export default function () {
 
     return (
         <div className='home'>
-            {
+            {/* {
                 !changeHeader &&
                 <div className='chocolateDown' id='chocolateDown'>
                     <img src={chocolateImg} />
                 </div>
-            }
+            } */}
 
             <div className='s1'>
                 <Slider {...settings}>

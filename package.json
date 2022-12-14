@@ -31,7 +31,10 @@
         "primereact": "^8.7.3",
         "react-router-dom": "^6.4.4",
         "react-slick": "^0.29.0",
+        "react-verification-code-input": "^1.2.9",
         "slick-carousel": "^1.8.1",
+        "universal-cookie": "^4.0.4",
         "webpack-dev-server": "^4.11.1"
+
     }
 }

@@ -186,7 +186,7 @@ export default function () {
         },
     ]
 
-    const [changeHeader, setChangeHeader] = useState(false);
+    
     const [sideInPopular, setSideInPopular] = useState(false);
     const [picsSideIn, setPicsSideIn] = useState(false);
     const [containerOferts, setContainerOferts] = useState(false);
@@ -197,7 +197,7 @@ export default function () {
     useEffect(() => {
         if (typeof window !== "undefined") {
             window.addEventListener("scroll", () => {
-                setChangeHeader(400)
+                
                 setSideInPopular(620)
                 setPicsSideIn(3020)
                 setContainerOferts(5720)
@@ -205,7 +205,7 @@ export default function () {
         }
         if (typeof window !== "undefined" && window.screen.width < 1024) {
             window.addEventListener("scroll", () => {
-                setChangeHeader( 400)
+                
                 setSideInPopular( 250)
                 setPicsSideIn( 620)
                 setContainerOferts( 1000)
@@ -215,11 +215,7 @@ export default function () {
 
     }, [])
 
-    useEffect(() => {
-        if (!changeHeader) {
-            document.getElementById('chocolateDown').style.top = '-20px'
-        }
-    }, [changeHeader])
+    
 
     useEffect(() => {
         if (sideInPopular) {
@@ -273,12 +269,7 @@ export default function () {
 
     return (
         <div className='home'>
-            {
-                !changeHeader &&
-                <div className='chocolateDown' id='chocolateDown'>
-                    <img src={chocolateImg} />
-                </div>
-            }
+           
 
             <div className='s1'>
                 {/* <Slider {...settings}>

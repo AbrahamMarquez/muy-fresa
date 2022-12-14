@@ -3,8 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import InputText from "../../../components/atoms/InputText/InputText";
 import InputPassword from "../../../components/atoms/InputPassword/InputPassword";
 import { ColorValidation, SubmitValidation, UpdateValue } from "../../../utilities/Validations";
-import eye from '../../../img/login/Eye.svg'
-import closeEye from '../../../img/login/EyeClose.svg'
+
 
 import "./Login.scss";
 
@@ -56,20 +55,15 @@ const Login = (props) => {
 
                             </div>
                             <div className="txb-container">
-                                <div className="txb-container1" style={{ padding: "5px" }}>
-                                    <div className="txb-title">
-                                        Correo electrónico
-                                    </div>
+                                <div className="txb-container1" style={{ padding: "5px",width: '290px' }}>
+                                   
                                     <div className="txb" >
-                                        <InputText className={'input-text'} onChange={(e) => { UpdateValue(e, "email", inputList, setInputList) }} id={'email'} width="307px" height="33px" placeholder="Correo electrónico" />
+                                        <InputText title={' Correo electrónico'}  onChange={(e) => { UpdateValue(e, "email", inputList, setInputList) }} id={'email'} placeholder="Correo electrónico" />
                                     </div>
 
                                     {/* passwords */}
-                                    <div className="txb-subtitle">
-                                        Contraseña
-                                    </div>
                                     <div className="txb">
-                                        <InputPassword title={"Contraseña"}  onChange={(e) => { UpdateValue(e, "password", inputList, setInputList) }} id={'password'} width="307px" height="33px" placeholder="Contraseña"  UnlockPassIcon={eye} UnlockPassIconClose={closeEye} />
+                                        <InputPassword title={"Contraseña"}  onChange={(e) => { UpdateValue(e, "password", inputList, setInputList) }} id={'password'} placeholder="Contraseña" />
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +78,7 @@ const Login = (props) => {
                                 </label>
                                 </div>
                                 <div className="link">
-                                    <Link to="#">Olvidé mi contraseña</Link>
+                                    <Link to="/recover-password">Olvidé mi contraseña</Link>
                                 </div>
 
                             </div>

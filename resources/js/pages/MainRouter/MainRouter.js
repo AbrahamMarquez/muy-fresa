@@ -4,7 +4,9 @@ import {
     BrowserRouter as Router,
 } from "react-router-dom";
 
-
+//generak assets
+import candado from '../../img/icons/candado.png'
+import facebook from '../../img/icons/facebook.svg'
 //primereact
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
@@ -16,27 +18,39 @@ import Auth from "./Auth/Auth";
 import Guest from "./Guest/Guest";
 
 const MainRoute = () => {
-    const [auth, setAuth] = useState(false);
-
-    useEffect(() => {
-        if (localStorage.getItem("auth") == 1) {
-            setAuth(true);
-        } else {
-            setAuth(false);
-            localStorage.setItem("auth", 0);
+    const [fakeAuth, setFakeAuth] = useState("false")
+    useEffect(()=>
+    {
+        if(localStorage.getItem("auth"))
+        {
+            if(localStorage.getItem("auth")=="true")
+            {
+                setFakeAuth("true")
+                localStorage.setItem("auth","true");
+            }
+            else
+            {
+                setFakeAuth("false")
+                localStorage.setItem("auth","false");
+            }
         }
-    }, [auth]);
+        else
+        {
+            localStorage.setItem("auth","false");
+        }
+        
+    },[fakeAuth])
 
     return (
         <main>
             <Router>
-                {auth ? (
+                {fakeAuth=='true' ? (
                     <>
-                        <Auth setAuth={setAuth} />
+                        <Auth setAuth={setFakeAuth} />
                     </>
                 ) : (
                     <>
-                        <Guest setAuth={setAuth}></Guest>
+                        <Guest setAuth={setFakeAuth}></Guest>
                     </>
                 )}
             </Router>
