@@ -54,14 +54,15 @@ export default function ({
                 </button>
 
                 <div className='search'>
-                    <div className='searchInput'>
+                    
                         <InputText
+                             className='searchInput'
                             placeholder={'Buscar'}
                             value={search}
                             onChange={(e) => handleChangeSearch(e)}
                             width={'100%'}
                         />
-                    </div>
+                    
                     <button className='imgContainer'>
                         <img src={searchIcon} />
                     </button>

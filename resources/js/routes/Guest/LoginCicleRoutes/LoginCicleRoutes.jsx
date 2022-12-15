@@ -1,8 +1,10 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
+import Conditions from "../../../pages/guest/loginCicle/Conditions/Conditions";
 import RecoverPasswordSkeleton from "../../../pages/guest/loginCicle/RecoverPassword/RecoverPasswordSkeleton";
 
 import RegisterSkeleton from "../../../pages/guest/loginCicle/Register/RegisterSkeleton";
+import RegisterCode from "../../../pages/guest/loginCicle/RegisterCode/RegisterCode";
 import VerificationCodeSkeleton from "../../../pages/guest/loginCicle/VerificationCode/VerificationCodeSkeleton";
 import VerificationPasswordSkeleton from "../../../pages/guest/loginCicle/VerificationPassword/VerificationPasswordSkeleton";
 const VerificationCode = lazy(()=>import("../../../pages/guest/loginCicle/VerificationCode/VerificationCode"))
@@ -50,6 +52,24 @@ const LoginCicleRoutes =()=>
                             <Register/>
                         </Suspense>
 
+                    }
+                />
+                <Route 
+                    path="/register-code"
+                    element=
+                    {
+                        <Suspense fallback={<VerificationCodeSkeleton/>}>
+                            <RegisterCode/>
+                        </Suspense>
+                    }
+                />
+                 <Route 
+                    path="/conditions"
+                    element=
+                    {
+                        <Suspense fallback={<VerificationCodeSkeleton/>}>
+                            <Conditions/>
+                        </Suspense>
                     }
                 />
                 
