@@ -424,6 +424,13 @@
                     width: 57.96px;
                     height: 57.96px;
                     padding-bottom: 15px;
+                    
+                    @media screen and (max-width:1024px) {
+                        width: 21.96px;
+                        height: 39.96px;
+    
+                    }
+                    
                 }
 
                 @media screen and (max-width:1024px) {
