@@ -1,0 +1,87 @@
+.conditions-container
+{
+    display: flex;
+    justify-content: center;
+    padding-left:15px;
+    padding-right:15px;
+
+    .Conditions
+    {
+        max-width: 1137px;
+        text-align: justify;
+        width: 100%;
+        padding: 72px;
+        background: white;
+        border-radius:50px ;
+        margin-bottom: 60px;
+        @media screen and (max-width:1024px) {
+            padding: 35px 11px 35px 11px;
+            
+        }
+        .title
+        {
+            text-align: center;
+            color: #e5133a;
+            font-weight:bold;
+            font-size: 25px;
+            margin-bottom: 18px;
+           
+        }
+        .sub-title
+        {
+            text-align: center;
+            color: #747573;
+            font-weight:600;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+        p
+        {
+        
+            color: #000000;
+            font-weight:600;
+            font-size: 14px;
+            // margin-bottom: 18px;
+        }
+        .selects-container
+        {
+            display: flex;
+            align-items: center;
+            margin-bottom: 9px;
+            label
+            {
+                margin-left: 5px;
+                font-size: 12px;
+                
+            }
+        }
+        .buttons-container
+        {
+            display: flex;
+            justify-content: center;
+            flex-direction:row;
+            margin-bottom: 50px;
+            @media screen and (max-width:1024px) {
+                flex-direction: column-reverse;
+            }
+            .mr-31
+            {
+                margin-right: 31px;
+                margin-bottom: 0px;
+                @media screen and (max-width:1024px) {
+                    margin-right: 0px;
+                    margin-top: 15px;
+                }
+            }
+            .button
+            {
+                min-width: 303px;
+                width: 100%;
+                @media screen and (max-width:1024px) {
+                    min-width: auto;
+                    
+                }
+            }
+        }
+    }
+}

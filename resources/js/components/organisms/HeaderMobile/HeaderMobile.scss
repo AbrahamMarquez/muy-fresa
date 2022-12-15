@@ -35,7 +35,7 @@
 
         .loginBtn {
             width: 65px;
-            height: 65px;
+            height: 152px;
             background: #fff;
             display: flex;
             justify-content: center;
@@ -64,10 +64,9 @@
             margin: 26px 0 35px 0;
 
             .searchInput {
-                width: 170px;
+                width: 170px!important;
                 height: 25px;
-                padding: 0px 45px;
-                border: 1px solid #ffffff;
+                
                 border-radius: 11px;
                 background-size: cover;
                 font-family: Rubik;

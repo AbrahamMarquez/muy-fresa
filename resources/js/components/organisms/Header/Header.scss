@@ -11,6 +11,9 @@
     z-index: 1000;
     background:transparent;
     z-index: 1000;
+    @media screen and (max-width:1024px) {
+        padding: 0px;
+    }
     .chocolateDown {
         top: -150px;
         transition: all 8s;
@@ -21,7 +24,10 @@
         img {
             width:110%;
             @media screen and (max-width:1024px) {
-                display: none!important;
+                // display: none!important;
+                
+                width: 200%;
+                height: 160px;
             }
         }
     }
@@ -35,7 +41,9 @@
         border-radius: 100%;
         transition: all 0.5s;
         z-index: 1000;
-
+        @media screen and (max-width:1024px) {
+            margin-left: 20px;
+        }
         img {
             width: 100%;
         }
@@ -73,7 +81,9 @@
         z-index: 99;
         width: 40px;
         height: 40px;
-
+        @media screen and (max-width:1024px) {
+            margin-right: 20px;
+        }
         @include lg {
             display: none;
         }

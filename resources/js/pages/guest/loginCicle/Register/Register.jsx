@@ -37,7 +37,7 @@ const Register =()=>
             {
                 document.getElementById('Pass').style.border = '1px solid #a6c285';
                 document.getElementById('confirmPass').style.border = '1px solid #a6c285';
-                navigate('/')
+                navigate('/register-code')
                 
             }
             else
