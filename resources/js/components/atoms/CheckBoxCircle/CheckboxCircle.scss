@@ -1,0 +1,82 @@
+:root
+    {
+        --borders:"1px solid red"
+    }
+.GeneralCheckbox {
+
+    .input[type="checkbox"]+label {
+        color: red;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+    }
+
+    //aqui se edita el estilo del check
+    .normal
+    {
+        .input[type="checkbox"]+label:before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin: 0 10px;
+            background: #fff;
+            border-radius: 100%;
+            box-shadow: 3px 3px 5px #ccc;
+        }
+    }
+    
+    .red
+    {
+        .input[type="checkbox"]+label:before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin: 0 10px;
+            background: #fff;
+            border-radius: 100%;
+            box-shadow: 3px 3px 5px #ccc;
+            border: 1px solid red!important;
+        }
+    }
+
+    .input[type="checkbox"]:checked+label:after {
+        content: "";
+        width: 0px;
+        height: 0px;
+        border: 7px solid #db0032;
+        border-radius: 100%;
+        float: left;
+        
+        position: absolute;
+        margin-left: 13px;
+        transform: rotate(-55deg);
+
+    }
+
+    //texto color 
+    .input[type="checkbox"]+label {
+
+        line-height: 2;
+        font-size: 14px;
+        color: #949494;
+        font-weight: 600;
+        transition: color .5s;
+    }
+    .input[type="checkbox"]+label:hover
+    {
+        color: #db0032;
+        
+        transition: color .5s;
+    }
+
+    .input[type="checkbox"] {
+        display: none;
+    }
+    .selected
+    {
+        color:#db0032!important ;
+    }
+}

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import MenuLink from '../../atoms/MenuLink/MenuLink'
 import InputText from '../../atoms/InputText/InputText'
 import HeaderMobile from '../HeaderMobile/HeaderMobile'
-
+import { useLocation } from "react-router-dom";
 //style
 import './Header.scss'
 import  '../../../pages/MainRouter/MainRouter.scss'
@@ -16,6 +16,7 @@ import userIcon from '../../../img/icons/userIcon.svg'
 import logoMuyFresa from '../../../img/icons/logoMuyFresa.svg'
 import burguerIcon from '../../../img/icons/burguerIcon.svg'
 import chocolateImg from '../../../img/header/animationChocolate.png'
+
 export default function () {
     
     const navigate = useNavigate()
@@ -80,7 +81,8 @@ export default function () {
     const [search, setSearch] = useState('')
     const [showSideMenu, setShowSideMenu] = useState(false)
     const [changeHeader, setChangeHeader] = useState(false);
-
+    const route = useLocation()
+    
     const handleShowInput = () => {
         if (document.getElementById('searchInput').style.width == '0px' || document.getElementById('searchInput').style.width == '') {
             document.getElementById('searchInput').style.width = '820px'
@@ -110,15 +112,25 @@ export default function () {
     }
 
     useEffect(() => {
-        if (typeof window !== "undefined") {
-            window.addEventListener("scroll", () =>
-                setChangeHeader(window.pageYOffset > 400)
-            );
+        
+        if(route.pathname.includes("arrangements"))
+        {
+            setChangeHeader(true)
         }
-    }, [])
+        else
+        {
+            // setChangeHeader(false)
+            if (typeof window !== "undefined") {
+                window.addEventListener("scroll", () =>
+                    setChangeHeader(window.pageYOffset > 400)
+                );
+            }
+        }
+    }, [route])
+   
 
     return (
-        <header className={!changeHeader ? "header" : "header headerBackground "}>
+        <header id={"header"} className={!changeHeader ? "header" : "header headerBackground "}>
 
             {/* {
                 !changeHeader && */}
@@ -126,7 +138,8 @@ export default function () {
                     <img id='img-chocolate' src={chocolateImg} />
                 </div>
             {/* }    */}
-            <div className={!changeHeader ? "logo" : "logo logoSmall"} onClick={() => navigate('/')}>
+            <div id='logo' className={!changeHeader ? "logo" : "logo logoSmall"} onClick={() => navigate('/')}>
+                
                 <img src={logoMuyFresa} />
             </div>
 

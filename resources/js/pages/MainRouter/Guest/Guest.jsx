@@ -7,6 +7,7 @@ const Footer = lazy(() => import("../../../components/organisms/Footer/Footer"))
 
 //skeleton
 import HeaderSkeleton from "../../../components/organisms/Header/HeaderSkeleton";
+import ArreglosCicle from "../../../routes/Guest/ArreglosCicle/ArreglosCicle";
 import LoginCicleRoutes from "../../../routes/Guest/LoginCicleRoutes/LoginCicleRoutes";
 
 const Guest = () => {
@@ -16,9 +17,9 @@ const Guest = () => {
             <Suspense fallback={<HeaderSkeleton/>}>
                 <Header/>
             </Suspense>
-
-            <LoginCicleRoutes></LoginCicleRoutes>
             <HomeRoutes/>
+            <LoginCicleRoutes/>
+            <ArreglosCicle/>
             
 
             
