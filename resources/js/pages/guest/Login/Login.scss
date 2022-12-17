@@ -1,5 +1,12 @@
 .fs-LoginP{
-    
+    .GeneralCheckbox 
+    {
+        .input[type=checkbox] + label{
+            
+            font-size: 13px;
+            font-weight: 400;
+        }
+    }
     .fs-Login{
         display: flex;
         flex-direction: column;

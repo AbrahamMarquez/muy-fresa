@@ -56,8 +56,8 @@ const VerificationPassword =()=>
                         </div>
                         <div className="container-input">
                             {/* <InputText placeholder={'Correo electrónico'} id='email' onChange={(e)=>{UpdateValue(e,'email',inputList,setInputList)}} title={"Correo electrónico"}></InputText> */}
-                            <InputPassword id={'newPass'} onChange={(e)=>{UpdateValue(e,'newPass',inputList,setInputList)}} title={'Nueva contraseña'} className='input-ps-vp'></InputPassword>
-                            <InputPassword  id={'confirmPass'} onChange={(e)=>{UpdateValue(e,'confirmPass',inputList,setInputList)}} title={'Confirmar contraseña'}></InputPassword>
+                            <InputPassword placeholder={'Contraseña'} id={'newPass'} onChange={(e)=>{UpdateValue(e,'newPass',inputList,setInputList)}} title={'Nueva contraseña'} className='input-ps-vp'></InputPassword>
+                            <InputPassword placeholder={'Contraseña'} id={'confirmPass'} onChange={(e)=>{UpdateValue(e,'confirmPass',inputList,setInputList)}} title={'Confirmar contraseña'}></InputPassword>
                         </div>
                         <div className="buttons-container">
                             <Button className={"button"} onClick={()=>{navigate('/login')}} >Cancelar</Button>
