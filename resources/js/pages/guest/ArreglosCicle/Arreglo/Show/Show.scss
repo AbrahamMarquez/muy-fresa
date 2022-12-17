@@ -1,0 +1,31 @@
+.ShowArreglo
+{
+    padding:69px 90px 69px 90px;
+    .route-top
+    {
+        font-weight: 400;
+        font-size: 16px;
+        .label
+        {
+            color: #77ab39;
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+    .grid-show-areglo {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+        
+        .col1 { 
+            grid-area: 1 / 1 / 6 / 4;
+            .carrusel
+            {
+                
+            }
+        }
+        .col2 { grid-area: 1 / 4 / 6 / 8; }
+}
