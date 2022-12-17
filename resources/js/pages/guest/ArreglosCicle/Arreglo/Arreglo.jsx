@@ -23,7 +23,7 @@ import c12 from '../../../../img/arreglos/cards/c12.jpg'
 import c13 from '../../../../img/arreglos/cards/c13.jpg'
 
 //paginator images
-import wha from '../../../../img/icons/whatsApp.svg'
+import wha from '../../../../img/icons/whatsapp.svg'
 import leftArrow from '../../../../img/icons/leftArrow.svg'
 const Arreglo = () => {
     const data = [
