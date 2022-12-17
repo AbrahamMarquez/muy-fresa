@@ -32,7 +32,6 @@ const RegisterCode = ()=>
         var sec = start;
         var timer = setInterval(function () {
             document.getElementById('safeTimerDisplay').innerHTML = '00:' + sec;
-            // console.log("sec",sec);
             setTimeTotal(sec)
             timeCookieRegister.set("time", sec, { path: '/verification-code' })
             sec--;

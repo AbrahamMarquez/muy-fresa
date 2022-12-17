@@ -1,0 +1,183 @@
+.ArreglosCard {
+    width: 100%;
+    max-width: 252px;
+    box-shadow: -8px 10px 16px -3px rgba(84, 84, 84, 0.36);
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid transparent;
+    transition: border 1s;
+    position: relative;
+
+    .image-container {
+        height: 252px;
+        position: relative;
+
+        .image {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+
+        }
+
+        .circleCard-bottom {
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            background: #e5133a;
+            border-radius: 100px;
+            bottom: -2%;
+            left: 50%;
+            transition: all .6s;
+            // display: none;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .circleCard-left {
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            background: #e5133a;
+            border-radius: 100px;
+            top: 170px;
+            left: -2%;
+            transition: all .6s;
+            // display: none;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .circleCard-right {
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            background: #e5133a;
+            border-radius: 100px;
+            top: 170px;
+
+            left: 93%;
+            transition: all .6s;
+            // display: none;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+    }
+
+    .image-container:hover {
+
+        .circleCard-left {
+
+            left: 15%;
+            z-index: 1;
+            transition: all .6s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circleCard-left:hover {
+            background: #ba002b;
+        }
+
+        .circleCard-bottom {
+            bottom: 46px;
+            left: calc(50% - 15px);
+            transition: all .6s;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .circleCard-bottom:hover {
+            background: #ba002b;
+        }
+
+        .circleCard-right {
+
+            left: 73%;
+            transition: all .6s;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .circleCard-right:hover {
+            background: #ba002b;
+        }
+
+    }
+
+    .description {
+        padding: 19px;
+        background: #F5F5F5;
+
+        .title-card {
+            font-size: 12px;
+            color: #323232;
+
+        }
+
+        .price-card {
+            color: #77ab39;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 1s;
+        }
+
+    }
+
+    .porcent-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+
+        .position-porcent {
+            // position: relative;
+            background-image: url('../../../img/arreglos/cards/porcentCircle.png');
+            width:90px;
+            height: 90px;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .porcent {
+                
+                z-index: 2;
+                font-size: 22px;
+                font-weight: bold;
+                color: white;
+            }
+        }
+    }
+
+}
+
+.ArreglosCard:hover {
+    border: 1px solid #db0032;
+    transition: border 1s;
+    .description {
+        .price-card {
+            color: #db0032;
+            transition: color 1s;
+            
+        }
+
+    }
+}

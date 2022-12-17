@@ -220,14 +220,13 @@ export default function () {
         },
     ]
 
-    const [changeHeader, setChangeHeader] = useState(false);
+    // const [changeHeader, setChangeHeader] = useState(false);
     const [sideInPopular, setSideInPopular] = useState(false);
     const [picsSideIn, setPicsSideIn] = useState(false);
     const [containerOferts, setContainerOferts] = useState(false);
     const [popularItemsLeft, setpopularItemsLeft] = useState(popularLeft)
     const [popularItemsRight, setpopularItemsRight] = useState(popularRight)
 
-    console.log("sideInPopular", sideInPopular);
     useEffect(() => {
         if (typeof window !== "undefined") {
             window.addEventListener("scroll", () => {
