@@ -254,9 +254,6 @@ const Arreglo = () => {
         }
     }, [])
     useEffect(() => {
-
-
-        // setChangeHeader(false)
         if (typeof window !== "undefined") {
             window.addEventListener("scroll", () => {
                 if (window.pageYOffset > 600) {
@@ -268,8 +265,8 @@ const Arreglo = () => {
             );
         }
 
-    }, [])
-
+    }, [])  
+    
     return (
         <>
             <div className="generalBackground-mr" style={{paddingTop:"100px"}}>

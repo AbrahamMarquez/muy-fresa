@@ -1,7 +1,7 @@
 import { Skeleton } from "primereact/skeleton";
 import React, { useState, useEffect } from "react";
 import './InputPassword.scss';
-import eye from '../../../img/icons/Eyess.svg'
+import eye from '../../../img/login/Eyes.svg'
 import closeEye from '../../../img/login/EyeClose.svg'
 
 const InputPassword = ({ placeholder, id, onChange, value, className, title, required = true, autoComplete = 'on', disabled, skeleton }) => {

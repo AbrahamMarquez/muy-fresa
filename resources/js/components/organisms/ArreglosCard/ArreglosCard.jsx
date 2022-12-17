@@ -6,7 +6,9 @@ import carrito from '../../../img/icons/carrito.svg'
 import eye from '../../../img/icons/Eyess.svg'
 import heardFill from '../../../img/icons/heard-fill.svg'
 import porcentCircle from '../../../img/arreglos/cards/porcentCircle.png'
+import { useNavigate } from "react-router-dom";
 const ArreglosCard = ({ img, title, price, porcent }) => {
+    const navigate = useNavigate();
     const [like, setLike] = useState(false)
     return (
         <>
@@ -41,7 +43,7 @@ const ArreglosCard = ({ img, title, price, porcent }) => {
                         <img className="imgCircle" src={carrito} />
                     </div>
                     <div className="circleCard-right">
-                        <img className="imgCircle" src={eye} />
+                        <img className="imgCircle" src={eye} onClick={()=>{navigate(`/arrangements/${title}/show`)}}/>
                     </div>
                 </div>
                 <div className="description">
