@@ -193,7 +193,6 @@ export default function () {
     const [popularItemsLeft, setpopularItemsLeft] = useState(popularLeft)
     const [popularItemsRight, setpopularItemsRight] = useState(popularRight)
 
-    console.log("sideInPopular", sideInPopular);
     useEffect(() => {
         if (typeof window !== "undefined") {
             window.addEventListener("scroll", () => {

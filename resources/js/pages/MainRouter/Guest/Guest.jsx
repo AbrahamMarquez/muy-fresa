@@ -1,4 +1,6 @@
-import { lazy, Suspense } from "react"
+import { lazy, Suspense, useEffect } from "react"
+import { useLocation } from "react-router-dom";
+import HeaderNoChocolate from "../../../components/organisms/Header/HeaderNoChocolate";
 
 //components
 const HomeRoutes = lazy(() => import("../../../routes/Guest/Home/HomeRoutes"));
@@ -11,11 +13,19 @@ import ArreglosCicle from "../../../routes/Guest/ArreglosCicle/ArreglosCicle";
 import LoginCicleRoutes from "../../../routes/Guest/LoginCicleRoutes/LoginCicleRoutes";
 
 const Guest = () => {
-
+    const route = useLocation()
+    console.log("route.pathname ",route.pathname );
+    
     return (
         <>
             <Suspense fallback={<HeaderSkeleton/>}>
-                <Header/>
+                {
+                    route.pathname == '/'?
+                    <>
+                        <Header/>
+                    </>:
+                        <HeaderNoChocolate/>
+                }
             </Suspense>
             <HomeRoutes/>
             <LoginCicleRoutes/>

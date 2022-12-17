@@ -6,12 +6,136 @@
         grid-template-rows: repeat(5, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+        @media screen and (max-width:1024px) {
+            display: flex;
+        }
         }
         
         .col1
         { 
             grid-area: 1 / 1 / 6 / 2; 
+            @media screen and (max-width:1024px) {
+                display: none;
+            }
             
         }
-        .col2 { grid-area: 1 / 2 / 6 / 6; }
+        .col2 { 
+            
+            box-shadow: -7px 15px 20px rgba(0,0,0,0.1), inset -5px 5px 25px rgba(0,0,0,0.05);
+            grid-area: 1 / 2 / 6 / 6;
+            padding: 52px 90px 20px 90px;
+            .input-search-container
+            {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                .inputSearch
+                {
+                    min-width:447px ;
+                }
+                
+            }
+            .title
+            {
+                color:#db0032;
+                font-weight: bold;
+                height: 57px;
+                border-bottom: 1px solid #db0032;
+                display: flex;
+                align-items: center;
+                margin-bottom: 44px;
+            }
+            .grid-cards
+            {
+                display: flex;
+                flex-wrap: wrap;
+                grid-gap: 62px;
+            }
+        }
+        .p-dataview-content
+        {
+            .grid
+            {
+                grid-gap: 61px;
+                justify-content: center;
+            }
+        }
+        // paginator
+        .paginator
+        {
+            width: 34px;
+            color: initial;
+            
+            .right
+            {
+                transform: scaleX(-1);
+            }
+        }
+        .buton-paginator
+        {
+            width: 51px;
+            cursor: pointer;
+            background: transparent;
+            opacity: 57%;
+        }
+        .buton-paginator-number
+        {
+            cursor: pointer;
+            color: #524a4e!important;
+            background: transparent!important;
+            font-weight: 600;
+            font-size: 18px;
+            width: 51px;
+            opacity: 57%;
+            transition: color .5s;
+            border-color:#db0032!important;
+            
+        }
+        .buton-paginator-number:hover
+        {
+            color: #db0032!important;
+            transition: color .5s;
+        }
+        .p-dataview 
+        {
+            .p-paginator-bottom
+            {
+                border-width: 0px!important;
+                margin-top: 47px;
+            }
+        }
+        .p-link:focus
+        {
+            box-shadow: 0 0 0 0.2rem #a30329;
+        }
+        .p-link
+        {
+            width: 40px;
+            height: 20px;
+        }
+        .p-paginator 
+        {
+            .p-paginator-pages 
+            {
+                .p-paginator-page
+                {
+                    width: 2rem;
+                    height: 2rem;
+                    min-width: 2rem;
+                }
+            }
+        }
+        .whatsApp
+        {
+            position: absolute;
+            top: 50%;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #4EB44D;
+            right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 }

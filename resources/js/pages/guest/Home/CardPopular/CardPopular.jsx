@@ -19,7 +19,6 @@ export default function ({
     const handlePopular = () => {
         const idxSelect = items.findIndex(element => element.id == id)
 
-        console.log(idxSelect);
 
         let newItems = [...items]
         if(newItems[idxSelect].selected){

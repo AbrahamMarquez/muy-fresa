@@ -30,7 +30,6 @@ const VerificationCodeSkeleton = () => {
         var sec = start;
         var timer = setInterval(function () {
             document.getElementById('safeTimerDisplay').innerHTML = '00:' + sec;
-            // console.log("sec",sec);
             setTimeTotal(sec)
             timeCookie.set("time", sec, { path: '/verification-code' })
             sec--;

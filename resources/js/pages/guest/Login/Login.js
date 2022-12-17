@@ -27,7 +27,6 @@ const Login = (props) => {
     const navigate = useNavigate()
     const nextPage = () => {
         if (SubmitValidation(inputList, setInputList)) {
-            console.log(inputList?.email?.value?.includes("@employ"), inputList?.email?.value)
             if(inputList?.email?.value.includes("@employ")){
                 dispatch(changeCollaboratorState(true))
                 localStorage.setItem("isColab", 1);

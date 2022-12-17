@@ -4,7 +4,6 @@ import './CheckboxCircle.scss'
 
 const CheckboxCircle = ({id,children,textContentSetting,className,value,setValue,isValid=true,onClick})=>
 {
-    console.log("value",value);
     return(
         <>
         <div className={`GeneralCheckbox ${className}`}   style={{position:"relative"}}>
