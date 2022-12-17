@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import './Arreglo.scss'
 import '../../../MainRouter/MainRouter.scss'
 import SideSearchArregement from "../../../../components/organisms/SideSearchArregement/SideSearchArregement";
@@ -26,179 +26,175 @@ import c13 from '../../../../img/arreglos/cards/c13.jpg'
 import wha from '../../../../img/icons/whatsapps.svg'
 import leftArrow from '../../../../img/icons/leftArrow.svg'
 const Arreglo = () => {
+    const [openFilter, setOpenFilter] = useState(false)
     const data = [
         {
-            img:c1,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"caja",
-            porcent:'15'
+            img: c1,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "caja",
+            porcent: '15'
         },
         {
-            img:c2,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"caja",
-            porcent:'0'
+            img: c2,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "caja",
+            porcent: '0'
 
         },
         {
-            img:c3,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"ramo",
-            porcent:'0'
+            img: c3,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "ramo",
+            porcent: '0'
         },
         {
-            img:c4,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"caja",
-            porcent:'0'
+            img: c4,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "caja",
+            porcent: '0'
         },
         {
-            img:c5,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"caja",
-            porcent:'0'
+            img: c5,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "caja",
+            porcent: '0'
         },
         {
-            img:c6,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"ramo",
-            porcent:'0'
-            
+            img: c6,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "ramo",
+            porcent: '0'
+
         },
         {
-            img:c7,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"caja",
-            porcent:'0'
+            img: c7,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "caja",
+            porcent: '0'
         },
         {
-            img:c8,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"caja",
-            porcent:'0'
+            img: c8,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "caja",
+            porcent: '0'
         },
         {
-            img:c9,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"ramo",
-            porcent:'0'
+            img: c9,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "ramo",
+            porcent: '0'
         },
         {
-            img:c10,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"caja",
-            porcent:'0'
+            img: c10,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "caja",
+            porcent: '0'
         },
         {
-            img:c1,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"ramo",
-            porcent:'0'
+            img: c1,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "ramo",
+            porcent: '0'
         },
         {
-            img:c12,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"ramo",
-            porcent:'0'
+            img: c12,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "ramo",
+            porcent: '0'
         },
         {
-            img:c13,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"ramo",
-            porcent:'0'
+            img: c13,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "ramo",
+            porcent: '0'
         },
         {
-            img:c1,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"ramo",
-            porcent:'0'
+            img: c1,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "ramo",
+            porcent: '0'
         },
         {
-            img:c2,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"ramo",
-            porcent:'0'
+            img: c2,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "ramo",
+            porcent: '0'
         },
         {
-            img:c3,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"ramo",
-            porcent:'100'
+            img: c3,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "ramo",
+            porcent: '100'
         },
         {
-            img:c4,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"ramo",
-            porcent:'0'
+            img: c4,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "ramo",
+            porcent: '0'
         },
         {
-            img:c5,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"ramo",
-            porcent:'0'
+            img: c5,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "ramo",
+            porcent: '0'
         },
         {
-            img:c6,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"ramo",
-            porcent:'0'
+            img: c6,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "ramo",
+            porcent: '0'
         },
         {
-            img:c7,
-            title:"Fresas con chocolate",
-            price:'$115.00',
-            type:"caja",
-            porcent:'0'
+            img: c7,
+            title: "Fresas con chocolate",
+            price: '$115.00',
+            type: "caja",
+            porcent: '0'
         },
-        
+
     ]
     // se filtran las cajas de los ramos
-    const dataCajas =[]
+    const dataCajas = []
 
-    data.map((item)=>
-        {
-           
-            if(item.type == 'caja')
-            {
-                dataCajas.push(item)
-            }
-            
-        })
-     //se filtran  los ramos
-     const dataRamos =[]
+    data.map((item) => {
 
-    data.map((item)=>
-        {
-           
-            if(item.type == 'ramo')
-            {
-                dataRamos.push(item)
-            }
-            
-        })
-    const card = (data)=>
-    {
-        console.log("data",data)
-        return(
+        if (item.type == 'caja') {
+            dataCajas.push(item)
+        }
+
+    })
+    //se filtran  los ramos
+    const dataRamos = []
+
+    data.map((item) => {
+
+        if (item.type == 'ramo') {
+            dataRamos.push(item)
+        }
+
+    })
+    const card = (data) => {
+        console.log("data", data)
+        return (
             <>
 
                 <ArreglosCard img={data.img} title={data.title} price={data.price} porcent={data.porcent}></ArreglosCard>
@@ -212,21 +208,20 @@ const Arreglo = () => {
         'PrevPageLink': (options) => {
             return (
                 <button type="button" className={"buton-paginator"} onClick={options.onClick} disabled={options.disabled}>
-                    <img className="paginator left " src={leftArrow}/>
+                    <img className="paginator left " src={leftArrow} />
                     {/* <Ripple /> */}
                 </button>
             )
         },
         'NextPageLink': (options) => {
             return (
-                <button type="button" style={{cursor:"pointer!important"}} className={`buton-paginator`} onClick={options.onClick} disabled={options.disabled}>
-                    <img style={{transform: 'scaleX(-1)'}} className="paginator right" src={leftArrow}/>
+                <button type="button" style={{ cursor: "pointer!important" }} className={`buton-paginator`} onClick={options.onClick} disabled={options.disabled}>
+                    <img style={{ transform: 'scaleX(-1)' }} className="paginator right" src={leftArrow} />
                     {/* <Ripple /> */}
                 </button>
             )
         },
-        'PageLinks':(options)=>
-        {
+        'PageLinks': (options) => {
             if ((options.view.startPage === options.page && options.view.startPage !== 0) || (options.view.endPage === options.page && options.page + 1 !== options.totalPages)) {
                 const className = classNames(options.className, { 'p-disabled': true });
 
@@ -241,16 +236,66 @@ const Arreglo = () => {
             )
         }
     }
+    useEffect(() => {
+        const col1 = document.getElementById('col1')
+        if (openFilter) {
+            col1.style.left = "0px"
+            col1.style.transition = "all .5s"
+        }
+        else {
+            col1.style.left = "-250px"
+            col1.style.transition = "all .5s"
+        }
+
+    }, [openFilter])
+    useEffect(() => {
+        if (window.screen.width > 1023) {
+            setOpenFilter(true)
+        }
+    }, [])
+    useEffect(() => {
+
+
+        // setChangeHeader(false)
+        if (typeof window !== "undefined") {
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset > 600) {
+
+                    setOpenFilter(false)
+                }
+            }
+
+            );
+        }
+
+    }, [])
+
     return (
         <>
-            <div className="generalBackground-mr">
+            <div className="generalBackground-mr" style={{paddingTop:"100px"}}>
                 <div className="Arreglo ">
                     <div className="grid-arreglo">
-                        <div className="col1">
-                            <SideSearchArregement></SideSearchArregement>
+                        <div className={`col1 `} id="col1">
+                            {
+                                window.screen.width < 1024 ?
+                                    <>
+                                        <><SideSearchArregement setOpenFilter={setOpenFilter}></SideSearchArregement></>:
+                                    </> :
+                                    <><SideSearchArregement ></SideSearchArregement></>
+
+                            }
+
                         </div>
                         <div className="col2">
                             <div className="input-search-container">
+
+                                {
+                                    window.screen.width < 1024 ?
+                                        <>
+                                            <div className="searchFor-responsive" onClick={() => setOpenFilter(true)}>{'Buscar por... >'}</div>
+                                        </> :
+                                        ""
+                                }
                                 <InputSearch className={"inputSearch"}></InputSearch>
                             </div>
                             <div className="title">Cajas</div>
@@ -265,7 +310,7 @@ const Arreglo = () => {
                             ></DataView>
                             <div className="title">Ramos</div>
                             {/* cards */}
-                            
+
                             <DataView
                                 itemTemplate={card}
                                 value={dataRamos}
@@ -274,11 +319,11 @@ const Arreglo = () => {
                                 rows={8}
                                 layout={"grid"}
                             ></DataView>
-                            
+
 
                         </div>
                     </div>
-                <div className="whatsApp"><img src={wha}></img></div>
+                    <div className="whatsApp"><img src={wha}></img></div>
                 </div>
             </div>
 

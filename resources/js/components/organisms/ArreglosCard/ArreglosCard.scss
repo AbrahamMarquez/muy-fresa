@@ -6,11 +6,22 @@
     border: 1px solid transparent;
     transition: border 1s;
     position: relative;
-
+    @media screen and (max-width:1024px) {
+        max-width: 93px;
+    }
+    .imgCircle
+    {
+        width: initial;
+        @media screen and (max-width:1024px) {
+            width: 10px;
+        }
+    }
     .image-container {
         height: 252px;
         position: relative;
-
+        @media screen and (max-width:1024px) {
+            height: 93px;
+        }
         .image {
             height: 100%;
             object-fit: cover;
@@ -32,6 +43,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @media screen and (max-width:1024px) {
+                width: 18px;
+                height: 18px;
+                top: 65px;
+            }
 
         }
 
@@ -49,7 +65,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
+            @media screen and (max-width:1024px) {
+                width: 18px;
+                height: 18px;
+                top: 65px;
+            }
         }
 
         .circleCard-right {
@@ -67,6 +87,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @media screen and (max-width:1024px) {
+                width: 18px;
+                height: 18px;
+                top: 65px;
+                left: 84%;
+            }
 
         }
 
@@ -96,6 +122,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @media screen and (max-width:1024px) {
+                
+                left: calc(50% - 6px);
+            }
 
         }
 
@@ -111,6 +141,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            
 
         }
 
@@ -123,10 +154,16 @@
     .description {
         padding: 19px;
         background: #F5F5F5;
+        @media screen and (max-width:1024px) {
+            padding: 4px;
+        }
 
         .title-card {
             font-size: 12px;
             color: #323232;
+            @media screen and (max-width:1024px) {
+                font-size: 9px;
+            }
 
         }
 
@@ -135,6 +172,9 @@
             font-size: 16px;
             font-weight: bold;
             transition: color 1s;
+            @media screen and (max-width:1024px) {
+                font-weight: 500;
+            }
         }
 
     }
@@ -146,10 +186,14 @@
         position: absolute;
         top: -20px;
         left: -20px;
-
+        @media screen and (max-width:1024px) {
+            top: -10px;
+            left: -10px;
+        }
         .position-porcent {
             // position: relative;
             background-image: url('../../../img/arreglos/cards/porcentCircle.png');
+            background-size: cover;
             width:90px;
             height: 90px;
             background-repeat: no-repeat;
@@ -157,12 +201,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @media screen and (max-width:1024px) {
+                width:34px;
+                height: 34px;
+            }
             .porcent {
                 
                 z-index: 2;
                 font-size: 22px;
                 font-weight: bold;
                 color: white;
+                @media screen and (max-width:1024px) {
+                    font-size: 11px;
+                }
             }
         }
     }

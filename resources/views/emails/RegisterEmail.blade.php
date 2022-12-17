@@ -15,6 +15,7 @@
         {
             width:757px;
             background-image:url('{{asset("images/redBg.svg")}}');
+            border-radius:10px 10px 0 0;
 
         }
         .welcome
