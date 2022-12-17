@@ -6,6 +6,7 @@ import { ColorValidation, SubmitValidation, UpdateValue } from "../../../utiliti
 
 
 import "./Login.scss";
+import CheckboxCircle from "../../../components/atoms/CheckBoxCircle/CheckboxCircle";
 
 const Login = (props) => {
 
@@ -38,6 +39,7 @@ const Login = (props) => {
             navigate("#")
         }
     }
+    const [rememberMe,setRememberMe] = useState(false)
     return (
         <>
             <div className="fs-LoginP">
@@ -68,13 +70,14 @@ const Login = (props) => {
                             </div>
                             {/* remember password */}
                             <div className="remember-box">
-                                <div style={{ display: "flex" }}>
+                                <div style={{ display: "flex",marginTop:"5px" }}>
                                
-                                <label className="radio">
+                                {/* <label className="radio">
                                     <input type="radio"  id="radioRememberPassword" name="radio" value="1" />
                                     <span className="check"></span>
                                     <label htmlFor="radioRememberPassword" className="txt-remember">Recuerdame</label>
-                                </label>
+                                </label> */
+                                <CheckboxCircle className={'check'} id='cajas' value={rememberMe} setValue={setRememberMe}>Recuérdame</CheckboxCircle>}
                                 </div>
                                 <div className="link">
                                     <Link to="/recover-password">Olvidé mi contraseña</Link>
