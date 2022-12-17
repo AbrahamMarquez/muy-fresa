@@ -2,6 +2,14 @@
 {
     width: 100%;
     padding: 64px 25px 0px 25px;
+    // .scroll
+    // {
+    //     overflow: hidden;
+    //     @media screen and (max-width:1024px) {
+    //         overflow: auto;
+    //     }
+        
+    // }
     .title
     {
         font-size:23px;
@@ -9,6 +17,9 @@
         font-weight: bold;
         text-align: center;
         margin-bottom: 32px;
+        @media screen and (max-width:1024px) {
+            font-size:12px; 
+        }
     }
     .p-slider 
     {

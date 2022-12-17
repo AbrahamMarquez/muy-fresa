@@ -23,6 +23,7 @@
             background-repeat: no-repeat;
             background-position-x: -213px;
             height: 218px;
+            border-radius:10px;
         }
         .logo-container
         {

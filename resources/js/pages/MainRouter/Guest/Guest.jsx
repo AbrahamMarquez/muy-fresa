@@ -14,13 +14,20 @@ import LoginCicleRoutes from "../../../routes/Guest/LoginCicleRoutes/LoginCicleR
 
 const Guest = () => {
     const route = useLocation()
-    console.log("route.pathname ",route.pathname );
     
     return (
         <>
             <Suspense fallback={<HeaderSkeleton/>}>
                 {
-                    route.pathname == '/'?
+                    route.pathname == '/' ||
+                    route.pathname == '/login' ||
+                    route.pathname == '/recover-password'||
+                    route.pathname == '/verification-code'||
+                    route.pathname == '/verification-password'||
+                    route.pathname == '/register'||
+                    route.pathname == '/register-code'||
+                    route.pathname == '/conditions'
+                    ?
                     <>
                         <Header/>
                     </>:

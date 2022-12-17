@@ -21,7 +21,9 @@
         padding-left: 15px;
         padding-right:35px;
         font-size: 15px;
-
+        @media screen and (max-width:1024px) {
+          height: 30px;
+        }
       }
      
       

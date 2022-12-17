@@ -3,7 +3,7 @@ import './ArreglosCard.scss'
 //card images
 import heard from '../../../img/icons/heard.svg'
 import carrito from '../../../img/icons/carrito.svg'
-import eye from '../../../img/icons/eye.svg'
+import eye from '../../../img/icons/Eyess.svg'
 import heardFill from '../../../img/icons/heard-fill.svg'
 import porcentCircle from '../../../img/arreglos/cards/porcentCircle.png'
 const ArreglosCard = ({ img, title, price, porcent }) => {
@@ -29,19 +29,19 @@ const ArreglosCard = ({ img, title, price, porcent }) => {
                         {
                             like ?
                                 <>
-                                    <img src={heardFill} />
+                                    <img className="imgCircle" src={heardFill} />
                                 </> :
                                 <>
-                                    <img src={heard} />
+                                    <img className="imgCircle" src={heard} />
                                 </>
                         }
 
                     </div>
                     <div className="circleCard-bottom">
-                        <img src={carrito} />
+                        <img className="imgCircle" src={carrito} />
                     </div>
                     <div className="circleCard-right">
-                        <img src={eye} />
+                        <img className="imgCircle" src={eye} />
                     </div>
                 </div>
                 <div className="description">
