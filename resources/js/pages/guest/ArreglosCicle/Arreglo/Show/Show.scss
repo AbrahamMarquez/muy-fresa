@@ -1,31 +1,124 @@
-.ShowArreglo
-{
-    padding:69px 90px 69px 90px;
-    .route-top
-    {
+.ShowArreglo {
+    padding: 69px 90px 69px 90px;
+
+    .route-top {
         font-weight: 400;
         font-size: 16px;
-        .label
-        {
+
+        .label {
             color: #77ab39;
             font-weight: 400;
             font-size: 16px;
         }
     }
+
     .grid-show-areglo {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(5, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        }
         
-        .col1 { 
-            grid-area: 1 / 1 / 6 / 4;
-            .carrusel
-            {
-                
-            }
+    }
+
+    .col1 {
+        grid-area: 1 / 1 / 6 / 4;
+
+        .carrusel {}
+    }
+
+    .col2 {
+        grid-area: 1 / 4 / 6 / 8;
+    }
+
+
+}
+
+.imagenG {
+    @media (min-width: 1440px) {
+        width: 439px;
+        height: 529px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        padding-left: 29px;
+    }
+}
+
+.imagenP {
+    @media (min-width: 1440px) {
+        width: 92px;
+        height: 97px;
+
+        object-fit: cover;
+    }
+
+}
+
+.p-galleria-thumbnail-items-container {
+    height: 521px !important;
+    // background: white;
+}
+
+.p-galleria {
+    .p-galleria-thumbnail-container {
+        background: white;
+    }
+}
+
+.p-galleria {
+    .p-galleria-item-nav {
+        background: white;
+        width: 26px;
+        height: 26px;
+        border-radius: 100%;
+        border: 1px solid #77ab39;
+
+        .p-galleria-item-next-icon {
+
+            font-size: 1rem !important;
+            color: #77ab39;
         }
-        .col2 { grid-area: 1 / 4 / 6 / 8; }
+
+        .p-galleria-item-next-icon:hover {
+
+            color: white;
+
+        }
+    }
+
+    .p-galleria-item-nav:not(.p-disabled):hover {
+        background: #77ab39;
+
+    }
+
+}
+
+.p-galleria {
+    .p-galleria-item-nav {
+        .p-galleria-item-prev-icon {
+            font-size: 1rem !important;
+            color: #77ab39;
+
+        }
+
+        .p-galleria-item-prev-icon:hover {
+
+            color: white;
+
+        }
+
+    }
+
+    .p-galleria-item-nav:not(.p-disabled):hover {
+        background: #77ab39;
+
+    }
+}
+.p-galleria-item-prev {
+    left: 32px;
+
+}
+.p-link:focus 
+{
+    box-shadow: none!important;
 }
