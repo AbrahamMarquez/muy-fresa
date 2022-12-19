@@ -1,5 +1,5 @@
 .ShowArreglo {
-    padding: 69px 90px 69px 90px;
+    padding: 69px 175px 69px 174px;
 
     .route-top {
         font-weight: 400;
@@ -14,11 +14,11 @@
 
     .grid-show-areglo {
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(5, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        
+
     }
 
     .col1 {
@@ -28,15 +28,219 @@
     }
 
     .col2 {
-        grid-area: 1 / 4 / 6 / 8;
+        grid-area: 1 / 4 / 6 / 9;
+
+        .title-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 42px;
+            height: 61px;
+            border-bottom: 1px solid #e5133a;
+            align-items: center;
+
+            .title {
+                color: #e5133a;
+                font-size: 23px;
+                font-weight: 600;
+
+            }
+
+            .sub-title {
+                color: #77ab39;
+                font-size: 23px;
+                font-weight: 600;
+            }
+        }
+
+        .chocolate-title {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+
+            .title {
+                color: #e5133a;
+                font-size: 16px;
+
+            }
+
+            .sub-title {
+                color: #949494;
+                font-size: 14px;
+                margin-left: 8px;
+            }
+        }
+    }
+
+    .chocolate-containers {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        position: relative;
+        margin-top: 14px;
+
+    }
+
+    .toppic-container {
+        margin-top: 25px;
+
+        .ch-container {
+            margin-top: 18px;
+        }
     }
 
 
+    .img-clocolate {
+        .GeneralCheckbox {
+            .input[type=checkbox]:checked+label:after {
+                border: 7px solid #77ab39;
+            }
+        }
+
+        .img-check {
+            img {
+                width: 86px;
+            }
+
+            .checkarreglo {
+                top: -98px;
+                right: -47px;
+            }
+
+            .description {
+                top: 84px;
+                left: 0px;
+            }
+        }
+    }
+
+    .add {
+        color: #77ab39;
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .checkDiamantina {
+        .normal {
+            .input[type=checkbox]+label {
+                color: #77ab39;
+                cursor: pointer;
+                font-size: 12px;
+            }
+
+            .input[type=checkbox]+label:hover {
+                color: #77ab39;
+                cursor: pointer;
+                font-size: 12px;
+            }
+            .selected
+            {
+                color: #77ab39!important;
+            }
+        }
+    }
+
+    .img-diamantina {
+
+        .img-check {
+            img {
+                width: 86px;
+            }
+
+            .checkarreglo {
+                top: -105px;
+                right: -73px;
+            }
+
+            .description {
+                top: 84px;
+                left: 0px;
+            }
+        }
+    }
+
+    .img-congratulations
+    {
+        .img-check {
+            img {
+                width: 130px;
+            }
+
+            .checkarreglo {
+                top: -141px;
+                right: -114px;
+            }
+
+            .description {
+                top: 150px;
+                    left: 0px;
+            }
+        }
+    }
+    .container-congratulations
+    {
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+        position: relative;
+        margin-top: 14px;
+    
+    }
+
+    .diamantina-descount {
+        display: flex;
+
+        .container {
+            width: 62px;
+            background: #77ab39;
+            color: white;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            height: 28px;
+        }
+    }
+
+    .textarea-container
+    {
+        margin-top: 20px;
+    }
+    .anonimo
+    {
+        margin-top: 36px;
+    }
+   
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .imagenG {
-    @media (min-width: 1440px) {
-        width: 439px;
+    @media (min-width: 1024px) {
+        max-width: 444px;
+        width: 100%;
         height: 529px;
         -o-object-fit: cover;
         object-fit: cover;
@@ -45,7 +249,7 @@
 }
 
 .imagenP {
-    @media (min-width: 1440px) {
+    @media (min-width: 1024px) {
         width: 92px;
         height: 97px;
 
@@ -114,11 +318,12 @@
 
     }
 }
+
 .p-galleria-item-prev {
     left: 32px;
 
 }
-.p-link:focus 
-{
-    box-shadow: none!important;
+
+.p-link:focus {
+    box-shadow: none !important;
 }
