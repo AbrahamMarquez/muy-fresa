@@ -1,0 +1,33 @@
+.Counter
+{
+    width: 100%;
+    max-width: 140px;
+    
+    
+    font-size: 12px;
+    
+    .title-Counter
+    {
+        width: 100%;
+         
+         color: #323232;
+         margin-bottom: 9px;
+         text-align: center;
+         font-size: 18px;
+    }
+    .container-counter
+    {
+        display: flex;
+        border:1px solid #323232;
+        border-radius: 4px;
+        justify-content: space-around;
+        align-items: center;
+        .icon
+        {
+            color:#db0032 ;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    }
+    
+}

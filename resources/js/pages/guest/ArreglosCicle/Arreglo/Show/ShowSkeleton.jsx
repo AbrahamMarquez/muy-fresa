@@ -54,8 +54,9 @@ import c4 from '../../../../../img/arreglos/cards/c4.jpg'
 
 import heard from '../../../../../img/icons/heard.svg'
 import heardFill from '../../../../../img/icons/heard-fill.svg'
+import { Skeleton } from "primereact/skeleton";
 
-const Show = () => {
+const ShowSkeleton = () => {
     const { product } = useParams()
 
     const images = [
@@ -457,13 +458,13 @@ const Show = () => {
         <>
             <div className="generalBackground-mr" >
                 <div className="ShowArreglo">
-                    <div className="route-top">Arreglos &nbsp;<span className="label">{`> ${product}`}</span></div>
+                    <div className="route-top"><Skeleton width="250px" height="20px"/></div>
                     {
                         window.screen.width < 1024 ?
                             <>
                                 <div className="title-container">
-                                    <div className="title">Fresas con chocolate</div>
-                                    <div className="sub-title">Disponible</div>
+                                    <div className="title"><Skeleton width="200px" height="20px"/></div>
+                                    <div className="sub-title"><Skeleton width="100px" height="20px"/></div>
                                 </div>
                             </> : ""
                     }
@@ -471,19 +472,7 @@ const Show = () => {
                         <div className="col1">
                             <div className="carrusel">
                                 <div className="card">
-                                    <Galleria showItemNavigators value={images} responsiveOptions={responsiveOptions} numVisible={5} thumbnailsPosition={window.screen.width > 1444 ? "left" : "bottom"} style={{ maxWidth: '100%' }}
-                                        item={itemTemplate} thumbnail={thumbnailTemplate} />
-                                    <div className="circleCard-left" onClick={() => { setLike(!like) }}>
-                                        {
-                                            like ?
-                                                <>
-                                                    <img className="imgCircle" src={heardFill} />
-                                                </> :
-                                                <>
-                                                    <img className="imgCircle" src={heard} />
-                                                </>
-                                        }
-                                    </div>
+                                <Skeleton width="335px" height="436px"/>
                                 </div>
                             </div>
                             <div className="contentPay">
@@ -492,37 +481,28 @@ const Show = () => {
                                     window.screen.width > 1023 ?
                                         <>
                                             <div className="price-container-l">
-                                                <div className="total">Total:</div>
+                                                <div className="total"><Skeleton width="50px" height="20px"/></div>
                                                 <div className="discount-container-l">
-                                                    <div className="discount">%15</div>
+                                                    <div className="discount"><Skeleton width="40px" height="40px"/></div>
                                                     <div className="price-container-b">
-                                                        <div className="price">$115.00</div>
-                                                        <div className="envio">+$100.00 de envio</div>
+                                                        <div className="price"><Skeleton width="100px" height="40px"/></div>
+                                                        <div className="envio"><Skeleton width="200px" height="20px"/></div>
                                                     </div>
 
                                                 </div>
                                             </div>
                                             <div className="counter-element">
-                                                <Counter value={counter} setValue={setCounter} ></Counter>
+                                            <Skeleton width="100px" height="62px"/>
                                             </div>
                                             <div className="buttons-show-array">
-                                                <Button className={"button-array"}>
-                                                    <div className="interiorButton"> <div style={{ marginRight: "5px" }}>Agregar al carrito</div> <img src={carritoRed}></img>   </div>
-                                                </Button >
-                                                <Button color={"red"} className={"button-array"}><div style={{ fontSize: "20px" }}>Ordenar ahora</div></Button>
+                                            <Skeleton  className={"button-array"} width="80%" height="55px"/>
+                                            <Skeleton  className={"button-array"} width="80%" height="55px"/>
                                             </div>
                                         </> : ""
                                 }
 
                                 <div className="container-description">
-                                    <Description title={"Fresas con chocolate"}>
-                                        <div className="plane-text">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.
-                                        </div>
-                                        <div className="subtitle">Aliquam erat volutpat. </div>
-                                        <div className="plane-text">
-                                            Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.                                        </div>
-                                    </Description>
+                                    <Skeleton  className={"button-array"} width="95%" height="637px"/>
                                 </div>
                             </div>
 
@@ -532,15 +512,13 @@ const Show = () => {
                                 window.screen.width > 1023 ?
                                     <>
                                         <div className="title-container">
-                                            <div className="title">Fresas con chocolate</div>
-                                            <div className="sub-title">Disponible</div>
+                                            <Skeleton width="100px" height="20px"/>
                                         </div>
                                     </> : ""
                             }
 
                             <div className="chocolate-title">
-                                <div className="title">Chocolate </div>
-                                <div className="sub-title"> {' (Máx.3 chocolates)'}</div>
+                                <div className="title"><Skeleton width="200px" height="20px"/> </div>
                             </div>
                             <div className="chocolate-containers">
                                 {
@@ -548,33 +526,16 @@ const Show = () => {
 
                                         return (
                                             <>
-                                                <ChocolateType className={'img-clocolate-top'} id={item.id} img={item.img} description={item.description} check={item.check} setCheck={item.setCheck} discount={item.discount}></ChocolateType>
+                                                {/* <ChocolateType className={'img-clocolate-top'} id={item.id} img={item.img} description={item.description} check={item.check} setCheck={item.setCheck} discount={item.discount}></ChocolateType> */}
+                                                <Skeleton width="127px" height="129px"/>
                                             </>
                                         )
                                     })
                                 }
 
                             </div>
-                            {
-                                check3 ?
-                                    <>
-                                        <div className="chocolate-containers">
-                                            {
-                                                chocolateDataColor.map((item) => {
-
-                                                    return (
-                                                        <>
-                                                            <ChocolateType id={item.id} className={'img-clocolate'} img={item.img} description={item.description} check={item.check} setCheck={item.setCheck} discount={item.discount}></ChocolateType>
-                                                        </>
-                                                    )
-                                                })
-                                            }
-                                        </div>
-                                    </> : ""
-                            }
                             <div className="chocolate-title">
-                                <div className="title">Topping </div>
-                                <div className="sub-title"> {' (Máx.6 toppings)'}</div>
+                            <Skeleton width="200px" height="20px"/>
                             </div>
                             <div className="toppic-container">
                                 {
@@ -582,7 +543,7 @@ const Show = () => {
                                         return (
                                             <>
                                                 <div className={"ch-container"}>
-                                                    <CheckboxCircle className={'normal-text'} id={item.id} value={item.check} setValue={item.setCheck}>{item.title}</CheckboxCircle>
+                                                <Skeleton width="200px" height="20px"/>
                                                 </div>
                                             </>
                                         )
@@ -590,35 +551,19 @@ const Show = () => {
                                 }
                             </div>
                             <div className="chocolate-title" style={{ marginTop: "35px" }}>
-                                <div className="title">Diamantina </div>
-                                <CheckboxCircle id="diamantina" className={'checkDiamantina'} value={diamantina} setValue={setDiamantina}>Agregar</CheckboxCircle>
+                                <div className="title"><Skeleton width="200px" height="20px"/> </div>
+                                
 
                             </div>
                             <div className="diamantina-descount">
                                 <div className="container">
-                                    + 10%
+                                <Skeleton width="50px" height="20px"/>
                                 </div>
 
                             </div>
-                            {
-                                diamantina ?
-                                    <>
-                                        <div className="chocolate-containers">
-                                            {
-                                                diamantinaData.map((item) => {
-
-                                                    return (
-                                                        <>
-                                                            <ChocolateType id={item.id} img={item.img} className={'img-diamantina'} description={item.description} check={item.check} setCheck={item.setCheck} discount={item.discount}></ChocolateType>
-                                                        </>
-                                                    )
-                                                })
-                                            }
-                                        </div>
-                                    </> : ""
-                            }
+                           
                             <div className="chocolate-title">
-                                <div className="title">¿Quieres agregar una tarjeta de felicitación?</div>
+                                <div className="title"><Skeleton width="300px" height="20px"/></div>
 
                             </div>
                             <div className="container-congratulations">
@@ -627,70 +572,44 @@ const Show = () => {
                                         return (
                                             <>
                                                 <div className={"ch-container"}>
-                                                    <ChocolateType id={item.id} img={item.img} className={'img-congratulations'} description={item.description} check={item.check} setCheck={item.setCheck} discount={item.discount}></ChocolateType>
+                                                <Skeleton width="130px" height="141px"/>
                                                 </div>
                                             </>
                                         )
                                     })
                                 }
                             </div>
-                            <div className="anonim-container-message">
-                                {
-                                    congratulations1 || congratulations3 ?
-                                        <>
-                                            <div className="textarea-container">
-                                                <TextArea placeholder='Escribe tu mensaje aqui'></TextArea>
-                                            </div>
-                                            <div className="anonimo">
-                                                <CheckboxCircle id="anomim" value={anonim} setValue={setAnonim}>Anonimo</CheckboxCircle>
-                                            </div>
-                                            {
-                                                !anonim ?
-                                                    <>
-                                                        <div className="anonimo">
-                                                            <InputText placeholder={"Persona que firma el mensaje de la tarjeta"}></InputText>
-                                                        </div>
-                                                    </> :
-                                                    ""
-
-                                            }
-
-
-                                        </> : ""
-                                }
-                            </div>
+                            
                         </div>
                     </div>
                     {
                         window.screen.width < 1024 ?
                             <>
-                                <div className="price-container-l" style={{ marginTop: "40px" }}>
-                                    <div className="total">Total:</div>
-                                    <div className="discount-container-l">
-                                        <div className="discount">%15</div>
-                                        <div className="price-container-b">
-                                            <div className="price">$115.00</div>
-                                            <div className="envio">+$100.00 de envio</div>
-                                        </div>
+                                 <div className="price-container-l">
+                                                <div className="total"><Skeleton width="50px" height="20px"/></div>
+                                                <div className="discount-container-l">
+                                                    <div className="discount"><Skeleton width="40px" height="40px"/></div>
+                                                    <div className="price-container-b">
+                                                        <div className="price"><Skeleton width="100px" height="40px"/></div>
+                                                        <div className="envio"><Skeleton width="200px" height="20px"/></div>
+                                                    </div>
 
-                                    </div>
-                                </div>
-                                <div className="counter-element">
-                                    <Counter value={counter} setValue={setCounter} ></Counter>
-                                </div>
-                                <div className="buttons-show-array">
-                                    <Button className={"button-array"}>
-                                        <div className="interiorButton"> <div style={{ marginRight: "5px" }}>Agregar al carrito</div> <img src={carritoRed}></img>   </div>
-                                    </Button >
-                                    <Button color={"red"} className={"button-array"}><div style={{ fontSize: "20px" }}>Ordenar ahora</div></Button>
-                                </div>
+                                                </div>
+                                            </div>
+                                            <div className="counter-element">
+                                            <Skeleton width="100px" height="62px"/>
+                                            </div>
+                                            <div className="buttons-show-array">
+                                            <Skeleton  className={"button-array"} width="80%" height="55px"/>
+                                            <Skeleton  className={"button-array"} width="80%" height="55px"/>
+                                            </div>
                             </> : ""
                     }
 
                     <div className="products-r ">
                         <div className="title-containerr">
                             <hr className="line" />
-                            <div className="title">Productos relacionados</div>
+                            <div className="title"><Skeleton width="100%" height="20px"/></div>
                             <hr className="line" />
                         </div>
                     </div>
@@ -703,7 +622,7 @@ const Show = () => {
                                         cardsProductsDataR.map((data) => {
                                             return (
                                                 <>
-                                                    <ArreglosCard img={data.img} title={data.title} price={data.price} porcent={data.porcent}></ArreglosCard>
+                                                <Skeleton width="93px" height="154px"/>
                                                 </>
                                             )
                                         })
@@ -714,7 +633,7 @@ const Show = () => {
                                     cardsProductsData.map((data) => {
                                         return (
                                             <>
-                                                <ArreglosCard img={data.img} title={data.title} price={data.price} porcent={data.porcent}></ArreglosCard>
+                                                <Skeleton width="252px" height="334px"/>
                                             </>
                                         )
                                     })
@@ -728,4 +647,4 @@ const Show = () => {
         </>
     )
 }
-export default Show
+export default ShowSkeleton

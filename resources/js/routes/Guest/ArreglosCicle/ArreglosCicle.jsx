@@ -1,7 +1,9 @@
-import React, { Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import Arreglo from "../../../pages/guest/ArreglosCicle/Arreglo/Arreglo";
-import Show from "../../../pages/guest/ArreglosCicle/Arreglo/Show/Show";
+const Arreglo = lazy(()=>import("../../../pages/guest/ArreglosCicle/Arreglo/Arreglo"))
+import ArregloSkeleton from "../../../pages/guest/ArreglosCicle/Arreglo/ArregloSkeleton";
+const Show = lazy(()=>import("../../../pages/guest/ArreglosCicle/Arreglo/Show/Show"))
+import ShowSkeleton from "../../../pages/guest/ArreglosCicle/Arreglo/Show/ShowSkeleton";
 
 const ArreglosCicle = () => {
     //como no lleva chocolate en el header aqui se le quita 
@@ -12,15 +14,16 @@ const ArreglosCicle = () => {
                 <Route
                     path="/arrangements"
                     element={
-                        <Suspense fallback={<></>}>
+                        <Suspense fallback={<ArregloSkeleton/>}>
                             <Arreglo></Arreglo>
+                            {/* <ArregloSkeleton/> */}
                         </Suspense>
                     }
                 />
                 <Route
                     path="/arrangements/:product/show"
                     element={
-                        <Suspense fallback={<></>}>
+                        <Suspense fallback={<ShowSkeleton/>}>
                             <Show></Show>
                         </Suspense>
                     }
