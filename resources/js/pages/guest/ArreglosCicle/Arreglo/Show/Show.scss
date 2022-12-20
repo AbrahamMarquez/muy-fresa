@@ -194,12 +194,12 @@
         position: relative;
         margin-top: 14px;
         overflow: hidden;
-        padding-top: 10px;
+        padding-top: 27px;
 
         @media screen and (max-width:900px) {
             overflow-x: auto;
             justify-content: initial;
-            padding-top: 24px;
+            padding-top: 27px;
         }
     }
 

@@ -636,7 +636,7 @@ const Show = () => {
                             </div>
                             <div className="anonim-container-message">
                                 {
-                                    congratulations1 || congratulations3 ?
+                                    congratulations1 || congratulations2 || congratulations3 ?
                                         <>
                                             <div className="textarea-container">
                                                 <TextArea placeholder='Escribe tu mensaje aqui'></TextArea>

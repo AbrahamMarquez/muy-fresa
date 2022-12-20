@@ -62,7 +62,7 @@ import pic5 from '../../../img/home/pics/pic5.svg'
 import pic6 from '../../../img/home/pics/pic6.svg'
 import pic7 from '../../../img/home/pics/pic7.svg'
 import pic8 from '../../../img/home/pics/pic8.svg'
-import pic9 from '../../../img/home/pics/pic9.svg'
+import pic9 from '../../../img/home/pics/pic9.jpg'
 import InputText from '../../../components/atoms/InputText/InputText';
 
 
@@ -239,7 +239,7 @@ export default function () {
         if (typeof window !== "undefined" && window.screen.width < 1024) {
             window.addEventListener("scroll", () => {
                 // setChangeHeader(window.pageYOffset > 400)
-                setSideInPopular(window.pageYOffset > 150)
+                setSideInPopular(window.pageYOffset > 100)
                 setPicsSideIn(window.pageYOffset > 520)
                 setContainerOferts(window.pageYOffset > 950)
             });
@@ -649,6 +649,7 @@ export default function () {
                             <div className='inputContainer'>
                                 <InputText
                                     placeholder={'Correo electrónico'}
+                                    className={'input-big'}
                                 />
                             </div>
                             <button className='joinButton'>Unirme</button>

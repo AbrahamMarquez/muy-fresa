@@ -421,7 +421,7 @@
                 }
 
                 img {
-                    width: 57.96px;
+                    width: 41px;
                     height: 57.96px;
                     padding-bottom: 15px;
                     
@@ -1051,7 +1051,7 @@
             width: 100%;
             position: absolute;
             left: -100%;
-            padding: 60px 150px;
+            padding:241px 153px;
             display: flex;
             overflow: hidden;
             transition: all 0.5s;
@@ -1080,7 +1080,26 @@
                         text-decoration: none solid rgb(219, 0, 50);
                     }
                 }
-
+                .input-big
+                {
+                    input
+                    {
+                        font-size: 20px;
+                            @media screen and (max-width:1024px) {
+                                font-size: 8px;
+                            }
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                    }
+                    input::placeholder
+                    {
+                        font-size: 20px;
+                            @media screen and (max-width:1024px) {
+                                font-size: 8px;
+                            }
+                    }
+                }
                 .inputEmail {
                     width: 430px;
                     height: 65px;
@@ -1094,13 +1113,13 @@
                     }
 
                     .inputContainer {
-                        width: 70%;
-
+                        width: 100%;
+                        height: 100%;
                         input {
                             background: transparent;
                             color: #fff;
                             border: none;
-
+                            font-size: 20px;
                             @media screen and (max-width:1024px) {
                                 font-size: 8px;
                             }
@@ -1122,7 +1141,7 @@
                         border-radius: 0 27px 27px 0;
                         font-weight: 600;
                         font-family: "League Spartan", sans-serif;
-
+                        font-size: 15px;
                         @media screen and (max-width:1024px) {
                             font-size: 8px;
                         }
