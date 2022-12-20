@@ -32,31 +32,31 @@ export default function () {
             subOptions: [
                 {
                     title: 'Cajas',
-                    link: '/arrangements/boxes'
+                    link: '/arrangements'
                 },
                 {
                     title: 'Ramos',
-                    link: '/arrangements/bouquets'
+                    link: '/arrangements'
                 },
                 {
                     title: 'Números y letras',
-                    link: '/arrangements/numbers-and-letters'
+                    link: '/arrangements'
                 },
                 {
                     title: 'Canastas',
-                    link: '/arrangements/baskets'
+                    link: '/arrangements'
                 },
                 {
                     title: 'Torres',
-                    link: '/arrangements/towers'
+                    link: '/arrangements'
                 },
                 {
                     title: 'Con vino',
-                    link: '/arrangements/with-wine'
+                    link: '/arrangements'
                 },
                 {
                     title: 'Con flores',
-                    link: '/arrangements/with-flowers'
+                    link: '/arrangements'
                 }
             ]
         },
