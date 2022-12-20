@@ -35,8 +35,8 @@ const Login = (props) => {
                 localStorage.setItem("isColab", 0);
             }
             props.setAuth(true);
-            localStorage.setItem("auth", 1);
-            navigate("#")
+            localStorage.setItem("auth", "true");
+            navigate("/")
         }
     }
     const [rememberMe,setRememberMe] = useState(false)

@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 //guest  
 require (__DIR__ . '/web/guest.php');
-
+//auth
+require (__DIR__ . '/web/auth.php');
 
 
 
