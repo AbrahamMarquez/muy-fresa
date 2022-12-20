@@ -1,0 +1,38 @@
+.Description {
+    width: 100%;
+    border-bottom: 1px solid #e5133a;
+
+    .titleDescription {
+        width: 50%;
+        height: 36px;
+        background: #e5133a;
+        color: white;
+        font-size: 13px;
+        border-radius: 25px 25px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width:400px) {
+         text-align: center;
+         font-size: 8px;
+        }
+    }
+
+    
+
+}
+
+.contentDescription {
+    .title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #323232;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        @media screen and (max-width:400px) {
+            
+            font-size: 12px;
+           }
+    }
+    padding: 10px;
+}
