@@ -9,7 +9,7 @@ const Login = lazy(() => import("../../../pages/guest/Login/Login"))
 import HomeSkeleton from "../../../pages/guest/Home/HomeSkeleton";
 import LoginSkeleton from "../../../pages/guest/Login/LoginSkeleton";
 
-export default function () {
+export default function ({setAuth}) {
     
     return (
         <Routes>
@@ -24,7 +24,7 @@ export default function () {
             <Route
                 path="/login"
                 element={<Suspense fallback={<LoginSkeleton />}>
-                    <Login />
+                    <Login setAuth={setAuth}/>
                 </Suspense>}
             />
         </Routes>
