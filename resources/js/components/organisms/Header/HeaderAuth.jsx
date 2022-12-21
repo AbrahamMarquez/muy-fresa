@@ -162,7 +162,7 @@ export default function ({userIcon}) {
                     </button>
                 </div>
 
-                <button onClick={() => navigate('/arrangements/car')}>
+                <button onClick={() => navigate('/shopping')}>
                     <img src={shoppIcon} />
                 </button>
 

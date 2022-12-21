@@ -5,13 +5,91 @@
         grid-template-rows: repeat(5, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+        min-height: 1000px;
+        @media screen and (max-width:1024px) {
+            display: flex;
+            flex-direction: column;
+            min-height: auto;
+        }
     }
 
     .col1 {
         grid-area: 1 / 1 / 6 / 8;
+        padding:55px 80px 0px 180px ;
+        margin-bottom: 500px;
+        @media screen and (max-width:1024px) {
+            padding:55px 10px 10px 10px ;
+            margin-bottom: 100px;
+        }
+        .cards-container
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
     }
 
     .col2 {
         grid-area: 1 / 8 / 6 / 11;
+        padding:55px 25px 0px 25px;
+        @media screen and (max-width:1024px) {
+            padding:0;
+            position: fixed;
+            bottom: 0px;
+            z-index: 10;
+            width: 100%;
+        }
+        .card-col2
+        {
+            padding: 38px;
+            box-shadow: 0px 5px 12px -2px rgba(0,0,0,0.12);
+            border-radius: 12px;
+            background: white;
+            .content
+            {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 40px;
+                .left
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .subtotal
+                    {
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    .subtotal-f
+                    {
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                    .total
+                    {
+                        font-size: 21px;
+                        font-weight: 600;
+                    }
+                }
+                .right
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .price
+                    {
+                        font-size: 16px;
+                        text-align: right;
+                    }
+                    .total-green
+                    {
+                        font-size: 21px;
+                        font-weight: 500;
+                        color: #77ab39;
+                        text-align: right;
+                    }
+                }
+            }
+        }
     }
 }

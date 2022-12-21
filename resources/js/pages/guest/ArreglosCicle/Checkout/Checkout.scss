@@ -1,0 +1,137 @@
+.Checkout {
+    background-image: url('../../../../img/backgrounds/Path.svg');
+    min-height: 100vh;
+
+    .checkout-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+        .col1 {
+            grid-area: 1 / 1 / 6 / 3;
+            padding: 38px 92px 0px 92px;
+
+            .card {
+                width: 100%;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.2);
+                background: white;
+                margin-bottom: 31px;
+                transition: all 1s;
+            }
+
+            .card:hover {
+                background: #db0032;
+                transition: all 1s;
+                .calndar-container {
+                   
+
+                    .content-calendar {
+
+                        .color-calendar {
+                            font-size: 20px;
+                            color: white;
+                        }
+                        .img-calendar
+                        {
+                            filter: grayscale(100%) sepia(100%) brightness(200%) saturate(0%) contrast(1000%);
+                        }
+
+                    }
+                }
+            }
+
+            .calndar-container {
+                display: flex;
+                justify-content: center;
+
+                .content-calendar {
+                    display: flex;
+                    gap: 30px;
+                    align-items: center;
+
+                    .color-calendar {
+                        font-size: 20px;
+                        color: #db0032;
+                    }
+
+                }
+            }
+
+            .card-2 {
+                padding: 38px;
+                box-shadow: 0px 5px 12px -2px rgba(0, 0, 0, 0.12);
+                border-radius: 12px;
+                background: white;
+
+                .buttons-container {
+                    margin-bottom: 19px;
+                }
+
+                .content {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 40px;
+
+                    .left {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        .subtotal {
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+
+                        .subtotal-f {
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+
+                        .total {
+                            font-size: 21px;
+                            font-weight: 600;
+                            color: #db0032;
+                        }
+
+                        .envio {
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: #77ab39;
+                        }
+
+                    }
+
+                    .right {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        .price {
+                            font-size: 16px;
+                            text-align: right;
+                        }
+
+                        .total-green {
+                            font-size: 21px;
+                            font-weight: 500;
+
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+
+        .col2 {
+            grid-area: 1 / 3 / 6 / 6;
+            padding: 38px 15% 0px 0px;
+
+        }
+    }
+
+
+}

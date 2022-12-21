@@ -2,6 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/arrangements/car', function () {return view('main.index');});
+Route::get('/shopping', function () {return view('main.index');});
 
 

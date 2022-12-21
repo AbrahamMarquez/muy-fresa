@@ -1,4 +1,4 @@
-.CarCard {
+.CarCard-checkout {
     width: 100%;
     padding: 14px 28px;
     border-radius: 10px;
@@ -29,15 +29,55 @@
         display: flex;
         align-items: center;
 
-        .img-product {
-            width: 143px;
-            height: 151px;
+        
+        .x-button-container
+        {
+            position: relative;
+            .x-button {
+                position: absolute;
+                width: 22px;
+                height: 22px;
+                background: #db0032;
+                border-radius: 100px;
+                color: white;
+                font-size: 17px;
+                font-weight: 600;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: -8px;
+                left: -21px;
+            }
+            .img-product {
+                position: relative;
+                width: 100px;
+                height: 98px;
+                border-radius: 12px;
+                object-fit: cover;
+                position: relative;
+                @media screen and (max-width:1024px) {
+                    width: 92px;
+                    height: 78px;
+                }
+    
+                
+            }
+        }
+        
+        .cuatity
+        {
+            width: 38px;
+            height: 25px;
             border-radius: 12px;
-            object-fit: cover;
-
+            color: white;
+            font-size: 14px;
+            background: #694e4e;
+            text-align: center;
+            position: initial;
             @media screen and (max-width:1024px) {
-                width: 92px;
-                height: 78px;
+                position: absolute;
+                bottom: 0px;
+                right: -8px;
             }
         }
 
@@ -45,14 +85,16 @@
             margin-left: 18px;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             width: 100%;
             flex-direction: row;
+
             @media screen and (max-width:1024px) {
                 flex-direction: column;
             }
-
+            
             .title {
-                font-size: 29px;
+                font-size: 18px;
                 font-weight: 500;
 
                 @media screen and (max-width:1024px) {
@@ -61,10 +103,12 @@
             }
 
             .text {
-                font-size: 14px;
+                font-size: 10px;
                 font-weight: 400;
                 max-width: 370px;
                 text-align: justify;
+                line-height: 20px;
+
                 @media screen and (max-width:1024px) {
                     font-size: 10px;
                 }
@@ -85,10 +129,11 @@
 
                 .price {
                     font-size: 22px;
-                    font-weight: 600;
-                    color: #77ab39;
+                    font-weight: 500;
+                    color: #323232;
                     text-align: right;
                     margin-bottom: 0px;
+
                     @media screen and (max-width:1024px) {
                         margin-bottom: 13px;
                     }
@@ -106,6 +151,7 @@
 
     .conter-class {
         width: 140px;
+
         @media screen and (max-width:1024px) {
             width: 92px;
         }

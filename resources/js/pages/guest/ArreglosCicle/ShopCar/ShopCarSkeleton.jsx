@@ -4,11 +4,10 @@ import "../../../MainRouter/MainRouter.scss";
 import CarCard from "../../../../components/organisms/CarCard/CarCard";
 import Button from "../../../../components/atoms/Button/Button";
 import { useNavigate } from "react-router-dom";
+import { Skeleton } from "primereact/skeleton";
 
-
-const ShopCar = () => {
+const ShopCarSkeleton = () => {
     const navigate = useNavigate();
-
     const dataCards = [
         {
             title: "Fresas con chocolate",
@@ -47,8 +46,7 @@ const ShopCar = () => {
                                     dataCards.map((item) => {
                                         return (
                                             <>
-                                                <CarCard
-                                                    title={item.title} description={item.description} price={item.price} onClick={()=>{navigate(item.urlClick)}}/>
+                                                <Skeleton width="100%" height="186px"></Skeleton>
                                             </>
                                         )
                                     })
@@ -61,17 +59,17 @@ const ShopCar = () => {
                             <div className="card-col2">
                                 <div className="content">
                                     <div className="left">
-                                        <div className="subtotal-f">Subtotal:</div>
-                                        <div className="subtotal">Costo de envío:</div>
-                                        <div className="total">Total:</div>
+                                        <div className="subtotal-f"> <Skeleton width="100px" height="20px"></Skeleton></div>
+                                        <div className="subtotal"><Skeleton width="100px" height="20px"></Skeleton></div>
+                                        <div className="total"><Skeleton width="100px" height="20px"></Skeleton></div>
                                     </div>
                                     <div className="right">
-                                        <div className="price">$805.00 MXN</div>
-                                        <div className="price">$100.00 MXN</div>
-                                        <div className="total-green">$905.00 MXN</div>
+                                        <div className="price"><Skeleton width="100px" height="20px"></Skeleton></div>
+                                        <div className="price"><Skeleton width="100px" height="20px"></Skeleton></div>
+                                        <div className="total-green"><Skeleton width="100px" height="20px"></Skeleton></div>
                                     </div>
                                 </div>
-                                <Button color={"red"} onClick={()=>{navigate('/arrangements/checkout')}}>Proceder al pago</Button>
+                                <Skeleton width="100%" height="40px"></Skeleton>
                             </div>
                         </div>
                     </div>
@@ -80,4 +78,4 @@ const ShopCar = () => {
         </>
     )
 }
-export default ShopCar
+export default ShopCarSkeleton
