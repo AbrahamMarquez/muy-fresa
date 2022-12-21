@@ -1,10 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import './Checkout.scss'
 import "../../../MainRouter/MainRouter.scss";
 import Button from "../../../../components/atoms/Button/Button";
 import calendarIcon from '../../../../img/icons/calendar.svg'
 import CheckoutCard from "../../../../components/organisms/CheckoutCard/CheckoutCard";
+import Calendar from "../../../../components/molecules/GeneralCalendar/GeneralCalendar";
+
 const Checkout = () => {
+    const cardData = [
+        {
+            price: "$115.00 MXN",
+            cuatity: 1,
+            title: "Fresas con chocolate",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed."
+        },
+        {
+            price: "$115.00 MXN",
+            cuatity: 1,
+            title: "Fresas con chocolate",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed."
+        },
+        {
+            price: "$115.00 MXN",
+            cuatity: 1,
+            title: "Fresas con chocolate",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed."
+        },
+        {
+            price: "$115.00 MXN",
+            cuatity: 1,
+            title: "Fresas con chocolate",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed."
+        },
+    ]
+    const [date, setDate] = useState()
+    const [showCalendar,setShowCalendar] = useState(false)
     return (
         <>
             <div className="generalBackground-mr">
@@ -12,26 +42,43 @@ const Checkout = () => {
                     <div className="checkout-grid">
 
                         <div className="col1">
-                            <div className="card">
+                            <div className="card" onClick={() => { setShowCalendar(true) }}>
                                 <div className="calndar-container">
-                                    <div className="content-calendar">
-                                        <img className="img-calendar" src={calendarIcon}/>
+                                    <div className="content-calendar" >
+                                        <img className="img-calendar" src={calendarIcon} />
                                         <div className="color-calendar">Selecciona fecha y horario</div>
+
                                     </div>
                                 </div>
                             </div>
                             <div className="card-2">
+                                {
+                                    window.screen.width < 1024 ?
+                                        <>
+                                            <div className="envio mb36">{"Envío(Añadir direccion)"}</div>
+                                        </> : ""
+                                }
                                 <div className="content">
                                     <div className="left">
                                         <div className="subtotal-f">Subtotal:</div>
                                         <div className="subtotal">Costo de envío:</div>
-                                        <div className="envio">{"Envío(Añadir direccion)"}</div>
+                                        {
+                                            window.screen.width > 1023 ?
+                                                <>
+                                                    <div className="envio">{"Envío(Añadir direccion)"}</div>
+                                                </> : ""
+                                        }
                                         <div className="total">Total:</div>
                                     </div>
                                     <div className="right">
                                         <div className="price">$805.00 MXN</div>
                                         <div className="price">$100.00 MXN</div>
-                                        <div></div>
+                                        {
+                                            window.screen.width > 1023 ?
+                                                <>
+                                                    <div></div>
+                                                </> : ""
+                                        }
                                         <div className="total-green">$905.00 MXN</div>
                                     </div>
                                 </div>
@@ -43,12 +90,28 @@ const Checkout = () => {
 
                         </div>
                         <div className="col2">
-                            <CheckoutCard price="$115.00 MXN" cuatity={1} title={"Fresas con chocolate"} description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.'></CheckoutCard>
+                            <div className="cards-container">
+                                {
+                                    cardData.map((item) => {
+                                        return (
+                                            <>
+                                                <CheckoutCard price={item.price} cuatity={item.cuatity} title={item.title} description={item.description}></CheckoutCard>
+                                            </>
+                                        )
+                                    })
+                                }
+                            </div>
                         </div>
 
                     </div>
                 </div>
+            
             </div>
+            {
+                showCalendar?
+                <Calendar value={date} setValue={setDate} openModal={setShowCalendar}></Calendar>
+                :""
+            }
         </>
     )
 }

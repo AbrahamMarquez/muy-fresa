@@ -15,18 +15,24 @@ const CheckoutCard = ({ title, description, price, onClick, cuatity }) => {
                             <img src={cardImd} className={"img-product"}></img>
                             <div className="x-button">x</div>
                             {
-                            window.screen.width < 1024 ?
-                                <>
-                                    <div className="cuatity">x{cuatity}</div>
-                                </> : ""
-                        }
+                                window.screen.width < 1024 ?
+                                    <>
+                                        <div className="cuatity">x{cuatity}</div>
+                                    </> : ""
+                            }
                         </div>
 
                     </div>
                     <div className="description">
-                        <div className="z-index">
+                        <div className="z-index2">
                             <div className="title">{title}</div>
-                            <div className="text">{description}</div>
+                            {
+                                window.screen.width > 1023 ?
+                                    <>
+                                        <div className="text">{description}</div>
+                                    </> : ""
+                            }
+
                         </div>
                         {
                             window.screen.width > 1023 ?
@@ -40,7 +46,14 @@ const CheckoutCard = ({ title, description, price, onClick, cuatity }) => {
                             </div>
                         </div>
                     </div>
+
                 </div>
+                {
+                    window.screen.width < 1024 ?
+                        <>
+                            <div style={{marginTop:"10px"}} className="text">{description}</div>
+                        </> : ""
+                }
                 <div className="coverCarCard" onClick={onClick}></div>
             </div>
 

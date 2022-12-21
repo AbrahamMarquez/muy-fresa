@@ -8,11 +8,17 @@
         grid-template-rows: repeat(5, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+        @media screen and (max-width:1024px) {
+            display: flex;
+            flex-direction:column-reverse;
+        }
 
         .col1 {
             grid-area: 1 / 1 / 6 / 3;
             padding: 38px 92px 0px 92px;
-
+            @media screen and (max-width:1024px) {
+                padding: 38px 5% 0px 5%;
+            }
             .card {
                 width: 100%;
                 padding: 30px;
@@ -21,6 +27,28 @@
                 background: white;
                 margin-bottom: 31px;
                 transition: all 1s;
+                @media screen and (max-width:1024px) {
+                    padding: 20px;
+
+                }
+                .color-calendar {
+                    font-size: 20px;
+                    color: white;
+                    @media screen and (max-width:1024px) {
+                        font-size: 18px;
+
+                    }
+                }
+                .img-calendar
+                {
+                    width: initial;
+                        height: initial;
+                    @media screen and (max-width:1024px) {
+                        width: 27px;
+                        height: 27px;
+
+                    }
+                }
             }
 
             .card:hover {
@@ -34,10 +62,21 @@
                         .color-calendar {
                             font-size: 20px;
                             color: white;
+                            @media screen and (max-width:1024px) {
+                                font-size: 18px;
+        
+                            }
                         }
                         .img-calendar
                         {
                             filter: grayscale(100%) sepia(100%) brightness(200%) saturate(0%) contrast(1000%);
+                            width: initial;
+                                height: initial;
+                            @media screen and (max-width:1024px) {
+                                width: 27px;
+                                height: 27px;
+
+                            }
                         }
 
                     }
@@ -55,7 +94,12 @@
 
                     .color-calendar {
                         font-size: 20px;
-                        color: #db0032;
+                        font-weight: 500;
+                        color:#db0032 ;
+                        @media screen and (max-width:1024px) {
+                            font-size: 18px;
+    
+                        }
                     }
 
                 }
@@ -66,11 +110,24 @@
                 box-shadow: 0px 5px 12px -2px rgba(0, 0, 0, 0.12);
                 border-radius: 12px;
                 background: white;
-
+                margin-bottom: 0px;
+                @media screen and (max-width:1024px) {
+                    margin-bottom: 200px;
+                }
                 .buttons-container {
                     margin-bottom: 19px;
                 }
+                .envio {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #77ab39;
 
+                }
+                .mb36
+                {
+                    margin-bottom: 36px;
+                    font-size: 18px;
+                }
                 .content {
                     display: flex;
                     justify-content: space-between;
@@ -95,13 +152,12 @@
                             font-size: 21px;
                             font-weight: 600;
                             color: #db0032;
+                            @media screen and (max-width:1024px) {
+                                font-size: 28px;
+                            }
                         }
 
-                        .envio {
-                            font-size: 14px;
-                            font-weight: 600;
-                            color: #77ab39;
-                        }
+                        
 
                     }
 
@@ -113,22 +169,37 @@
                         .price {
                             font-size: 16px;
                             text-align: right;
+                            
                         }
 
                         .total-green {
                             font-size: 21px;
                             font-weight: 500;
-
+                            @media screen and (max-width:1024px) {
+                                font-size: 28px;
+                                width: 201px;
+                            }
                             text-align: right;
                         }
                     }
                 }
             }
+            
         }
 
         .col2 {
             grid-area: 1 / 3 / 6 / 6;
+
             padding: 38px 15% 0px 0px;
+            @media screen and (max-width:1024px) {
+                padding: 38px 5% 0px 5%;
+            }
+            .cards-container
+            {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
 
         }
     }

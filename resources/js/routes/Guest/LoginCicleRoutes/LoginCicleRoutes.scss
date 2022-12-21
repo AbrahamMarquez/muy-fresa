@@ -3,8 +3,15 @@
     min-height: calc(100vh - 200px);
     padding-top:200px;
     background-image: url('../../../img/login/background_fresa.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     @media screen and (max-width:1024px) {
       padding-top:170px;
       min-height: 100vh;
+    }
+    @media screen and (min-width:1920px) {
+      padding-top:170px;
+      min-height: calc(100vh - 200px);
+      padding-top:272px;
     }
 }

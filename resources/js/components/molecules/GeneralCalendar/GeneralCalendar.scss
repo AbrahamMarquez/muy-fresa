@@ -1,0 +1,102 @@
+.Calendar {
+    position: fixed;
+    top: calc(50% - 252px);
+    left: calc(50% - 233px);
+    z-index: 4;
+    @media screen and (max-width:1024px) {
+        max-width: 300px;
+        
+        left: calc(50% - 152px);
+       }
+    .container {
+        max-width: 644px;
+        width: 100%;
+        background: #77ab39;
+        padding: 20px;
+        color: white;
+       @media screen and (max-width:700px) {
+        max-width: 300px;
+       
+       }
+        .remeber {
+            font-size: 28px;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .description {
+            font-size: 20px;
+            font-weight: 400;
+            max-width: 90%;
+            text-align: justify;
+            line-height: 22px;
+            margin-top: 15px;
+        }
+    }
+}
+
+.calendar-background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.49);
+    z-index: 3;
+}
+
+.p-datepicker {
+    width: 644px !important;
+    @media screen and (max-width:700px) {
+        max-width: 300px;
+       }
+    .p-datepicker-header {
+        border-bottom: 2px solid #e5133a;
+
+        .p-datepicker-title {
+            .p-datepicker-year {
+                font-size: 28px;
+                color: #77ab39;
+                font-weight: 600;
+            }
+
+            .p-datepicker-year:hover {
+                font-size: 28px;
+                color: #77ab39;
+                font-weight: 600;
+            }
+
+            .p-datepicker-month {
+                font-size: 28px;
+                color: #e5133a;
+                font-weight: 700;
+            }
+        }
+       
+    }
+   
+    .pi {
+
+        color: #e5133a;
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+
+    td>span {
+        color: #e5133a;
+    }
+    td>span.p-highlight
+    {
+        background: #77ab39!important;
+        color: white!important;
+    }
+    td.p-datepicker-today > span
+    {
+        background: #e5133a!important;
+        color: white!important;
+    }
+
+
+}

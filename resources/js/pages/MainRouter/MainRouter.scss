@@ -12,6 +12,7 @@ body {
 {
     min-height: calc(100vh - 200px);
     padding-top:100px;
+    
     @media screen and (max-width:1024px) {
       padding-top:170px;
       min-height: 100vh;
