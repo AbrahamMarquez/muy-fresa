@@ -12,7 +12,7 @@ import HeaderSkeleton from "../../../components/organisms/Header/HeaderSkeleton"
 import ArreglosCicle from "../../../routes/Guest/ArreglosCicle/ArreglosCicle";
 import LoginCicleRoutes from "../../../routes/Guest/LoginCicleRoutes/LoginCicleRoutes";
 
-const Guest = () => {
+const Guest = ({setAuth}) => {
     const route = useLocation()
     
     return (
@@ -34,7 +34,7 @@ const Guest = () => {
                         <HeaderNoChocolate/>
                 }
             </Suspense>
-            <HomeRoutes/>
+            <HomeRoutes setAuth={setAuth}/>
             <LoginCicleRoutes/>
             <ArreglosCicle/>
             
