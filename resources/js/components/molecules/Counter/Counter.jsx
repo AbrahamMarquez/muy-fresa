@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import './Counter.scss'
 
 
-const Counter = ({ className, value, setValue }) => {
+const Counter = ({ className, value, setValue,title }) => {
     useEffect(()=>
     {
         if(value<0)
@@ -13,7 +13,7 @@ const Counter = ({ className, value, setValue }) => {
     return (
         <>
             <div className={`Counter ${className}`}>
-                <div className="title-Counter">Cantidad</div>
+                <div className="title-Counter">{title}</div>
                 <div className="container-counter">
                     <div className="icon" onClick={()=>{setValue(value=value+1)}}>+</div>
                     <div className="">{value}</div>

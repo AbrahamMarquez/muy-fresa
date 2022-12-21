@@ -1,45 +1,43 @@
 import React, { useState } from "react";
-import './CarCard.scss'
+import './CheckoutCard.scss'
 import cardImd from '../../../img/arreglos/cards/c10.jpg';
 import trash from '../../../img/icons/trash.svg';
 import Counter from '../../molecules/Counter/Counter'
 
-const CarCard = ({ title, description, price, onClick }) => {
+const CheckoutCard = ({ title, description, price, onClick, cuatity }) => {
     const [counter, setCounter] = useState(1)
     return (
         <>
-            <div className="CarCard" >
+            <div className="CarCard-checkout" >
                 <div className="content">
                     <div className="z-index">
-                        <img src={cardImd} className={"img-product"}></img>
-                        {
+                        <div className="x-button-container">
+                            <img src={cardImd} className={"img-product"}></img>
+                            <div className="x-button">x</div>
+                            {
                             window.screen.width < 1024 ?
                                 <>
-                                    
-                                        <Counter value={counter} setValue={setCounter} title={""} className={"conter-class"}></Counter>
-                                    
+                                    <div className="cuatity">x{cuatity}</div>
                                 </> : ""
                         }
+                        </div>
+
                     </div>
                     <div className="description">
                         <div className="z-index">
                             <div className="title">{title}</div>
                             <div className="text">{description}</div>
-                            <div className="front">
-                                {
-                                    window.screen.width > 1023 ?
-                                        <>
-                                            <Counter value={counter} setValue={setCounter} title={""} className={"conter-class"}></Counter>
-                                        </> : ""
-                                }
-                            </div>
                         </div>
+                        {
+                            window.screen.width > 1023 ?
+                                <>
+                                    <div className="cuatity">x{cuatity}</div>
+                                </> : ""
+                        }
                         <div className="price-container">
                             <div className="z-index">
-                                <div className="title">Precio</div>
                                 <div className="price">{price}</div>
                             </div>
-                            <img className="img-trash" src={trash}></img>
                         </div>
                     </div>
                 </div>
@@ -49,4 +47,4 @@ const CarCard = ({ title, description, price, onClick }) => {
         </>
     )
 }
-export default CarCard 
+export default CheckoutCard 

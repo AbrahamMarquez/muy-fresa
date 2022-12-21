@@ -4,6 +4,7 @@ const Arreglo = lazy(()=>import("../../../pages/guest/ArreglosCicle/Arreglo/Arre
 import ArregloSkeleton from "../../../pages/guest/ArreglosCicle/Arreglo/ArregloSkeleton";
 const Show = lazy(()=>import("../../../pages/guest/ArreglosCicle/Arreglo/Show/Show"))
 import ShowSkeleton from "../../../pages/guest/ArreglosCicle/Arreglo/Show/ShowSkeleton";
+import Checkout from "../../../pages/guest/ArreglosCicle/Checkout/Checkout";
 
 const ArreglosCicle = () => {
     //como no lleva chocolate en el header aqui se le quita 
@@ -25,6 +26,14 @@ const ArreglosCicle = () => {
                     element={
                         <Suspense fallback={<ShowSkeleton/>}>
                             <Show></Show>
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="/arrangements/checkout"
+                    element={
+                        <Suspense fallback={<></>}>
+                            <Checkout></Checkout>
                         </Suspense>
                     }
                 />

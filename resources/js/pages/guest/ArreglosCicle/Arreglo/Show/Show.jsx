@@ -503,7 +503,7 @@ const Show = () => {
                                                 </div>
                                             </div>
                                             <div className="counter-element">
-                                                <Counter value={counter} setValue={setCounter} ></Counter>
+                                                <Counter value={counter} setValue={setCounter} title={"Cantidad"}></Counter>
                                             </div>
                                             <div className="buttons-show-array">
                                                 <Button className={"button-array"}>
@@ -676,7 +676,7 @@ const Show = () => {
                                     </div>
                                 </div>
                                 <div className="counter-element">
-                                    <Counter value={counter} setValue={setCounter} ></Counter>
+                                    <Counter value={counter} setValue={setCounter} title={"Cantidad"}></Counter>
                                 </div>
                                 <div className="buttons-show-array">
                                     <Button className={"button-array"}>

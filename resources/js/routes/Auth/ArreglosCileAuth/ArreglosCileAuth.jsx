@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import ShopCar from "../../../pages/guest/ArreglosCicle/ShopCar/ShopCar";
+const ShopCar = lazy(()=>import("../../../pages/guest/ArreglosCicle/ShopCar/ShopCar"))
+import ShopCarSkeleton from "../../../pages/guest/ArreglosCicle/ShopCar/ShopCarSkeleton";
 
 
 const ArreglosCicleAuth = () => {
@@ -10,15 +11,16 @@ const ArreglosCicleAuth = () => {
         <>
             <Routes>
                 <Route
-                    path="/arrangements/car"
+                    path="/shopping"
                     element={
-                        <Suspense fallback={<></>}>
-                            
+                        <Suspense fallback={<ShopCarSkeleton/>}>
+                            {/* <ShopCarSkeleton/> */}
                             <ShopCar></ShopCar>
                             
                         </Suspense>
                     }
                 />
+                
                 
             </Routes>
         </>
