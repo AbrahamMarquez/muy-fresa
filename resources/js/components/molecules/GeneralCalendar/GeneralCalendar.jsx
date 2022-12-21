@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './GeneralCalendar.scss'
 import { Calendar } from 'primereact/calendar';
 import tachuela from '../../../img/icons/tachuela.png'
 const GeneralCalendar = ({ value, setValue, openModal }) => {
+    useEffect(()=>
+    {
+        if(value!=undefined)
+        {
+            openModal(false)
+        }
+        
+    },[value])
+    console.log("value",value)
     return (
         <>
             <div className="Calendar">
