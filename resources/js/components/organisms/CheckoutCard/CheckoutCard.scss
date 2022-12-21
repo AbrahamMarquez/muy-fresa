@@ -6,7 +6,9 @@
     position: relative;
     transition: all 1s;
     box-shadow: 0px 9px 18px -1px rgba(0, 0, 0, 0.25);
-
+    @media screen and (max-width:1024px) {
+        padding: 14px 18px;
+    }
     .coverCarCard {
         position: absolute;
         background: transparent;
@@ -23,6 +25,14 @@
     .z-index {
         z-index: 2;
 
+    }
+    .z-index2 {
+        z-index: 2;
+        width:initial;
+        @media screen and (max-width:1024px) {
+            
+            width: 100%;
+        }
     }
 
     .content {
@@ -99,6 +109,7 @@
 
                 @media screen and (max-width:1024px) {
                     font-size: 18px;
+                    text-align: right;
                 }
             }
 
@@ -111,6 +122,10 @@
 
                 @media screen and (max-width:1024px) {
                     font-size: 10px;
+                    text-align: right;
+                    max-width: auto;
+                    width: 100%;
+                    line-height: 1;
                 }
             }
 
@@ -119,7 +134,9 @@
                 flex-direction: column;
                 align-items: flex-end;
                 justify-content: space-between;
-
+                @media screen and (max-width:1024px) {
+                    width: 100%;
+                }
                 .title {
                     font-size: 14px;
                     font-weight: 400;
