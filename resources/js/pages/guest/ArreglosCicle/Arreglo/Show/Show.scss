@@ -96,7 +96,7 @@
 
     .col1 {
         grid-area: 1 / 1 / 6 / 4;
-
+        
         .carrusel {}
     }
 
@@ -170,12 +170,12 @@
             margin-top: 15px;
             justify-content: initial;
 
-            
+
 
             .title {
                 color: #e5133a;
                 font-size: 16px;
-                
+
 
             }
 
@@ -489,7 +489,11 @@
         @media screen and (max-width:1400px) {
             display: flex;
             justify-content: center;
+
         }
+        
+        
+        
 
         .circleCard-left {
             cursor: pointer;
@@ -563,7 +567,7 @@
 
 .imagenG {
     // @media (min-width: 1024px) {
-    max-width: 476px;
+    // max-width: 476px;
     width: 100%;
     height: 577px;
     -o-object-fit: cover;
@@ -592,6 +596,19 @@
 
     ;
 
+}
+
+            
+                .p-galleria-item-wrapper
+                {
+    
+                    width: 100%;
+                }
+            
+        
+
+.p-galleria-item-container {
+    width: 100%;
 }
 
 .p-galleria-thumbnail-items-container {
