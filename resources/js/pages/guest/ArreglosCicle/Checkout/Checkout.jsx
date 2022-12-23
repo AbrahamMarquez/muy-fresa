@@ -5,8 +5,10 @@ import Button from "../../../../components/atoms/Button/Button";
 import calendarIcon from '../../../../img/icons/calendar.svg'
 import CheckoutCard from "../../../../components/organisms/CheckoutCard/CheckoutCard";
 import Calendar from "../../../../components/molecules/GeneralCalendar/GeneralCalendar";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
+    const navigate = useNavigate()
     const cardData = [
         {
             price: "$115.00 MXN",
@@ -83,7 +85,7 @@ const Checkout = () => {
                                     </div>
                                 </div>
                                 <div className="buttons-container">
-                                    <Button color={"red"} onClick={() => { navigate('#') }}>Realizar pedido</Button>
+                                    <Button color={"red"} onClick={() => { navigate('/arrangements/checkout/product') }}>Realizar pedido</Button>
                                 </div>
                                 <Button onClick={() => { navigate('#') }}>Seguir comprando</Button>
                             </div>

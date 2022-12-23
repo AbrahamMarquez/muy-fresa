@@ -2,6 +2,7 @@ import React, { lazy, Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 const Arreglo = lazy(()=>import("../../../pages/guest/ArreglosCicle/Arreglo/Arreglo"))
 import ArregloSkeleton from "../../../pages/guest/ArreglosCicle/Arreglo/ArregloSkeleton";
+import Product from "../../../pages/guest/ArreglosCicle/Arreglo/Product/Product";
 const Show = lazy(()=>import("../../../pages/guest/ArreglosCicle/Arreglo/Show/Show"))
 import ShowSkeleton from "../../../pages/guest/ArreglosCicle/Arreglo/Show/ShowSkeleton";
 import Checkout from "../../../pages/guest/ArreglosCicle/Checkout/Checkout";
@@ -34,6 +35,14 @@ const ArreglosCicle = () => {
                     element={
                         <Suspense fallback={<></>}>
                             <Checkout></Checkout>
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="/arrangements/checkout/product"
+                    element={
+                        <Suspense fallback={<></>}>
+                            <Product></Product>
                         </Suspense>
                     }
                 />

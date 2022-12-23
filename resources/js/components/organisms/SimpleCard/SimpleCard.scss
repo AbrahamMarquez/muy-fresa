@@ -1,0 +1,47 @@
+.SimpleCard
+{
+    padding: 5px;
+    .container
+    {
+        display: flex;
+        align-items: center;
+        .img
+        {
+            min-width:82px;
+            height: 80px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-right: 9px;
+            @media screen and (max-width:1024px) {
+                min-width:36px;
+                height: 35px;
+            }
+        }
+        .text-contaiener
+        {
+            .title
+            {
+                font-size: 18px;
+                font-weight: 600; 
+                margin-bottom: 5px;
+                @media screen and (max-width:1024px) {
+                    font-size: 12px;
+                }
+            }
+            .text
+            {
+                font-size: 10px;
+                max-width:535px ;
+                text-align: justify;
+                @media screen and (max-width:1024px) {
+                    font-size: 8px;
+                    height: 60px;
+                    overflow: hidden;
+                    /* white-space: nowrap; */
+                    text-overflow: ellipsis;
+
+                }
+            }
+        }
+    }
+}
