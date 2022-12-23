@@ -9,9 +9,12 @@
       padding-top:170px;
       min-height: 100vh;
     }
-    @media screen and (min-width:1920px) {
+    @media screen and (min-width:1921px) {
       padding-top:170px;
       min-height: calc(100vh - 200px);
       padding-top:272px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 }

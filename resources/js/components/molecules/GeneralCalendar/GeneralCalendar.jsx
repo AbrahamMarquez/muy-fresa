@@ -3,19 +3,11 @@ import './GeneralCalendar.scss'
 import { Calendar } from 'primereact/calendar';
 import tachuela from '../../../img/icons/tachuela.png'
 const GeneralCalendar = ({ value, setValue, openModal }) => {
-    useEffect(()=>
-    {
-        if(value!=undefined)
-        {
-            openModal(false)
-        }
-        
-    },[value])
-    console.log("value",value)
+
     return (
         <>
             <div className="Calendar">
-                <Calendar id="touchUI" value={value} onChange={(e) => setValue(e.value)} inline showWeek />
+                <Calendar id="touchUI" value={value} onChange={(e) => {setValue(e.value)}} inline showWeek />
                 <div className="container">
                     <div className="remeber">
                         <div className="title">Recuerda :</div>
