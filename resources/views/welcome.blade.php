@@ -17,7 +17,7 @@
 
         <style>
             body {
-                font-family: 'Rubik', sans-serif;
+                font-family: 'League Spartan', sans-serif;
             }
         </style>
     </head>
