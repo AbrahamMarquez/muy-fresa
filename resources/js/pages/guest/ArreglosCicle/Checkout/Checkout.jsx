@@ -6,6 +6,7 @@ import calendarIcon from '../../../../img/icons/calendar.svg'
 import CheckoutCard from "../../../../components/organisms/CheckoutCard/CheckoutCard";
 import Calendar from "../../../../components/molecules/GeneralCalendar/GeneralCalendar";
 import { useNavigate } from "react-router-dom";
+import SendDirectionModal from "../../../../components/molecules/SendDirectionModal/SendDirectionModal";
 
 const Checkout = () => {
     const navigate = useNavigate()
@@ -37,6 +38,7 @@ const Checkout = () => {
     ]
     const [date, setDate] = useState()
     const [showCalendar,setShowCalendar] = useState(false)
+    const [openModalAddress,setOpenModalAddress] = useState(true)
     return (
         <>
             <div className="generalBackground-mr">
@@ -57,7 +59,7 @@ const Checkout = () => {
                                 {
                                     window.screen.width < 1024 ?
                                         <>
-                                            <div className="envio mb36">{"Envío(Añadir direccion)"}</div>
+                                            <div className="envio mb36" onClick={()=>{setOpenModalAddress(true)}}>{"Envío(Añadir direccion)"} </div>
                                         </> : ""
                                 }
                                 <div className="content">
@@ -114,6 +116,12 @@ const Checkout = () => {
                 <Calendar value={date} setValue={setDate} openModal={setShowCalendar}></Calendar>
                 :""
             }
+            {
+                openModalAddress?
+                <SendDirectionModal setOpenModalAddress={setOpenModalAddress}></SendDirectionModal>
+                :""
+            }
+
         </>
     )
 }
