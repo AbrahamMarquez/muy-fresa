@@ -174,7 +174,7 @@ const Product = () => {
                                 </div>
                             </div>
                             <div className="btn-contianer">
-                                <Button color={"red"} className={"btnVisa"}>Realizar pedido</Button>
+                                <Button color={"red"} className={"btnVisa" } onClick={()=>{navigate("/arrangements/checkout/payment")}}>Realizar pedido</Button>
                                 <Button onClick={()=>{navigate("/shopping")}}  className={"btnVisa"}>Regresar al carrito</Button>
                             </div>
                         </div>

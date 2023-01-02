@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './Checkout.scss'
 import "../../../MainRouter/MainRouter.scss";
 import Button from "../../../../components/atoms/Button/Button";
@@ -38,7 +38,57 @@ const Checkout = () => {
     ]
     const [date, setDate] = useState()
     const [showCalendar,setShowCalendar] = useState(false)
-    const [openModalAddress,setOpenModalAddress] = useState(true)
+    const [openModalAddress,setOpenModalAddress] = useState(false)
+    const [directionSelected,setDirectionSelected] = useState(null)
+    const [address,setAddress] = useState( [
+        {
+            name: "Nataly Sánchez",
+            no1: "3323456585",
+            no2: "3323456585",
+            street: "Federico E. Ibarra 2345",
+            state: "Jalisco, Zapopan",
+            reference: "Es una casa azul con reja negra"
+            , id: 1
+        },
+        {
+            name: "Nataly Sánchez",
+            No1: "3323456585",
+            No2: "3323456585",
+            street: "Federico E. Ibarra 2345",
+            state: "Jalisco, Zapopan",
+            reference: "Es una casa azul con reja negra"
+            , id: 2
+        },
+        {
+            name: "Nataly Sánchez",
+            No1: "3323456585",
+            No2: "3323456585",
+            street: "Federico E. Ibarra 2345",
+            state: "Jalisco, Zapopan",
+            reference: "Es una casa azul con reja negra"
+            , id: 3
+        },
+        {
+            name: "Nataly Sánchez",
+            No1: "3323456585",
+            No2: "3323456585",
+            street: "Federico E. Ibarra 2345",
+            state: "Jalisco, Zapopan",
+            reference: "Es una casa azul con reja negra"
+            , id: 4
+        },
+    ])
+    useEffect(()=>
+    {
+        if(openModalAddress)
+        {
+            document.getElementById("bodyId").style.overflow="hidden"
+        }
+        else
+        {
+            document.getElementById("bodyId").style.overflow="auto"
+        }
+    },[openModalAddress])
     return (
         <>
             <div className="generalBackground-mr">
@@ -59,7 +109,7 @@ const Checkout = () => {
                                 {
                                     window.screen.width < 1024 ?
                                         <>
-                                            <div className="envio mb36" onClick={()=>{setOpenModalAddress(true)}}>{"Envío(Añadir direccion)"} </div>
+                                            <div className="envio mb36" onClick={()=>{setOpenModalAddress(true)}}>{`Envío(${directionSelected==null?"Añadir direccion":directionSelected.street+","+directionSelected.state})`} </div>
                                         </> : ""
                                 }
                                 <div className="content">
@@ -69,7 +119,7 @@ const Checkout = () => {
                                         {
                                             window.screen.width > 1023 ?
                                                 <>
-                                                    <div className="envio">{"Envío(Añadir direccion)"}</div>
+                                                    <div className="envio" onClick={()=>{setOpenModalAddress(true)}}>{`Envío(${directionSelected==null?"Añadir direccion":directionSelected.street+","+directionSelected.state})`} </div>
                                                 </> : ""
                                         }
                                         <div className="total">Total:</div>
@@ -118,7 +168,7 @@ const Checkout = () => {
             }
             {
                 openModalAddress?
-                <SendDirectionModal setOpenModalAddress={setOpenModalAddress}></SendDirectionModal>
+                <SendDirectionModal setOpenModalAddress={setOpenModalAddress} setDirectionSelected={setDirectionSelected} address={address} setAddress={setAddress}></SendDirectionModal>
                 :""
             }
 

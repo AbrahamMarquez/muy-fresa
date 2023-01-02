@@ -3,6 +3,10 @@
     z-index: 4;
     top: calc(50% - 218px);
     left: calc(50% - 397px);
+    @media screen and (max-width:800px){
+        top: calc(50% - 215px);
+        left: calc(50% - 126px);
+    }
 
     .card {
         max-width: 794px;
@@ -10,68 +14,206 @@
         border-radius: 5px;
         box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.1), inset -5px 5px 20px rgba(0, 0, 0, 0.05);
         background: white;
-       padding: 10px 40px;
-        .x
-        {
+        padding: 10px 40px;
+
+        .x {
             display: flex;
             width: 100%;
             justify-content: flex-end;
-
         }
-        .title
-        {
-            font-size:18px ;
-            color:#e5133a ;
+
+        .title {
+            font-size: 18px;
+            color: #e5133a;
             height: 35px;
             border-bottom: 1px solid #e5133a;
             text-align: center;
             margin-bottom: 15px;
         }
     }
+
     .grid-direccion-envio {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(5, 1fr);
         grid-column-gap: 15px;
-        grid-row-gap: 0px;
+        grid-row-gap: 15px;
         padding-left: 0px;
         padding-right: 10px;
-        .col1 { grid-area: 1 / 1 / 2 / 7; }
-        .col2 { grid-area: 1 / 7 / 2 / 10; }
-        .col3 { grid-area: 1 / 10 / 2 / 13; }
-        .col4 { grid-area: 2 / 1 / 3 / 13; }
-        .col5 { grid-area: 3 / 1 / 4 / 11; }
-        .col6 { grid-area: 3 / 11 / 4 / 13; }
-        .col7 { grid-area: 4 / 1 / 5 / 11; }
-        .col8 { grid-area: 4 / 11 / 5 / 13; }
-        .col9 { grid-area: 5 / 1 / 6 / 7; }
-        .col10 { grid-area: 5 / 7 / 6 / 10; }
-        .col11 { grid-area: 5 / 10 / 6 / 13; }
-        .input-envio
-        {
-            .title_input
-            {
-                color: #e5133a;
-               
-            }
-            
+        height:auto;
+        @media screen and (max-width:800px){
+            display:flex;
+            flex-direction: column;
+            height: 200px;
+            overflow-y: auto;
             
         }
-        .input-envio-np
-        {
-            .title_input
-            {
-                color: #e5133a;
-                padding-left: 0px;
-               
-            }
-            
-            
+        .col1 {
+            grid-area: 1 / 1 / 2 / 7;
         }
 
+        .col2 {
+            grid-area: 1 / 7 / 2 / 10;
+        }
+
+        .col3 {
+            grid-area: 1 / 10 / 2 / 13;
+        }
+
+        .col4 {
+            grid-area: 2 / 1 / 3 / 13;
+        }
+
+        .col5 {
+            grid-area: 3 / 1 / 4 / 11;
+        }
+
+        .col6 {
+            grid-area: 3 / 11 / 4 / 13;
+        }
+
+        .col7 {
+            grid-area: 4 / 1 / 5 / 11;
+        }
+
+        .col8 {
+            grid-area: 4 / 11 / 5 / 13;
+        }
+
+        .col9 {
+            grid-area: 5 / 1 / 6 / 7;
+        }
+
+        .col10 {
+            grid-area: 5 / 7 / 6 / 10;
+        }
+
+        .col11 {
+            grid-area: 5 / 10 / 6 / 13;
+        }
+
+        .input-envio {
+            .title_input {
+                color: #e5133a;
+
+            }
+
+
+        }
+
+        .input-envio-np {
+            .title_input {
+                color: #e5133a;
+                padding-left: 0px;
+
+            }
+
+
+        }
+
+    }
+
+    .btn-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        column-gap: 20px;
+        margin-top: 41px;
+        margin-bottom: 41px;
+        flex-direction:row;
+        @media screen and (max-width:800px) {
+            flex-direction: column-reverse;
+            row-gap: 20px;
+
+        }
+        .btn {
+            width: 100%;
+
+        }
+    }
+
+
+
+    /////////////////////////////////////////////////////////////////////////// second part (direction add)  
+
+    .noDirection {
+        width: 710px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (max-width:800px) {
+            width: 184px;
+        }
+        .img {
+            width: 213px;
+        }
+
+        .contentBottom {
+            max-width: 225px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 34px;
+
+            .upps {
+                font-size: 16px;
+                font-weight: 600;
+                color: #323232;
+                margin-bottom: 15px;
+            }
+
+            .upps-text {
+                font-size: 14px;
+                font-weight: 600;
+                color: #949494;
+                text-align: center;
+            }
+        }
+        .hrRed
+        {
+            width: 100%;
+            margin-bottom:30px ;
+            border-top: 1px solid #e5133a;
         }
         
-       
+    }
+
+    //////////////////////////////////////////////////////////////////////////addDirection
+    .addDirection
+    {
+        width: 710px;
+        height: 380px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 9px;
+        border-bottom: 1px solid #e5133a;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        @media screen and (max-width:800px) {
+            width: 184px;
+            height: 200px;
+        }
+    }
+    .btn
+        {
+            width:315px ;
+            @media screen and (max-width:800px) {
+                width:100%;
+    
+            }
+        }
+        .btnf
+        {
+            width:315px ;
+            @media screen and (max-width:800px) {
+                width:100%;
+    
+            }
+        }
 }
 
 .SendDirectionModalBackgroun {
