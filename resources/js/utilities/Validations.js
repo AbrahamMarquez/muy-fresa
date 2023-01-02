@@ -37,7 +37,7 @@ export const ValidationRfc = (string) => {
     } else {
         return false;
     }
-}
+} 
 
 export const ValidationEmpty = (value) => {
     if (value === "") {
