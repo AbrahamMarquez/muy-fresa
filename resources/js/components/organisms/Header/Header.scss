@@ -213,6 +213,45 @@
         height: 63px;
         border-radius: 100%;
         object-fit: cover;
+        position: relative;
+        
+    }
+    .arrow
+        {
+            position: absolute;
+            width: 22px!important;
+            height: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #77ab39;
+            border-radius: 50px;
+            top: 58px;
+            right: 159px;
+        }
+    
+    .modalUser
+    {
+        position: absolute;
+        width: 224px;
+        height: fit-content;
+        background: white;
+        top: 85px;
+        padding: 14px 0px; 
+        box-shadow: -15px 15px 20px rgba(0,0,0,0.1), inset -5px 5px 20px rgba(0,0,0,0.05);
+        border-radius: 14px;
+        .option
+        {
+            padding: 5px 5px 5px 30px;
+            text-align: start;
+            
+        }
+        .option:hover
+        {
+            background: #e5133a;
+            color: white;
+        }
+        
     }
 }
 

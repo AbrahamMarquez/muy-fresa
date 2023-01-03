@@ -49,11 +49,11 @@ const MainRoute = () => {
             <Router>
                 {fakeAuth=='true' ? (
                     <>
-                        <Auth setAuth={setFakeAuth} />
+                        <Auth fakeAuth={fakeAuth} setAuth={setFakeAuth} />
                     </>
                 ) : (
                     <>
-                        <Guest setAuth={setFakeAuth}></Guest>
+                        <Guest fakeAuth={fakeAuth} setAuth={setFakeAuth}></Guest>
                     </>
                 )}
             </Router>

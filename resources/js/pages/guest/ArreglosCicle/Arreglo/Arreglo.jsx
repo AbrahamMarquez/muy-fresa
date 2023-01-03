@@ -192,6 +192,7 @@ const Arreglo = () => {
         }
 
     })
+    //cards que se imprimiran en los paginators
     const card = (data) => {
         console.log("data", data)
         return (

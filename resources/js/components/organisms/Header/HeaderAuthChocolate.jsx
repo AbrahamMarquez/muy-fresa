@@ -8,7 +8,7 @@ import HeaderMobile from '../HeaderMobile/HeaderMobile'
 import { useLocation } from "react-router-dom";
 //style
 import './Header.scss'
-import '../../../pages/MainRouter/MainRouter.scss'
+import  '../../../pages/MainRouter/MainRouter.scss'
 //assets
 import searchIcon from '../../../img/icons/searchIcon.svg'
 import shoppIcon from '../../../img/icons/shoppIcon.svg'
@@ -16,16 +16,34 @@ import userIcon from '../../../img/icons/userIcon.svg'
 import logoMuyFresa from '../../../img/icons/logoMuyFresa.svg'
 import burguerIcon from '../../../img/icons/burguerIcon.svg'
 import chocolateImg from '../../../img/header/animationChocolate.png'
+import HeaderMobileAuth from '../HeaderMobile/HeaderMobileAuth'
 
-export default function () {
-
+export default function ({userIcon}) {
+    const [modalUser, setModalUser] = useState(false)
     const navigate = useNavigate()
 
     const options = [
         {
             title: 'Inicio',
             link: '/',
-            
+            subOptions:[
+                {
+                    title: 'Mi perfil',
+                    link: '#'
+                },
+                {
+                    title: 'Mis compras',
+                    link: '#'
+                },
+                {
+                    title: 'Favoritos',
+                    link: '#'
+                },
+                {
+                    title: 'Cerrar sesión',
+                    link: '#'
+                },
+            ]
         },
         {
             title: 'Arreglos',
@@ -82,8 +100,8 @@ export default function () {
     const [search, setSearch] = useState('')
     const [showSideMenu, setShowSideMenu] = useState(false)
     const [changeHeader, setChangeHeader] = useState(false);
-
-
+    
+    
     const handleShowInput = () => {
         if (document.getElementById('searchInput').style.width == '0px' || document.getElementById('searchInput').style.width == '') {
             document.getElementById('searchInput').style.width = '820px'
@@ -101,7 +119,8 @@ export default function () {
             document.getElementById('img-chocolate').style.display = 'initial'
             document.getElementById('chocolateDown').style.background = 'transparent'
         }
-        else {
+        else
+        {
             document.getElementById('chocolateDown').style.top = '-150px'
             document.getElementById('chocolateDown').style.background = '#3b2b1e'
             document.getElementById('img-chocolate').style.display = 'none'
@@ -112,21 +131,29 @@ export default function () {
     }
 
     useEffect(() => {
-        setChangeHeader(true)
-    }, [])
+        
+        
+            // setChangeHeader(false)
+            if (typeof window !== "undefined") {
+                window.addEventListener("scroll", () =>
+                    setChangeHeader(window.pageYOffset > 400)
+                );
+            }
 
+    }, [])
+   
 
     return (
         <header id={"header"} className={!changeHeader ? "header" : "header headerBackground "}>
 
             {/* {
                 !changeHeader && */}
-            <div className='chocolateDown' id='chocolateDown'>
-                <img id='img-chocolate' src={chocolateImg} />
-            </div>
+                <div className='chocolateDown' id='chocolateDown'>
+                    <img id='img-chocolate' src={chocolateImg} />
+                </div>
             {/* }    */}
             <div id='logo' className={!changeHeader ? "logo" : "logo logoSmall"} onClick={() => navigate('/')}>
-
+                
                 <img src={logoMuyFresa} />
             </div>
 
@@ -134,7 +161,7 @@ export default function () {
                 <img src={burguerIcon} />
             </div>
 
-            <HeaderMobile setShowSideMenu={setShowSideMenu} showSideMenu={showSideMenu} options={options} />
+            <HeaderMobileAuth setShowSideMenu={setShowSideMenu} showSideMenu={showSideMenu} options={options} userIcon={userIcon}/>
 
             <div className='rightSide'>
                 {
@@ -167,7 +194,22 @@ export default function () {
                 </button>
 
                 <button onClick={() => {}}>
-                    <img src={userIcon} />
+                   
+                    <img className='profile-image' src={userIcon} onClick={()=>{setModalUser(!modalUser)}} />
+                    <img className="arrow" onClick={()=>{setModalUser(!modalUser)}} src={arrowDown}></img>
+                    {/* modal user */}
+                    {
+                        modalUser ?
+                            <>
+                                <div className="modalUser">
+                                    <div className="option">Mi perfil</div>
+                                    <div className="option">Mis compras</div>
+                                    <div className="option">Favoritos</div>
+                                    <div className="option">Cerrar sesión</div>
+                                </div>
+                            </>:""
+                    }
+
                 </button>
             </div>
 
