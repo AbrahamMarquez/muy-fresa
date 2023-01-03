@@ -89,6 +89,7 @@
         .grid {
             grid-gap: 61px;
             justify-content: center;
+            background: white;
             @media screen and (max-width:1024px) {
                 grid-gap: 26px;
             }

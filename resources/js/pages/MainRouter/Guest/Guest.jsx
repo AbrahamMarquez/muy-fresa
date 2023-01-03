@@ -10,38 +10,43 @@ const Footer = lazy(() => import("../../../components/organisms/Footer/Footer"))
 //skeleton
 import HeaderSkeleton from "../../../components/organisms/Header/HeaderSkeleton";
 import ArreglosCicle from "../../../routes/Guest/ArreglosCicle/ArreglosCicle";
+import CravingsCicle from "../../../routes/Guest/CravingsCicle/CravingsCicle";
 import LoginCicleRoutes from "../../../routes/Guest/LoginCicleRoutes/LoginCicleRoutes";
 
-const Guest = ({setAuth}) => {
+const Guest = ({ setAuth, fakeAuth }) => {
     const route = useLocation()
-    
     return (
         <>
-            <Suspense fallback={<HeaderSkeleton/>}>
-                {
-                    route.pathname == '/' ||
-                    route.pathname == '/login' ||
-                    route.pathname == '/recover-password'||
-                    route.pathname == '/verification-code'||
-                    route.pathname == '/verification-password'||
-                    route.pathname == '/register'||
-                    route.pathname == '/register-code'||
-                    route.pathname == '/conditions'
-                    ?
-                    <>
-                        <Header/>
-                    </>:
-                        <HeaderNoChocolate/>
-                }
-            </Suspense>
-            <HomeRoutes setAuth={setAuth}/>
-            <LoginCicleRoutes/>
-            <ArreglosCicle/>
-            
+            {fakeAuth=="false" ?
+                <>
+                    <Suspense fallback={<></>}>
+                        {
+                            route.pathname == '/' ||
+                                route.pathname == '/login' ||
+                                route.pathname == '/recover-password' ||
+                                route.pathname == '/verification-code' ||
+                                route.pathname == '/verification-password' ||
+                                route.pathname == '/register' ||
+                                route.pathname == '/register-code' ||
+                                route.pathname == '/conditions' ||
+                                route.pathname == '/cravings'
+                                ?
+                                <>
+                                    <Header />
+                                </> :
+                                <HeaderNoChocolate />
+                        }
+                    </Suspense>
+                </> :
+                ""}
 
-            
 
-            <Suspense fallback={<div/>}>
+            <HomeRoutes setAuth={setAuth} />
+            <LoginCicleRoutes />
+            <ArreglosCicle />
+            <CravingsCicle />
+
+            <Suspense fallback={<div />}>
                 <Footer />
             </Suspense>
         </>

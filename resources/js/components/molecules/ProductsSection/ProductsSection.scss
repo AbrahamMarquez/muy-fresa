@@ -1,0 +1,113 @@
+.ProductsSection
+{
+    padding: 0px 40px;
+    margin-top: 20px;
+    @media screen and (max-width:600px) {
+        padding: 0px 23px;
+    }
+    .title-container
+    {
+        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        height: 50px;
+        @media screen and (max-width:600px) {
+            height: 28px;
+        }
+        .title
+        {
+            max-width: 845px;
+            width: 100%;
+            color: #77ab39;
+            font-size: 28px;
+            font-weight: 700;
+            border-bottom: 1px solid #77ab39;
+            text-align: center;
+            @media screen and (max-width:600px) {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+//paginator
+.paginator {
+    width: 34px;
+    color: initial;
+
+    .right {
+        transform: scaleX(-1);
+    }
+}
+.p-paginator
+{
+    background: transparent!important;
+}
+.buton-paginator {
+    width: 51px;
+    cursor: pointer;
+    background: transparent;
+    opacity: 57%;
+}
+
+.buton-paginator-number {
+    cursor: pointer;
+    color: #524a4e !important;
+    background: transparent !important;
+    font-weight: 600;
+    font-size: 18px;
+    width: 51px;
+    opacity: 57%;
+    transition: color .5s;
+    border-color: #db0032 !important;
+
+}
+
+.buton-paginator-number:hover {
+    color: #db0032 !important;
+    transition: color .5s;
+}
+
+.p-dataview {
+    .p-paginator-bottom {
+        border-width: 0px !important;
+        margin-top: 47px;
+    }
+}
+
+.p-link:focus {
+    box-shadow: 0 0 0 0.2rem #a30329;
+}
+
+.p-link {
+    width: 40px;
+    height: 20px;
+}
+
+.p-paginator {
+    .p-paginator-pages {
+        .p-paginator-page {
+            width: 2rem;
+            height: 2rem;
+            min-width: 2rem;
+        }
+    }
+}
+.p-dataview-content {
+    background: transparent!important;
+    .grid {
+        grid-gap: 61px;
+        justify-content: center;
+        @media screen and (max-width:1024px) {
+            grid-gap: 26px;
+        }
+    }
+}

@@ -18,14 +18,19 @@ import burguerIcon from '../../../img/icons/burguerIcon.svg'
 import chocolateImg from '../../../img/header/animationChocolate.png'
 import HeaderMobileAuth from '../HeaderMobile/HeaderMobileAuth'
 
-export default function ({userIcon}) {
 
+//menuUser
+import arrowDown from '../../../img/icons/arrowDown.svg'
+
+export default function ({ userIcon }) {
+    const [modalUser, setModalUser] = useState(false)
     const navigate = useNavigate()
 
     const options = [
         {
             title: 'Inicio',
             link: '/',
+
         },
         {
             title: 'Arreglos',
@@ -134,7 +139,7 @@ export default function ({userIcon}) {
                 <img src={burguerIcon} />
             </div>
 
-            <HeaderMobileAuth setShowSideMenu={setShowSideMenu} showSideMenu={showSideMenu} options={options} userIcon={userIcon}/>
+            <HeaderMobileAuth setShowSideMenu={setShowSideMenu} showSideMenu={showSideMenu} options={options} userIcon={userIcon} />
 
             <div className='rightSide'>
                 {
@@ -166,8 +171,22 @@ export default function ({userIcon}) {
                     <img src={shoppIcon} />
                 </button>
 
-                <button onClick={() => navigate('/')}>
-                    <img className='profile-image' src={userIcon} />
+                <button onClick={() => { }}>
+                    <img className='profile-image' src={userIcon} onClick={()=>{setModalUser(!modalUser)}} />
+                    <img className="arrow" onClick={()=>{setModalUser(!modalUser)}} src={arrowDown}></img>
+                    {/* modal user */}
+                    {
+                        modalUser ?
+                            <>
+                                <div className="modalUser">
+                                    <div className="option">Mi perfil</div>
+                                    <div className="option">Mis compras</div>
+                                    <div className="option">Favoritos</div>
+                                    <div className="option">Cerrar sesión</div>
+                                </div>
+                            </>:""
+                    }
+
                 </button>
             </div>
 

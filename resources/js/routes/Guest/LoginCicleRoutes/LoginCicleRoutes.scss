@@ -18,3 +18,25 @@
       align-items: center;
     }
 }
+.generalBackgroundWhite
+{
+  min-height: calc(100vh - 200px);
+  padding-top:200px;
+  @media screen and (max-width:1024px) {
+    padding-top:170px;
+    min-height: 100vh;
+  }
+  @media screen and (max-width:600px) {
+    padding-top:117px;
+    min-height: 100vh;
+  }
+  
+  @media screen and (min-width:1921px) {
+    padding-top:170px;
+    min-height: calc(100vh - 200px);
+    padding-top:272px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
