@@ -8,7 +8,7 @@ import HeaderMobile from '../HeaderMobile/HeaderMobile'
 import { useLocation } from "react-router-dom";
 //style
 import './Header.scss'
-import  '../../../pages/MainRouter/MainRouter.scss'
+import '../../../pages/MainRouter/MainRouter.scss'
 //assets
 import searchIcon from '../../../img/icons/searchIcon.svg'
 import shoppIcon from '../../../img/icons/shoppIcon.svg'
@@ -17,16 +17,17 @@ import logoMuyFresa from '../../../img/icons/logoMuyFresa.svg'
 import burguerIcon from '../../../img/icons/burguerIcon.svg'
 import chocolateImg from '../../../img/header/animationChocolate.png'
 import HeaderMobileAuth from '../HeaderMobile/HeaderMobileAuth'
+import arrowDown from '../../../img/icons/arrowDown.svg'
 
-export default function ({userIcon}) {
-    const [modalUser, setModalUser] = useState(false)
+export default function ({ userIcon }) {
+    const [modalUser, setModalUser] = useState(true)
     const navigate = useNavigate()
 
     const options = [
         {
             title: 'Inicio',
             link: '/',
-            subOptions:[
+            subOptions: [
                 {
                     title: 'Mi perfil',
                     link: '#'
@@ -81,7 +82,7 @@ export default function ({userIcon}) {
         },
         {
             title: 'Antojos',
-            link: '/whim'
+            link: '/cravings'
         },
         {
             title: 'Evento',
@@ -100,8 +101,8 @@ export default function ({userIcon}) {
     const [search, setSearch] = useState('')
     const [showSideMenu, setShowSideMenu] = useState(false)
     const [changeHeader, setChangeHeader] = useState(false);
-    
-    
+
+
     const handleShowInput = () => {
         if (document.getElementById('searchInput').style.width == '0px' || document.getElementById('searchInput').style.width == '') {
             document.getElementById('searchInput').style.width = '820px'
@@ -119,8 +120,7 @@ export default function ({userIcon}) {
             document.getElementById('img-chocolate').style.display = 'initial'
             document.getElementById('chocolateDown').style.background = 'transparent'
         }
-        else
-        {
+        else {
             document.getElementById('chocolateDown').style.top = '-150px'
             document.getElementById('chocolateDown').style.background = '#3b2b1e'
             document.getElementById('img-chocolate').style.display = 'none'
@@ -131,37 +131,40 @@ export default function ({userIcon}) {
     }
 
     useEffect(() => {
-        
-        
-            // setChangeHeader(false)
-            if (typeof window !== "undefined") {
-                window.addEventListener("scroll", () =>
-                    setChangeHeader(window.pageYOffset > 400)
-                );
-            }
+
+
+        // setChangeHeader(false)
+        if (typeof window !== "undefined") {
+            window.addEventListener("scroll", () =>
+                setChangeHeader(window.pageYOffset > 400)
+            );
+        }
 
     }, [])
-   
 
+    const closeSession = () => {
+        window.localStorage.setItem('auth', false);
+        navigate("/login")
+        window.location.reload(true);
+
+    }
     return (
         <header id={"header"} className={!changeHeader ? "header" : "header headerBackground "}>
 
             {/* {
                 !changeHeader && */}
-                <div className='chocolateDown' id='chocolateDown'>
-                    <img id='img-chocolate' src={chocolateImg} />
-                </div>
+            <div className='chocolateDown' id='chocolateDown'>
+                <img id='img-chocolate' src={chocolateImg} />
+            </div>
             {/* }    */}
             <div id='logo' className={!changeHeader ? "logo" : "logo logoSmall"} onClick={() => navigate('/')}>
-                
                 <img src={logoMuyFresa} />
             </div>
-
             <div className='sideMenu' onClick={() => setShowSideMenu(true)}>
                 <img src={burguerIcon} />
             </div>
 
-            <HeaderMobileAuth setShowSideMenu={setShowSideMenu} showSideMenu={showSideMenu} options={options} userIcon={userIcon}/>
+            <HeaderMobileAuth setShowSideMenu={setShowSideMenu} showSideMenu={showSideMenu} options={options} userIcon={userIcon} />
 
             <div className='rightSide'>
                 {
@@ -193,21 +196,29 @@ export default function ({userIcon}) {
                     <img src={shoppIcon} />
                 </button>
 
-                <button onClick={() => {}}>
-                   
-                    <img className='profile-image' src={userIcon} onClick={()=>{setModalUser(!modalUser)}} />
-                    <img className="arrow" onClick={()=>{setModalUser(!modalUser)}} src={arrowDown}></img>
-                    {/* modal user */}
+                <button onClick={() => { }}>
+
+                    <img className='profile-image' src={userIcon} onClick={() => { setModalUser(!modalUser) }} />
                     {
                         modalUser ?
+                            <>
+                                <img className="arrow" onClick={() => { setModalUser(!modalUser) }} src={arrowDown}></img>
+                            </> :
+                            <>
+                                <img className="arrow rotate-180" onClick={() => { setModalUser(!modalUser) }} src={arrowDown}></img>
+                            </>
+                    }
+                    {/* modal user */}
+                    {
+                        !modalUser ?
                             <>
                                 <div className="modalUser">
                                     <div className="option">Mi perfil</div>
                                     <div className="option">Mis compras</div>
                                     <div className="option">Favoritos</div>
-                                    <div className="option">Cerrar sesión</div>
+                                    <div className="option" onClick={() => { closeSession() }} >Cerrar sesión</div>
                                 </div>
-                            </>:""
+                            </> : ""
                     }
 
                 </button>

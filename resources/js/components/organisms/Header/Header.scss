@@ -9,11 +9,13 @@
     align-items: center;
     position: fixed;
     z-index: 1000;
-    background:transparent;
+    background: transparent;
     z-index: 1000;
+
     @media screen and (max-width:1024px) {
         padding: 0px;
     }
+
     .chocolateDown {
         top: -150px;
         transition: top 8s;
@@ -22,15 +24,17 @@
         width: 100%;
 
         img {
-            width:110%;
+            width: 110%;
+
             @media screen and (max-width:1024px) {
                 // display: none!important;
-                
+
                 width: 200%;
                 height: 160px;
             }
         }
     }
+
     .logo {
         width: 70px;
         height: 70px;
@@ -41,9 +45,11 @@
         border-radius: 100%;
         transition: all 0.5s;
         z-index: 1000;
+
         @media screen and (max-width:1024px) {
             margin-left: 20px;
         }
+
         img {
             width: 100%;
         }
@@ -71,7 +77,7 @@
         width: 95px;
         height: 95px;
 
-        img{
+        img {
             width: 150%;
         }
     }
@@ -81,9 +87,11 @@
         z-index: 99;
         width: 40px;
         height: 40px;
+
         @media screen and (max-width:1024px) {
             margin-right: 20px;
         }
+
         @include lg {
             display: none;
         }
@@ -207,55 +215,119 @@
     @include xl {
         padding: 22px 150px 22px 0;
     }
-    .profile-image
-    {
-        width: 63px!important;
+
+    .profile-image {
+        width: 63px !important;
         height: 63px;
         border-radius: 100%;
         object-fit: cover;
         position: relative;
-        
+
     }
-    .arrow
-        {
-            position: absolute;
-            width: 22px!important;
-            height: 22px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #77ab39;
-            border-radius: 50px;
-            top: 58px;
-            right: 159px;
+
+    .arrow {
+        position: absolute;
+        width: 22px !important;
+        height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #77ab39;
+        border-radius: 50px;
+        top: 58px;
+        right: 159px;
+
+        @media screen and (max-width:1435px) {
+            right: 28px;
         }
-    
-    .modalUser
-    {
+    }
+
+    .modalUser {
         position: absolute;
         width: 224px;
         height: fit-content;
         background: white;
         top: 85px;
-        padding: 14px 0px; 
-        box-shadow: -15px 15px 20px rgba(0,0,0,0.1), inset -5px 5px 20px rgba(0,0,0,0.05);
+        padding: 14px 0px;
+        box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.1), inset -5px 5px 20px rgba(0, 0, 0, 0.05);
         border-radius: 14px;
-        .option
-        {
+
+        .option {
             padding: 5px 5px 5px 30px;
             text-align: start;
-            
+
         }
-        .option:hover
-        {
+
+        .option:hover {
             background: #e5133a;
             color: white;
         }
-        
+
+    }
+
+    .cerrar-sesion {
+        padding: 10px 15px;
+        font-family: "Rubik";
+        font-size: 16px;
+        color: #ffffff;
+        -webkit-text-decoration: none solid rgb(255, 255, 255);
+        text-decoration: none solid rgb(255, 255, 255);
+        text-align: center;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .button-login-container
+    {
+        display: flex;
+        .btn
+        {
+            height: 65px;
+            width: 135px;
+            border-radius: 90px;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 14px;
+            @media screen and (max-width:1176px) {
+                width:100px;
+            }
+        }
+        .btn1
+        {
+            background: transparent;
+            border: 1px solid white;
+            transition: all .5s;
+        } 
+        .btn1:hover
+        {
+            transition: all .5s;
+            background: rgba(91, 77, 66);
+            border: 1px solid #8c8c8c;
+
+        } 
+        .btn2
+        {
+            background:#e5133a;
+            transition: all .5s;
+            // border: 1px solid white;
+            
+        } 
+        .btn2:hover
+        {
+            background:#a30329;
+            transition: all .5s;
+            // border: 1px solid white;
+            
+        } 
+    }
+    .rotate-180
+    {
+        transform: rotate(180deg);
     }
 }
 
-.headerBackground{
+.headerBackground {
     background: #3b2b1e;
-    
+
 }

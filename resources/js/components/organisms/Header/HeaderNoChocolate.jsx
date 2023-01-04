@@ -63,7 +63,7 @@ export default function () {
         },
         {
             title: 'Antojos',
-            link: '/whim'
+            link: '/cravings'
         },
         {
             title: 'Evento',
@@ -165,10 +165,13 @@ export default function () {
                 <button onClick={() => navigate('/shopping')}>
                     <img src={shoppIcon} />
                 </button>
-
-                <button onClick={() => {}}>
+                <div className="button-login-container">
+                    <button className='btn btn1' onClick={()=>{navigate("/login")}}>Inicia sesión</button>
+                    <button className='btn btn2' onClick={()=>{navigate("/register")}}>Regístrate</button>
+                </div>
+                {/* <button onClick={() => {}}>
                     <img src={userIcon} />
-                </button>
+                </button> */}
             </div>
 
 
