@@ -35,6 +35,8 @@
         <div id="reactRoute"></div>
         <script src="{{ mix('js/app.js') }}"></script>
         <script src="{{ mix('js/pages/MainRouter/MainRouter.js') }}"></script>
+        <script type="text/javascript" src="https://pay.conekta.com/v1.0/js/conekta-checkout.min.js"></script>
+        
     </body>
 
 </html>

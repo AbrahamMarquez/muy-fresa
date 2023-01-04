@@ -191,21 +191,100 @@
         .col2 {
             grid-area: 1 / 2 / 6 / 3;
 
+            .cards-container-pay {
+                padding: 20px 20px 0px 20px;
+                border: 1px solid #949494;
+                border-radius: 12px 12px 0 0;
+            }
+
+            .pay-method-title {
+                font-size: 18px;
+                color: #e5133a;
+                border-bottom: 1px solid #db0032;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+                height: 40px;
+
+            }
+
+            .pay-method-title-engine {
+                font-size: 18px;
+                color: #e5133a;
+                border-bottom: 1px solid #db0032;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+                height: 40px;
+                position: relative;
+
+                div {
+                    width: 100%;
+                }
+
+                .img-return {
+                    background: #77ab39;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50px;
+                    transform: rotate(90deg);
+                    position: absolute;
+                    top: -33px;
+                    left: 51px;
+                    cursor: pointer;
+
+                    @media screen and (max-width:600px) {
+                        top: -9px;
+                        left: 25px;
+                    }
+
+                }
+            }
+
             .pay-container {
                 // max-width: 550px;
                 border-radius: 12px 12px 0px 0px;
                 border: 1px solid #8c8c8c;
                 width: 100%;
-                padding: 166px 166px 0px 166px;
+                padding: 100px 10px 0px 10px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                height: fit-content;
 
                 @media screen and (max-width:1024px) {
-                    padding: 166px 30px 0px 30px;
+                    padding: 65px 30px 0px 30px;
                 }
 
+            }
+
+            .pay-container-engine {
+                border-radius: 12px 12px 0px 0px;
+                border: 1px solid #8c8c8c;
+                width: 100%;
+                padding: 100px 10px 0px 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: fit-content;
+
+                @media screen and (max-width:1024px) {
+                    padding: 65px 30px 0px 30px;
+                }
+
+                @media screen and (max-width:600px) {
+                    padding: 166px 0px 0px 0px;
+                }
+
+
+                .img-contianer {
+                    .img {
+                        padding-top: 30px;
+                        width: 275px;
+                    }
+                }
             }
 
             .cardImg-pay {
@@ -219,6 +298,7 @@
                 font-weight: 600;
                 text-align: center;
                 margin-bottom: 38px;
+                max-width: 230px;
             }
 
             .buttonPay {
@@ -295,6 +375,7 @@
                 // max-width: 550px;
                 margin-top: 42px;
                 margin-bottom: 0px;
+
                 @media screen and (max-width:1024px) {
 
                     margin-bottom: 50px;

@@ -1,0 +1,42 @@
+.cardPay
+{
+    
+    .card
+    {
+        width: 100%;
+        height: 60px;
+        border: 1px solid #949494;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        border-radius:8px ;
+        margin-bottom: 10px;
+        transition: all .5s;
+        
+    }
+    .card:hover
+    {
+        background:#db0032 ;
+        color: #ffffff;
+        transition: all .5s;
+        .img
+        {
+            filter: brightness(200%);
+        }
+        .text
+        {
+            color: white;
+            font-size: 12px;
+        }
+    }
+    .text-container
+    {
+        .text
+        {
+            color: #949494;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+    }
+}

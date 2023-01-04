@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import './Product.scss'
@@ -14,6 +14,10 @@ import TextArea from "../../../../../components/atoms/TextArea/TextArea";
 import InputText from "../../../../../components/atoms/InputText/InputText";
 import Button from "../../../../../components/atoms/Button/Button";
 import { useNavigate } from "react-router-dom";
+import PayMethodEngineModal from "../../../../../components/organisms/PayMethodEngine/PayMethodEngine";
+import card from '../../../../../img/arreglos/cards/payCard.png'
+import returnImg from '../../../../../img/icons/arrowDown.svg'
+import CardPay from "../../../../../components/molecules/cardPay/cardPay";
 const Product = () => {
     const navigate = useNavigate();
     const [products, setProducts] = useState([
@@ -73,7 +77,36 @@ const Product = () => {
             </>
         )
     }
+    const addCardFunction = () => {
+        console.log("entro")
+        const payCardCopy = [...payCards]
+        payCardCopy.push(
+            {
+                name: "Jorge Antonio Fuerte Diaz",
+                account: "**** **** **** **12"
+            },
+            {
+                name: "Jorge Antonio Fuerte Diaz",
+                account: "**** **** **** **12"
+            },
+            {
+                name: "Jorge Antonio Fuerte Diaz",
+                account: "**** **** **** **12"
+            },
+            {
+                name: "Jorge Antonio Fuerte Diaz",
+                account: "**** **** **** **12"
+            }
+        )
+        setPayCards(payCardCopy)
+    }
+    const [addCard, setAddCard] = useState(false)
+    const [payCards, setPayCards] = useState([])
+    // useEffect(()=>
+    // {
 
+    // },[payCards])
+    console.log("payCards", payCards)
     return (
         <>
             <div className="generalBackground-mr" >
@@ -82,7 +115,7 @@ const Product = () => {
                     <DataTable value={products} responsiveLayout="scroll">
                         <Column body={getCard} header="Producto"></Column>
                         <Column field="price" header="Precio"></Column>
-                        <Column field="cuantity" header={window.screen.width<1024?"Cant.":"Cantidad"}></Column>
+                        <Column field="cuantity" header={window.screen.width < 1024 ? "Cant." : "Cantidad"}></Column>
                         <Column field="total" header="total"></Column>
                     </DataTable>
                     <div className="calcs">
@@ -152,14 +185,62 @@ const Product = () => {
                         </div>
                         <div className="col2">
                             <div className="title-red mb-21">3. Metodos de pago:</div>
-                            <div className="pay-container">
 
-                                <img src={cardImg} className='cardImg-pay' />
-                                <div className="description">
-                                    Aún no tienes métodos de pago guardados
-                                </div>
-                                <Button className={"buttonPay"}>Agregar tarjeta</Button>
-                            </div>
+                            {
+                                !addCard ?
+                                    <>
+                                        {
+                                            payCards.length === 0 ?
+                                                <>
+                                                    <div className="pay-container">
+                                                        <div className="pay-method-title">Metodos de pago</div>
+                                                        <img src={cardImg} className='cardImg-pay' onClick={() => { addCardFunction() }} />
+                                                        <div className="description">
+                                                            Aún no tienes métodos de pago guardados
+                                                        </div>
+                                                        <Button className={"buttonPay"} onClick={() => { setAddCard(true) }}>Agregar tarjeta</Button>
+                                                    </div>
+                                                </> :
+                                                <>
+                                                    <div className="cards-container-pay">
+                                                        {
+                                                            payCards.map((item) => {
+                                                                return (
+                                                                    <>
+
+                                                                        <CardPay name={item.name} account={item.account}></CardPay>
+
+                                                                    </>
+                                                                )
+                                                            })
+                                                        }
+                                                        <div style={{width:"100%",marginTop:"30px",display:"flex",justifyContent:"center"}}>
+                                                            <Button className={"buttonPay"} onClick={() => { setAddCard(true) }}>Agregar tarjeta</Button>
+                                                        </div>
+                                                    </div>
+
+                                                </>
+                                        }
+
+                                    </> :
+                                    <>
+                                        <div className="pay-container-engine">
+                                            <div className="pay-method-title-engine">
+                                                <img className="img-return" src={returnImg} onClick={() => { setAddCard(false) }} />
+                                                <div>
+                                                    Metodos de pago
+                                                </div>
+
+                                            </div>
+                                            <div className="img-contianer">
+
+                                                <img className="img" src={card} />
+                                            </div>
+                                            <PayMethodEngineModal repetir={addCard}></PayMethodEngineModal>
+                                        </div>
+                                    </>
+                            }
+
                             <div className="payTota-container">
                                 <div className="pay">1 Pago de <b> $445.00 MXN</b></div>
                                 <div className="visa-container">
@@ -174,8 +255,8 @@ const Product = () => {
                                 </div>
                             </div>
                             <div className="btn-contianer">
-                                <Button color={"red"} className={"btnVisa" } onClick={()=>{navigate("/arrangements/checkout/payment")}}>Realizar pedido</Button>
-                                <Button onClick={()=>{navigate("/shopping")}}  className={"btnVisa"}>Regresar al carrito</Button>
+                                <Button color={"red"} className={"btnVisa"} onClick={() => { navigate("/arrangements/checkout/payment") }}>Realizar pedido</Button>
+                                <Button onClick={() => { navigate("/shopping") }} className={"btnVisa"}>Regresar al carrito</Button>
                             </div>
                         </div>
 
