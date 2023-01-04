@@ -66,7 +66,7 @@ export default function () {
         },
         {
             title: 'Antojos',
-            link: '/whim'
+            link: '/cravings'
         },
         {
             title: 'Evento',
@@ -115,9 +115,6 @@ export default function () {
     }
 
     useEffect(() => {
-
-
-        // setChangeHeader(false)
         if (typeof window !== "undefined") {
             window.addEventListener("scroll", () =>
                 setChangeHeader(window.pageYOffset > 400)
@@ -139,10 +136,12 @@ export default function () {
             <div id='logo' className={!changeHeader ? "logo" : "logo logoSmall"} onClick={() => navigate('/')}>
 
                 <img src={logoMuyFresa} />
+               
             </div>
 
             <div className='sideMenu' onClick={() => setShowSideMenu(true)}>
                 <img src={burguerIcon} />
+                
             </div>
 
             <HeaderMobile setShowSideMenu={setShowSideMenu} showSideMenu={showSideMenu} options={options} />
@@ -176,10 +175,11 @@ export default function () {
                 <button onClick={() => navigate('/shopping')}>
                     <img src={shoppIcon} />
                 </button>
-
-                <button onClick={() => { }}>
-                    <img src={userIcon} />
-                </button>
+                <div className="button-login-container">
+                    <button className='btn btn1' onClick={()=>{navigate("/login")}}>Inicia sesión</button>
+                    <button className='btn btn2' onClick={()=>{navigate("/register")}}>Regístrate</button>
+                </div>
+                
             </div>
             
 

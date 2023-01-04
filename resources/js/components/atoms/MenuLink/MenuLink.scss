@@ -31,6 +31,9 @@
     @include xl {
         padding: 10px 30px;
     }
+    @media screen and (max-width:1176px) {
+        padding: 10px 7px;
+    }
 }
 
 .menuLink:hover+.options {

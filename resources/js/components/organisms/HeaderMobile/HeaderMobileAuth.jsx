@@ -43,7 +43,13 @@ export default function ({
         }
     }, [showSideMenu])
 
-
+    const closeSession = ()=>
+    {
+        window.localStorage.setItem('auth', false);
+        navigate("/login")
+        window.location.reload(true);
+        
+    }
     return (
         <div className='headerMobile' id='headerMobile'>
             <div className='closeContainer' id='closeContainer'></div>
@@ -55,15 +61,15 @@ export default function ({
                 </button>
 
                 <div className='search'>
-                    
-                        <InputText
-                             className='searchInput'
-                            placeholder={'Buscar'}
-                            value={search}
-                            onChange={(e) => handleChangeSearch(e)}
-                            width={'100%'}
-                        />
-                    
+
+                    <InputText
+                        className='searchInput'
+                        placeholder={'Buscar'}
+                        value={search}
+                        onChange={(e) => handleChangeSearch(e)}
+                        width={'100%'}
+                    />
+
                     <button className='imgContainer'>
                         <img src={searchIcon} />
                     </button>
@@ -79,7 +85,7 @@ export default function ({
                         />
                     ))
                 }
-
+                <div className='cerrar-sesion' onClick={()=>{closeSession()}}>Cerrar sesión</div>
                 <div className='shoppButtonContainer'>
                     <button onClick={() => navigate('/shopping')} className='shoppButton'>
                         <img src={shoppIcon} />

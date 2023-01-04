@@ -31,7 +31,10 @@
             right: calc(50vh - 307px);
 
             @media screen and (max-width:1024px) {
-                right: calc(50vh - 409px);
+                right: calc(50vh - 406px);
+            }
+            @media screen and (max-width:400px) {
+                right: calc(50vh - 400px);
             }
 
             .title-red {
@@ -147,7 +150,7 @@
     }
 
     .cards-container {
-        background-image: url("../../../../img/cravings/pinkBackground.svg");
+        background-image: url("../../../../img/cravings/fondo.png");
         background-repeat: no-repeat;
         background-size: cover;
         margin-top: 40px;

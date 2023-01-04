@@ -50,7 +50,7 @@ export default function ({
                 <img width='30px' style={{ marginLeft: '-10px' }} src={returnIcon} onClick={() => setShowSideMenu(false)} />
 
                 <button className='loginBtn' onClick={() => navigate('/login')}>
-                    <img src={userIcon} />
+                    <img src={userIcon}/>
                 </button>
 
                 <div className='search'>
@@ -78,7 +78,7 @@ export default function ({
                         />
                     ))
                 }
-
+                
                 <div className='shoppButtonContainer'>
                     <button onClick={() => navigate('/shopping')} className='shoppButton'>
                         <img src={shoppIcon} />
