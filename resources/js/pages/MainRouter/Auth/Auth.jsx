@@ -10,13 +10,13 @@ import userIcon from '../../../img/login/profile.jpg'
 import ArreglosCicleAuth from "../../../routes/Auth/ArreglosCileAuth/ArreglosCileAuth"
 import ArreglosCicle from "../../../routes/Guest/ArreglosCicle/ArreglosCicle"
 import CravingsCicle from "../../../routes/Guest/CravingsCicle/CravingsCicle"
+import EventsRoute from "../../../routes/Guest/Events/EventsRoutes"
 import HomeRoutes from "../../../routes/Guest/Home/HomeRoutes"
 
 
 const Auth = ({ fakeAuth }) => {
   const route = useLocation()
 
-  console.log("fakeAuth",fakeAuth)
   return (
     <>
       {fakeAuth=="true" ?
@@ -31,7 +31,8 @@ const Auth = ({ fakeAuth }) => {
                 route.pathname == '/register' ||
                 route.pathname == '/register-code' ||
                 route.pathname == '/conditions' ||
-                route.pathname == '/cravings'
+                route.pathname == '/cravings' ||
+                route.pathname == '/event'
                 ?
                 <>
                   <HeaderAuthChocolate userIcon={userIcon}/>
@@ -51,6 +52,7 @@ const Auth = ({ fakeAuth }) => {
       <ArreglosCicle />
       <HomeRoutes />
       <CravingsCicle />
+      <EventsRoute/>
 
       <Suspense fallback={<div />}>
         <Footer />

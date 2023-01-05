@@ -194,10 +194,8 @@ const Arreglo = () => {
     })
     //cards que se imprimiran en los paginators
     const card = (data) => {
-        console.log("data", data)
         return (
             <>
-
                 <ArreglosCard img={data.img} title={data.title} price={data.price} porcent={data.porcent}></ArreglosCard>
             </>
         )
@@ -266,11 +264,11 @@ const Arreglo = () => {
             );
         }
 
-    }, [])  
-    
+    }, [])
+
     return (
         <>
-            <div className="generalBackground-mr" style={{paddingTop:"100px"}}>
+            <div className="generalBackground-mr" style={{ paddingTop: "100px" }}>
                 <div className="Arreglo ">
                     <div className="grid-arreglo">
                         <div className={`col1 `} id="col1">
