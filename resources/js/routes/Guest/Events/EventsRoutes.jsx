@@ -2,10 +2,10 @@ import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
 //components
-const Event = lazy(() =>import("../../../pages/Guest/Event/Event.jsx"));
+const Event = lazy(() =>import("../../../pages/guest/Event/Event.jsx"));
 
 //skeletons
-import EventSkeleton from "../../../pages/Guest/Event/EventSkeleton.jsx";
+import EventSkeleton from "../../../pages/guest/Event/EventSkeleton.jsx";
 
 
 const EventsRoute = ()=>
