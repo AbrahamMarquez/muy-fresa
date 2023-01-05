@@ -2,24 +2,21 @@ import React from "react";
 import './Select.scss'
 
 
-const Select = ({optionArr,value,onChange,id,title})=>
-{
-    console.log("optionArr",optionArr)
-    return(
+const Select = ({ optionArr, value, onChange, id, title }) => {
+    return (
         <>
             <div className="Select">
                 <div className="titleSe">{title}</div>
-            <select  value={value} id={id} onChange={onChange} className="select-componet">
-                {
-                    optionArr.map((item)=>
+                <select value={value} id={id} onChange={onChange} className="select-componet">
                     {
-                      return(
-                        <>
-                            <option>{item.label}</option>   
-                        </>
-                      )     
-                    })
-                }
+                        optionArr.map((item) => {
+                            return (
+                                <>
+                                    <option>{item.label}</option>
+                                </>
+                            )
+                        })
+                    }
                 </select>
             </div>
         </>

@@ -70,7 +70,6 @@ const Product = () => {
     }
 
     const getCard = (rowData) => {
-        console.log("rowData", rowData)
         return (
             <>
                 <SimpleCard data={rowData.cardData}></SimpleCard>
@@ -78,7 +77,6 @@ const Product = () => {
         )
     }
     const addCardFunction = () => {
-        console.log("entro")
         const payCardCopy = [...payCards]
         payCardCopy.push(
             {
@@ -106,7 +104,6 @@ const Product = () => {
     // {
 
     // },[payCards])
-    console.log("payCards", payCards)
     return (
         <>
             <div className="generalBackground-mr" >

@@ -13,11 +13,14 @@ import ArreglosCicle from "../../../routes/Guest/ArreglosCicle/ArreglosCicle";
 import CravingsCicle from "../../../routes/Guest/CravingsCicle/CravingsCicle";
 import LoginCicleRoutes from "../../../routes/Guest/LoginCicleRoutes/LoginCicleRoutes";
 
+//routes
+import EventsRoute from "../../../routes/Guest/Events/EventsRoutes";
+
 const Guest = ({ setAuth, fakeAuth }) => {
     const route = useLocation()
     return (
         <>
-            {fakeAuth=="false" ?
+            {fakeAuth == "false" ?
                 <>
                     <Suspense fallback={<></>}>
                         {
@@ -29,7 +32,8 @@ const Guest = ({ setAuth, fakeAuth }) => {
                                 route.pathname == '/register' ||
                                 route.pathname == '/register-code' ||
                                 route.pathname == '/conditions' ||
-                                route.pathname == '/cravings'
+                                route.pathname == '/cravings' ||
+                                route.pathname == '/event'
                                 ?
                                 <>
                                     <Header />
@@ -40,11 +44,11 @@ const Guest = ({ setAuth, fakeAuth }) => {
                 </> :
                 ""}
 
-
             <HomeRoutes setAuth={setAuth} />
             <LoginCicleRoutes />
             <ArreglosCicle />
             <CravingsCicle />
+            <EventsRoute />
 
             <Suspense fallback={<div />}>
                 <Footer />

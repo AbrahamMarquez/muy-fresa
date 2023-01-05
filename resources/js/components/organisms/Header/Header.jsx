@@ -70,7 +70,7 @@ export default function () {
         },
         {
             title: 'Evento',
-            link: 'event'
+            link: '/event'
         },
         {
             title: 'Galería',

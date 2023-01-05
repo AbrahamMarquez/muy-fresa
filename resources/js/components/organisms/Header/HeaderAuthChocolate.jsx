@@ -86,7 +86,7 @@ export default function ({ userIcon }) {
         },
         {
             title: 'Evento',
-            link: 'event'
+            link: '/event'
         },
         {
             title: 'Galería',

@@ -64,9 +64,12 @@ import pic7 from '../../../img/home/pics/pic7.svg'
 import pic8 from '../../../img/home/pics/pic8.svg'
 import pic9 from '../../../img/home/pics/pic9.jpg'
 import InputText from '../../../components/atoms/InputText/InputText';
+import { useNavigate } from 'react-router';
 
 
 export default function () {
+
+    const navigate = useNavigate()
 
     const template1 = (item) => {
         return (
@@ -76,12 +79,12 @@ export default function () {
                     <div className='container food'>
                         <div style={{ alignItems: 'flex-start' }}>
                             <h3>Conoce nuestros alimentos de temporada</h3>
-                            <button className='whimButton'>¡Date un antojo!</button>
+                            <button className='whimButton' onClick={() => navigate('/cravings')}>¡Date un antojo!</button>
                         </div>
                         <div >
                             <p className='text-10'>Haz click y pide mediante tu plataforma favorita</p>
                             <div className='imgsCont'>
-                                <img src={uber} />
+                                <img src={uber} onClick={()=> navigate('/')}/>
                                 <img src={rappi} />
                             </div>
                         </div>

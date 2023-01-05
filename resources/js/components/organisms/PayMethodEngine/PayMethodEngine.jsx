@@ -12,13 +12,11 @@ const config = {
 const callbacks = {
     // Evento que permitirá saber que el token se creado de forma satisfactoria, es importante que se consuman los datos que de él derivan.
     onCreateTokenSucceeded: function (token) {
-        console.log(token)
         // setOpenModal(false)
 
     },
     // Evento que permitirá saber que el token se creado de manera incorrecta, es importante que se consuman los datos que de él derivan y se hagan las correciones pertinentes.
     onCreateTokenError: function (error) {
-        console.log(error)
         // setOpenModal(false)
     }
 };
@@ -26,7 +24,7 @@ const callbacks = {
 
 
 
-const PayMethodEngineModal = ({repetir}) => {
+const PayMethodEngineModal = ({ repetir }) => {
     useEffect(() => {
         instancesCount++;
         if (instancesCount === 1) {
@@ -56,7 +54,7 @@ const PayMethodEngineModal = ({repetir}) => {
                             backgroundColor: '#FFFFFF' // Código de color hexadecimal para el fondo del iframe, generalmente es blanco.
                         }
                     },
-                   
+
                 }
 
 
@@ -64,7 +62,7 @@ const PayMethodEngineModal = ({repetir}) => {
         }
 
     }, [repetir])
-    instancesCount=0;
+    instancesCount = 0;
     return (
         <>
             <div id="conektaIframeContainer" className="modal-pay-method-edit" style={{ height: "468px", width: '100%' }}></div>

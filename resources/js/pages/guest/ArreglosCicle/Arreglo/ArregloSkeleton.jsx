@@ -194,10 +194,8 @@ const ArregloSkeleton = () => {
 
     })
     const card = (data) => {
-        console.log("data", data)
         return (
             <>
-
                 <Skeleton width="252px" height="334px"/>
             </>
         )
