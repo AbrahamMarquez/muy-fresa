@@ -1,11 +1,11 @@
 import React from "react";
 import './TextArea.scss'
 
-const TextArea = ({children,className,value,id,onChange,placeholder})=>
-{
-    return(
+const TextArea = ({ children, className, value, id, onChange, placeholder, title }) => {
+    return (
         <>
-            <textarea  placeholder={placeholder} value={value} id={id} onChange={onChange} className={`textArea ${className}`}>{children}</textarea>
+            <div className="title-textarea">{title}</div>
+            <textarea placeholder={placeholder} value={value} id={id} onChange={onChange} className={`textArea ${className}`}>{children}</textarea>
         </>
     )
 }

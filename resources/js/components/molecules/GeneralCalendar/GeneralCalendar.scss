@@ -55,6 +55,7 @@
         border-bottom: 2px solid #e5133a;
 
         .p-datepicker-title {
+            width: 100%;
             .p-datepicker-year {
                 font-size: 28px;
                 color: #77ab39;
@@ -70,6 +71,7 @@
             .p-datepicker-month {
                 font-size: 28px;
                 color: #e5133a;
+                width: 40%;
                 font-weight: 700;
             }
         }
