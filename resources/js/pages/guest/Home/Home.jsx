@@ -447,7 +447,7 @@ export default function () {
                 </div>
 
                 <div className='coverPink'>
-                    <button>Ver galería</button>
+                    <button onClick={() => navigate('/gallery')}>Ver galería</button>
                 </div>
 
                 <div className='camera'>
