@@ -15,6 +15,7 @@ import LoginCicleRoutes from "../../../routes/Guest/LoginCicleRoutes/LoginCicleR
 
 //routes
 import EventsRoute from "../../../routes/Guest/Events/EventsRoutes";
+import GalleryRoute from "../../../routes/Guest/Gallery/GalleryRoutes";
 
 const Guest = ({ setAuth, fakeAuth }) => {
     const route = useLocation()
@@ -33,7 +34,8 @@ const Guest = ({ setAuth, fakeAuth }) => {
                                 route.pathname == '/register-code' ||
                                 route.pathname == '/conditions' ||
                                 route.pathname == '/cravings' ||
-                                route.pathname == '/event'
+                                route.pathname == '/event' ||
+                                route.pathname == '/gallery'
                                 ?
                                 <>
                                     <Header />
@@ -49,6 +51,7 @@ const Guest = ({ setAuth, fakeAuth }) => {
             <ArreglosCicle />
             <CravingsCicle />
             <EventsRoute />
+            <GalleryRoute/>
 
             <Suspense fallback={<div />}>
                 <Footer />
