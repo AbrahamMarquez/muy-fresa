@@ -90,7 +90,7 @@ export default function ({ userIcon }) {
         },
         {
             title: 'Galería',
-            link: '/galery'
+            link: '/gallery'
         },
         {
             title: 'Nosotros',

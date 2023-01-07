@@ -71,7 +71,7 @@ export default function () {
         },
         {
             title: 'Galería',
-            link: '/galery'
+            link: '/gallery'
         },
         {
             title: 'Nosotros',
