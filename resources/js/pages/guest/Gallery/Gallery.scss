@@ -1,8 +1,8 @@
 .gallery {
     width: 100%;
-    background: url('../../../img/gallery/back.svg');
+    background: url('../../../img/gallery/back.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
     padding: 12% 10% 25% 10%;
 
     @media screen and (max-width: '968px') {
@@ -14,12 +14,12 @@
         font-size: 3vw;
         line-height: 3.2vw;
         font-weight: 900;
-        margin: 0 0 0 115px;
+        margin: 0 0 0 160px;
 
         @media screen and (max-width: '968px') {
             font-size: 4.5vw;
             line-height: 4.7vw;
-            margin: 0 0 0 40px;
+            margin: 0 0 0 80px;
         }
     }
 
@@ -28,13 +28,13 @@
         font-size: 4vw;
         line-height: 4.2vw;
         font-weight: 900;
-        margin: 0 0 0 115px;
+        margin: 0 0 0 160px;
 
 
         @media screen and (max-width: '968px') {
             font-size: 6vw;
             line-height: 6.2vw;
-            margin: 0 0 0 40px;
+            margin: 0 0 0 80px;
         }
     }
 
