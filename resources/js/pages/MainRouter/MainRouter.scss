@@ -21,6 +21,10 @@ body {
 
 .d-flex{
   display: flex;
+
+  @media screen and (max-width: '450px') {
+    flex-direction: column;
+  }
 }
 
 .mt-20{
