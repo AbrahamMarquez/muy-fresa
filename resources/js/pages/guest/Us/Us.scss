@@ -1,21 +1,29 @@
 .us {
 
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+
     .s1 {
         width: 100%;
         display: flex;
-        background: url('../../../img/us/circle.svg');
-        background-repeat: no-repeat;
         padding: 5% 5% 0 5%;
         background-size: contain;
         justify-content: space-between;
-        background-position: top -20vh right -11px;
 
         .s1-left {
             width: 50%;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-wrap: wrap;
+
+            .move {
+                width: 100%;
+                height: 100%;
+                margin-left: -50vw;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                transition: all 3s;
+            }
 
             .pic {
                 width: 55%;
@@ -24,9 +32,6 @@
                 background-size: cover !important;
                 background-position: center !important;
                 border-radius: 20px;
-                transition: all 3s;
-                margin-left: -50vw;
-                
             }
 
             .pic:first-of-type {
@@ -49,58 +54,77 @@
 
         .s1-right {
             width: 40%;
-            padding: 20vh 10px 0 30px;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-end;
+            justify-content: center;
 
-            p{
-                font-size: 1vw;
-                line-height: 20px;
-                margin: 0;
-                color: #fff;
-            }
-
-            .socialMedia{
+            .titleInfo {
+                position: absolute;
+                top: -100vh;
+                right: -100vh;
+                background: url('../../../img/us/circle.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 50%;
+                background-position: left bottom;
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                height: 100vh;
+                padding-bottom: 20vh;
+                transition: all 2s;
 
-                button{
-                    width: 60px;
-                    height: 60px;
-                    margin: 20px;
-                    background: transparent;
-                    border-radius: 10px;
-                    padding: 0;
-                    cursor: pointer;
+                p {
+                    font-size: 1vw;
+                    line-height: 20px;
+                    margin: 0;
+                    color: #fff;
+                }
 
-                    img{
-                        width: 100%;
-                        height: 100%;
+                .socialMedia {
+                    display: flex;
+                    justify-content: center;
+
+                    button {
+                        width: 60px;
+                        height: 60px;
+                        margin: 20px;
+                        background: transparent;
                         border-radius: 10px;
-                    }
+                        padding: 0;
+                        cursor: pointer;
 
-                    &:hover{
-                        background: #dadada;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                        }
+
+                        &:hover {
+                            opacity: 0.7;
+                        }
                     }
                 }
             }
 
-            .info{
+            .info {
                 width: 90%;
                 height: 40vh;
-                padding: 20px ;
+                z-index: 100;
+                padding: 20px;
                 border-radius: 20px 30px;
                 background: #fff;
-                margin-top: 50px;
-                box-shadow: -15px 14px 20px rgba(0,0,0,0.1);
+                margin-top: 100px;
+                box-shadow: -15px 14px 20px rgba(0, 0, 0, 0.1);
 
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-around;
 
-                h3{
+                h3 {
                     font-size: 1.5vw;
                     color: #e5133a;
                     font-weight: 600;
@@ -108,14 +132,14 @@
                     width: 100%;
                 }
 
-                span{
+                span {
                     width: 100%;
                     font-size: 0.5vw;
                     line-height: 0.6vw;
                     color: #323232;
                 }
 
-                button{
+                button {
                     width: 60%;
                     height: 50px;
                     display: flex;
@@ -127,23 +151,77 @@
                     color: #fff;
                     cursor: pointer;
 
-                    &:hover{
+                    &:hover {
                         background: #a30329;
                     }
                 }
 
-                button:last-of-type{
+                button:last-of-type {
                     background: #fff;
                     color: #e5133a;
-                    box-shadow: 0px 3px 3px rgba(0,0,0,0.17);
+                    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.17);
 
 
-                    &:hover{
+                    &:hover {
                         background: #ededed;
                     }
                 }
 
             }
+        }
+
+        @media screen and (max-width: 968px) {
+            justify-content: center;
+            align-items: center;
+
+            .s1-left{
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                .pic {
+                    height: 12vh;
+                }
+    
+                .pic:first-of-type {
+                    height: 20vh;
+                }
+            }
+
+            .s1-right{
+                width: 100%;
+
+                .titleInfo {
+                    height: 50vh;
+                    padding-bottom: 20vh;
+    
+                    p {
+                        font-size: 3vw;
+                        line-height: 3.1vw;
+                    }
+    
+                }
+    
+                .info {
+                    margin-top: 200px;
+    
+                    h3 {
+                        font-size: 3.5vw;
+                    }
+    
+                    span {
+                        font-size: 2.5vw;
+                        line-height: 2.6vw;
+                    }
+    
+                    button {
+                        font-size: 2vw;
+                    }
+   
+                }
+
+            }
+            
         }
     }
 
@@ -157,20 +235,21 @@
         justify-content: flex-end;
         padding: 2% 35%;
 
-        h3{
+        h3 {
             font-size: 2vw;
             line-height: 2vw;
             color: #fff;
         }
 
-        .p-container{
+        .p-container {
             width: 100%;
             height: 40vh;
-            box-shadow: -15px 14px 20px rgba(0,0,0,0.1);
+            box-shadow: -15px 14px 20px rgba(0, 0, 0, 0.1);
             padding: 20px 30px;
             background: #fff;
             border-radius: 30px;
-            p{
+
+            p {
                 font-size: 0.5vw;
             }
 
@@ -183,7 +262,7 @@
         height: 324px;
         overflow: hidden;
 
-        @media screen and (max-width:1024px) {
+        @media screen and (max-width:968px) {
             height: 162px;
         }
 
@@ -237,13 +316,18 @@
             z-index: 100;
             opacity: 0.5;
             margin-top: -324px;
+
+            @media screen and (max-width: '968px') {
+                height: 162px;
+                margin-top: -162px;
+            }
         }
     }
 
-    .s4{
+    .s4 {
         padding: 40px 10% 20vh 10%;
 
-        h5{
+        h5 {
             font-size: 2.3vw;
             line-height: 2.4vw;
             margin: 0;
@@ -251,7 +335,7 @@
             font-weight: 900;
         }
 
-        h3{
+        h3 {
             font-size: 2.8vw;
             line-height: 2.9vw;
             margin: 0;
@@ -259,12 +343,12 @@
             font-weight: 900;
         }
 
-        .title{
+        .title {
             display: flex;
             width: 30%;
             flex-direction: column;
             align-items: flex-end;
-            margin-bottom: 80px;            
+            margin-bottom: 80px;
         }
     }
 }

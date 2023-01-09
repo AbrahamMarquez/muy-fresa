@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import './Us.scss'
 
@@ -71,48 +71,66 @@ const Us = () => {
         },
     ]
 
+    const refS2 = useRef(false)
+    const refS4 = useRef(false)
+
     useEffect(() => {
-        document.getElementById('pic1').style.marginLeft = '0'
-        document.getElementById('pic2').style.marginLeft = '0'
-        document.getElementById('pic3').style.marginLeft = '0'
+        // document.getElementById('pic1').style.marginLeft = '0'
+        // document.getElementById('pic2').style.marginLeft = '0'
+        // document.getElementById('pic3').style.marginLeft = '0'
+        document.getElementById('s1-left').style.marginLeft = '20px'
+        document.getElementById('titleInfo').style.top = '-40vh'
+        document.getElementById('titleInfo').style.right = '-100px'
     }, [])
+
+    const toS2 = () => {
+        refS2.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+    const toS4 = () => {
+        refS4.current?.scrollIntoView({ behavior: 'smooth' });
+    };
 
 
     return (
         <div className='us'>
             <div className='s1'>
-                <div id='s1-left' className='s1-left'>
-                    <div id='pic1' className='pic' style={{ background: `url(${pic1})` }}></div>
-                    <div id='pic2' className='pic' style={{ background: `url(${pic2})` }}></div>
-                    <div id='pic3' className='pic' style={{ background: `url(${pic3})` }}></div>
+                <div className='s1-left'>
+                    <div id='s1-left' className='move'>
+                        <div id='pic1' className='pic' style={{ background: `url(${pic1})` }}></div>
+                        <div id='pic2' className='pic' style={{ background: `url(${pic2})` }}></div>
+                        <div id='pic3' className='pic' style={{ background: `url(${pic3})` }}></div>
+                    </div>
                 </div>
                 <div className='s1-right'>
-                    <p>Visita en nuestras redes sociales</p>
-                    <div className='socialMedia'>
-                        <button>
-                            <img src={facebook} />
-                        </button>
-                        <button>
-                            <img src={instagram} />
-                        </button>
-                        <button>
-                            <img src={ticktock} />
-                        </button>
+                    <div className='titleInfo' id='titleInfo'>
+                        <p>Visita en nuestras redes sociales</p>
+                        <div className='socialMedia'>
+                            <button>
+                                <img src={facebook} />
+                            </button>
+                            <button>
+                                <img src={instagram} />
+                            </button>
+                            <button>
+                                <img src={ticktock} />
+                            </button>
+                        </div>
                     </div>
 
                     <div className='info'>
+
                         <h3>Sobre Nosotros</h3>
 
                         <span>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
                         </span>
 
-                        <button className='ourHistory'> Nuestra Historia</button>
-                        <button> Conoce al equipo fresero</button>
+                        <button className='ourHistory' onClick={toS2}> Nuestra Historia</button>
+                        <button onClick={toS4}> Conoce al equipo fresero</button>
                     </div>
                 </div>
             </div>
-            <div className='s2'>
+            <div className='s2' ref={refS2}>
                 <h3>Nuestra Historia</h3>
                 <div className='p-container'>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. </p>
@@ -138,14 +156,14 @@ const Us = () => {
                 </div>
                 <div className='coverPink'></div>
             </div>
-            <div className='s4'>
+            <div className='s4' ref={refS4}>
                 <div className='title'>
                     <h5>Conoce al equipo</h5>
                     <h3>Fresero</h3>
                 </div>
                 {
                     data.map((item, idx) => (
-                        <CardUs item={item} key={idx} id={`item${idx}`}/>
+                        <CardUs item={item} key={idx} id={`item${idx}`} />
                     ))
                 }
             </div>
