@@ -9,3 +9,4 @@ require (__DIR__ . '/guest/emails/emails.php');
 require (__DIR__ . '/guest/cravings/cravingsCicle.php');
 require (__DIR__ . '/guest/events/events.php');
 require (__DIR__ . '/guest/gallery/gallery.php');
+require (__DIR__ . '/guest/us/us.php');
