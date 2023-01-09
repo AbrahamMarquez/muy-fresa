@@ -171,15 +171,10 @@ const Event = () => {
             numScroll: 3
         },
         {
-            breakpoint: '600px',
-            numVisible: 2,
-            numScroll: 2
-        },
-        {
-            breakpoint: '480px',
+            breakpoint: '968px',
             numVisible: 1,
             numScroll: 1
-        }
+        },
     ];
 
     const productTemplate = (product) => {
@@ -327,16 +322,18 @@ const Event = () => {
 
             <div className='sections s2' ref={refS4}>
                 <div className='s2-left'>
-                    <h3>Fresa <span>Móvil</span></h3>
-                    <div>
-                        <p>Incluye:</p>
-                        <ul>
-                            <li>3 Productos a elegir</li>
-                            <li>Servicio</li>
-                        </ul>
-                    </div>
                     <div className='imgContainer'>
                         <img src={carImg} />
+                    </div>
+                    <div className='name'>
+                        <h3>Fresa <span>Móvil</span></h3>
+                        <div>
+                            <p>Incluye:</p>
+                            <ul>
+                                <li>3 Productos a elegir</li>
+                                <li>Servicio</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div className='s2-right'>
@@ -396,12 +393,12 @@ const Event = () => {
                     <h3>Fresa <span>Móvil</span></h3>
 
                     <form onSubmit={(e) => handleSubmit(e)} className='form'>
-                        <div className='d-flex' style={{ alignItems: 'flex-end' }}>
+                        <div style={{ display: 'flex', alignItems: 'flex-end' }}>
                             <button type='text' onClick={() => setShowDateInput(true)} className='dateButton'>Seleccionar fecha</button>
 
                             {
                                 showDateInput &&
-                                <GeneralCalendar description='Cuentas con 24hrs para confirmar tu reserva de lo contrario de perderá dicha reservación.' className={'backPink'} value={date} setValue={setDate} openModal={setShowDateInput}/>
+                                <GeneralCalendar description='Cuentas con 24hrs para confirmar tu reserva de lo contrario de perderá dicha reservación.' className={'backPink'} value={date} setValue={setDate} openModal={setShowDateInput} />
 
                             }
                             <InputTime className={'ml-10 w-30'} title={' Hora del evento'} onChange={(e) => { UpdateValue(e, "time", inputList, setInputList) }} id={'time'} placeholder="Hora del evento" />
@@ -409,7 +406,7 @@ const Event = () => {
                         <InputText className={'mt-20'} title={' Nombre completo'} onChange={(e) => { UpdateValue(e, "name", inputList, setInputList) }} id={'name'} placeholder="Nombre completo" />
                         <div className='d-flex mt-20'>
                             <InputText className={'w-40'} title={' Correo electrónico'} onChange={(e) => { UpdateValue(e, "email", inputList, setInputList) }} id={'email'} placeholder="Correo electrónico" />
-                            <InputNumber className={'w-30 ml-10'} title={'Teléfono'} onChange={(e) => { UpdateValue(e, "phone", inputList, setInputList) }} id={'phone'} placeholder="Número de teléfono" />
+                            <InputNumber className={'w-40 ml-10'} title={'Teléfono'} onChange={(e) => { UpdateValue(e, "phone", inputList, setInputList) }} id={'phone'} placeholder="Número de teléfono" />
                         </div>
                         <InputText className={'mt-20'} title={'Dirección completa'} onChange={(e) => { UpdateValue(e, "address", inputList, setInputList) }} id={'address'} placeholder="Dirección completa" />
                         <div className='d-flex mt-20'>
