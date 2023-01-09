@@ -11,7 +11,9 @@ import ArreglosCicleAuth from "../../../routes/Auth/ArreglosCileAuth/ArreglosCil
 import ArreglosCicle from "../../../routes/Guest/ArreglosCicle/ArreglosCicle"
 import CravingsCicle from "../../../routes/Guest/CravingsCicle/CravingsCicle"
 import EventsRoute from "../../../routes/Guest/Events/EventsRoutes"
+import GalleryRoute from "../../../routes/Guest/Gallery/GalleryRoutes"
 import HomeRoutes from "../../../routes/Guest/Home/HomeRoutes"
+import UsRoutes from "../../../routes/Guest/Us/UsRoutes"
 
 
 const Auth = ({ fakeAuth }) => {
@@ -32,7 +34,9 @@ const Auth = ({ fakeAuth }) => {
                 route.pathname == '/register-code' ||
                 route.pathname == '/conditions' ||
                 route.pathname == '/cravings' ||
-                route.pathname == '/event'
+                route.pathname == '/event' ||
+                route.pathname == '/gallery'||
+                route.pathname == '/us'
                 ?
                 <>
                   <HeaderAuthChocolate userIcon={userIcon}/>
@@ -53,6 +57,8 @@ const Auth = ({ fakeAuth }) => {
       <HomeRoutes />
       <CravingsCicle />
       <EventsRoute/>
+      <GalleryRoute/>
+      <UsRoutes/>
 
       <Suspense fallback={<div />}>
         <Footer />
