@@ -3,7 +3,7 @@
     .s1 {
         width: 100%;
         display: flex;
-        background: url(/images/circle.svg?55460b1…);
+        background: url('../../../img/us/circle.svg');
         background-repeat: no-repeat;
         padding: 5% 5% 0 5%;
         background-size: contain;
@@ -19,11 +19,14 @@
 
             .pic {
                 width: 55%;
-                height: 30vh;
+                height: 35vh;
                 background-repeat: no-repeat !important;
                 background-size: cover !important;
                 background-position: center !important;
                 border-radius: 20px;
+                transition: all 3s;
+                margin-left: -50vw;
+                
             }
 
             .pic:first-of-type {
@@ -65,13 +68,17 @@
                 button{
                     width: 60px;
                     height: 60px;
-                    padding: 15px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     margin: 20px;
-                    background: #fff;
+                    background: transparent;
                     border-radius: 10px;
+                    padding: 0;
+                    cursor: pointer;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                    }
 
                     &:hover{
                         background: #dadada;
@@ -80,8 +87,8 @@
             }
 
             .info{
-                width: 70%;
-                height: 30vh;
+                width: 90%;
+                height: 40vh;
                 padding: 20px ;
                 border-radius: 20px 30px;
                 background: #fff;
@@ -148,7 +155,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding: 2% 30%;
+        padding: 2% 35%;
 
         h3{
             font-size: 2vw;
@@ -211,9 +218,6 @@
             position: relative;
             z-index: 20;
 
-            @media screen and (max-width:1024px) {
-                height: 81px;
-            }
 
             div {
                 width: 25%;
@@ -233,6 +237,34 @@
             z-index: 100;
             opacity: 0.5;
             margin-top: -324px;
+        }
+    }
+
+    .s4{
+        padding: 40px 10% 20vh 10%;
+
+        h5{
+            font-size: 2.3vw;
+            line-height: 2.4vw;
+            margin: 0;
+            color: #323232;
+            font-weight: 900;
+        }
+
+        h3{
+            font-size: 2.8vw;
+            line-height: 2.9vw;
+            margin: 0;
+            color: #db0032;
+            font-weight: 900;
+        }
+
+        .title{
+            display: flex;
+            width: 30%;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-bottom: 80px;            
         }
     }
 }
