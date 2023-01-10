@@ -8,6 +8,7 @@ import HeaderNoChocolate from "../../../components/organisms/Header/HeaderNoChoc
 import HeaderSkeleton from "../../../components/organisms/Header/HeaderSkeleton"
 import userIcon from '../../../img/login/profile.jpg'
 import ArreglosCicleAuth from "../../../routes/Auth/ArreglosCileAuth/ArreglosCileAuth"
+import ProfileRoute from "../../../routes/Auth/Profile/ProfileRoutes"
 import ArreglosCicle from "../../../routes/Guest/ArreglosCicle/ArreglosCicle"
 import CravingsCicle from "../../../routes/Guest/CravingsCicle/CravingsCicle"
 import EventsRoute from "../../../routes/Guest/Events/EventsRoutes"
@@ -56,6 +57,7 @@ const Auth = ({ fakeAuth }) => {
       <ArreglosCicle />
       <HomeRoutes />
       <CravingsCicle />
+      <ProfileRoute/>
       <EventsRoute/>
       <GalleryRoute/>
       <UsRoutes/>
