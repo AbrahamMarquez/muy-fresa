@@ -8,7 +8,11 @@ const CardUs = ({ item, id }) => {
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            setTeam(window.pageYOffset > 1500)
+            if(window.screen.width > 968){
+                setTeam(window.pageYOffset > 1500)
+            }else{
+                setTeam(window.pageYOffset > 860)
+            }
         });
     }, [])
 

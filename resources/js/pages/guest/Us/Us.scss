@@ -174,7 +174,7 @@
             justify-content: center;
             align-items: center;
 
-            .s1-left{
+            .s1-left {
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -182,52 +182,100 @@
                 .pic {
                     height: 12vh;
                 }
-    
+
                 .pic:first-of-type {
                     height: 20vh;
                 }
             }
 
-            .s1-right{
+            .s1-right {
                 width: 100%;
 
                 .titleInfo {
                     height: 50vh;
-                    padding-bottom: 20vh;
-    
+                    width: 70%;
+                    padding-bottom: 15vh;
+                    right: -10px;
+                    top: -10vh;
+
                     p {
                         font-size: 3vw;
                         line-height: 3.1vw;
                     }
-    
+
                 }
-    
+
                 .info {
                     margin-top: 200px;
-    
+
                     h3 {
                         font-size: 3.5vw;
                     }
-    
+
                     span {
                         font-size: 2.5vw;
                         line-height: 2.6vw;
                     }
-    
+
                     button {
                         font-size: 2vw;
                     }
-   
+
                 }
 
             }
-            
+
+        }
+
+        @media screen and (max-width: 450px) {
+
+            .s1-right {
+
+                .titleInfo {
+                    height: 35vh;
+                    width: 60%;
+                    padding-bottom: 4vh;
+                    padding-left: 30px;
+                    right: -10px;
+                    top: -10vh;
+
+                    p {
+                        font-size: 2.6vw;
+                        line-height: 2.7vw;
+                    }
+
+                    .socialMedia button {
+                        margin: 10px;
+                        height: 40px;
+                        width: 40px;
+                    }
+
+                }
+
+                .info {
+                    height: 24vh;
+
+                    span {
+                        font-size: 2.3vw;
+                        line-height: 2.4vw;
+                    }
+
+                    button {
+                        font-size: 3vw;
+                        margin-top: 10px;
+                    }
+
+                }
+
+            }
+
         }
     }
 
     .s2 {
         background: url('../../../img/us/backPink2.svg');
         background-size: cover;
+        background-position: top center;
         width: 100%;
         height: 70vh;
         display: flex;
@@ -248,11 +296,43 @@
             padding: 20px 30px;
             background: #fff;
             border-radius: 30px;
+            overflow: auto;
 
             p {
                 font-size: 0.5vw;
             }
 
+        }
+
+        @media screen and (max-width: 968px) {
+            padding: 3%;
+            height: 60vh;
+
+            h3 {
+                font-size: 3vw;
+                line-height: 3vw;
+            }
+
+            .p-container {
+                p {
+                    font-size: 1.5vw;
+                }
+            }
+        }
+
+        @media screen and (max-width: 968px) {
+            height: 55vh;
+
+            h3 {
+                font-size: 4vw;
+                line-height: 4vw;
+            }
+
+            .p-container {
+                p {
+                    font-size: 2vw;
+                }
+            }
         }
 
     }
