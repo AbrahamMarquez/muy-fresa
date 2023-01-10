@@ -192,7 +192,7 @@ export default function ({ userIcon }) {
                         !modalUser ?
                             <>
                                 <div className="modalUser">
-                                    <div className="option">Mi perfil</div>
+                                    <div className="option" onClick={() => navigate('/profile')}>Mi perfil</div>
                                     <div className="option">Mis compras</div>
                                     <div className="option">Favoritos</div>
                                     <div className="option" onClick={()=>{closeSession()}}>Cerrar sesión</div>

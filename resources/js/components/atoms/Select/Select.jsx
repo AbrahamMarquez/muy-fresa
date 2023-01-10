@@ -2,12 +2,12 @@ import React from "react";
 import './Select.scss'
 
 
-const Select = ({ optionArr, value, onChange, id, title }) => {
+const Select = ({ optionArr, value, onChange, id, title, disabled, className }) => {
     return (
         <>
-            <div className="Select">
+            <div className={`Select ${className}`}>
                 <div className="titleSe">{title}</div>
-                <select value={value} id={id} onChange={onChange} className="select-componet">
+                <select disabled={disabled} value={value} id={id} onChange={onChange} className="select-componet">
                     {
                         optionArr.map((item) => {
                             return (

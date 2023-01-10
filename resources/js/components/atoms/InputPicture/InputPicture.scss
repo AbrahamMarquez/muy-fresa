@@ -1,0 +1,29 @@
+.inputPicture{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .uploadPic{
+        width: 80px;
+        height: 23px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background: #77ab39;
+        font-size: 11px;
+        margin-top: 20px;
+        cursor: pointer;
+
+        &:hover{
+            background: #557d24;
+        }
+    }
+}
