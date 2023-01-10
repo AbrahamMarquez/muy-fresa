@@ -75,9 +75,6 @@ const Us = () => {
     const refS4 = useRef(false)
 
     useEffect(() => {
-        // document.getElementById('pic1').style.marginLeft = '0'
-        // document.getElementById('pic2').style.marginLeft = '0'
-        // document.getElementById('pic3').style.marginLeft = '0'
         document.getElementById('s1-left').style.marginLeft = '20px'
         if(window.screen.width > 968){
             document.getElementById('titleInfo').style.top = '-40vh'

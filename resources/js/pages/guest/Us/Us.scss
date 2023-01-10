@@ -87,6 +87,13 @@
                     display: flex;
                     justify-content: center;
 
+                    .button{
+                        width: 60px;
+                        height: 60px;
+                        margin: 20px;
+                        border-radius: 10px;
+                    }
+
                     button {
                         width: 60px;
                         height: 60px;
@@ -244,7 +251,7 @@
                         line-height: 2.7vw;
                     }
 
-                    .socialMedia button {
+                    .socialMedia button, .socialMedia .button {
                         margin: 10px;
                         height: 40px;
                         width: 40px;
@@ -296,8 +303,7 @@
             padding: 20px 30px;
             background: #fff;
             border-radius: 30px;
-            overflow: auto;
-
+            
             p {
                 font-size: 0.5vw;
             }
@@ -314,6 +320,8 @@
             }
 
             .p-container {
+                overflow: auto;
+
                 p {
                     font-size: 1.5vw;
                 }
